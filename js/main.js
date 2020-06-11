@@ -6,7 +6,7 @@ jQuery(function ($) {
     arrow: false,
     infinite: true,
     autoplaySpeed:1e4,
-    speed:1500,
+    speed:1000,
     draggable: false,
     swipe: false,
     fade:true,
@@ -148,7 +148,7 @@ var st = $(this).scrollTop() / 10;
       y: 150
     })
 
-    TweenMax.fromTo($bgSlider, 1.2,{x:'0%'}, {x:'100%', ease: Sine.easeInOut}, 1)
+    TweenMax.fromTo($bgSlider, 1,{x:'0%'}, {x:'100%', ease: Sine.easeInOut}, 1)
     if ($($pagination).hasClass('active')) {
 
 

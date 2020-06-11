@@ -331,7 +331,6 @@ var st = $(this).scrollTop() / 10;
 
   function animateSlider() {
 
-    TweenLite.set($bgSlider, {width:0, opacity: .9})
     TweenLite.set($slideBg, {
       scale: 1
     })

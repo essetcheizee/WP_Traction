@@ -264,7 +264,7 @@ var st = $(this).scrollTop() / 10;
     
     $bgSlider = $('.hero').find('.bg-slider');
     
-    TweenMax.set($bgSlider, {x:'100%'})
+    TweenMax.set($bgSlider, {x:'-100%'})
     timeline.timeScale(1)
     $img = $(slick.$slides).find('img');
     $animationCircle = $('.item-pagination.active').find('.outer-circle svg g')

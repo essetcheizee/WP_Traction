@@ -5,7 +5,7 @@ jQuery(function ($) {
   $('.featured-slider').slick({
     arrow: false,
     infinite: true,
-    autoplay:1e4,
+    autoplaySpeed:1e4,
     speed:1200,
     draggable: false,
     swipe: false,

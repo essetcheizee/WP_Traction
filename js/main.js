@@ -6,7 +6,7 @@ jQuery(function ($) {
     arrow: false,
     infinite: true,
     autoplaySpeed:1e4,
-    speed:1200,
+    speed:1500,
     draggable: false,
     swipe: false,
     fade:true,
@@ -259,7 +259,7 @@ var st = $(this).scrollTop() / 10;
       y: 50
     })
     TweenLite.set($bgSlider.find('img').attr('src', active), {opacity:1})
-    TweenMax.fromTo($bgSlider, 1.2, {x: "0%"}, {x: "100%",  ease: Strong.easeOut}, 1);  
+    TweenMax.fromTo($bgSlider, 1.5, {x: "0%"}, {x: "100%",  ease: Linear.easeNone}, 1);  
   })
   $('.featured-slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
     

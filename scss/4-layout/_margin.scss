@@ -1,0 +1,198 @@
+@for $i from 0 through 20 {
+
+    .--my-#{$i} {
+        padding-top: $i*.694445+vw;
+        padding-bottom: $i*.694445+vw;
+    }
+
+    .--mx-#{$i} {
+        padding-left: $i*.694445+vw;
+        padding-right: $i*.694445+vw;
+    }
+
+    .--mt-#{$i} {
+        padding-top: $i*.694445+vw !important;
+    }
+
+    .--mb-#{$i} {
+        padding-bottom: $i*.694445+vw !important;
+    }
+
+    .--ml-#{$i} {
+        padding-left: $i*.694445+vw !important;
+    }
+
+    .--mr-#{$i} {
+        padding-right: $i*.694445+vw !important;
+    }
+
+}
+
+@include xl {
+
+    @for $i from 0 through 20 {
+
+        .--my-#{$i}-xl {
+            padding-top: $i*.694445+vw;
+            padding-bottom: $i*.694445+vw;
+        }
+
+        .--mx-#{$i}-xl {
+            padding-left: $i*.694445+vw;
+            padding-right: $i*.694445+vw;
+        }
+
+        .--mt-#{$i}-xl {
+            padding-top: $i*.694445+vw !important;
+        }
+
+        .--mb-#{$i}-xl {
+            padding-bottom: $i*.694445+vw !important;
+        }
+
+        .--ml-#{$i}-xl {
+            padding-left: $i*.694445+vw !important;
+        }
+
+        .--mr-#{$i}-xl {
+            padding-right: $i*.694445+vw !important;
+        }
+
+    }
+}
+
+
+@include lg {
+
+    @for $i from 0 through 20 {
+
+        .--my-#{$i}-lg {
+            padding-top: $i*.694445+vw;
+            padding-bottom: $i*.694445+vw;
+        }
+
+        .--mx-#{$i}-lg {
+            padding-left: $i*.694445+vw;
+            padding-right: $i*.694445+vw;
+        }
+
+        .--mt-#{$i}-lg {
+            padding-top: $i*.694445+vw !important;
+        }
+
+        .--mb-#{$i}-lg {
+            padding-bottom: $i*.694445+vw !important;
+        }
+
+        .--ml-#{$i}-lg {
+            padding-left: $i*.694445+vw !important;
+        }
+
+        .--mr-#{$i}-lg {
+            padding-right: $i*.694445+vw !important;
+        }
+
+    }
+}
+
+
+@include md {
+
+    @for $i from 0 through 20 {
+
+        .--my-#{$i}-md {
+            padding-top: $i*.694445+vw;
+            padding-bottom: $i*.694445+vw;
+        }
+
+        .--mx-#{$i}-md {
+            padding-left: $i*.694445+vw;
+            padding-right: $i*.694445+vw;
+        }
+
+        .--mt-#{$i}-md {
+            padding-top: $i*.694445+vw !important;
+        }
+
+        .--mb-#{$i}-md {
+            padding-bottom: $i*.694445+vw !important;
+        }
+
+        .--ml-#{$i}-md {
+            padding-left: $i*.694445+vw !important;
+        }
+
+        .--mr-#{$i}-md {
+            padding-right: $i*.694445+vw !important;
+        }
+
+    }
+}
+
+
+@include sm {
+
+    @for $i from 0 through 20 {
+
+        .--my-#{$i}-sm {
+            padding-top: $i*.694445+vw;
+            padding-bottom: $i*.694445+vw;
+        }
+
+        .--mx-#{$i}-sm {
+            padding-left: $i*.694445+vw;
+            padding-right: $i*.694445+vw;
+        }
+
+        .--mt-#{$i}-sm {
+            padding-top: $i*.694445+vw !important;
+        }
+
+        .--mb-#{$i}-sm {
+            padding-bottom: $i*.694445+vw !important;
+        }
+
+        .--ml-#{$i}-sm {
+            padding-left: $i*.694445+vw !important;
+        }
+
+        .--mr-#{$i}-sm {
+            padding-right: $i*.694445+vw !important;
+        }
+
+    }
+}
+
+
+@include xs {
+
+    @for $i from 0 through 20 {
+
+
+        .--my-#{$i}-xs {
+            padding-top: $i*.694445+vw ;
+            padding-bottom: $i*.694445+vw ;
+        }
+
+        .--mx-#{$i}-xs {
+            padding-left: $i*.694445+vw ;
+            padding-right: $i*.694445+vw ;
+        }
+
+        .--mt-#{$i}-xs {
+            padding-top: $i*.694445+vw !important;
+        }
+
+        .--mb-#{$i}-xs {
+            padding-bottom: $i*.694445+vw !important;
+        }
+
+        .--ml-#{$i}-xs {
+            padding-left: $i*.694445+vw !important;
+        }
+
+        .--mr-#{$i}-xs {
+            padding-right: $i*.694445+vw !important;
+        }
+    }
+}

@@ -1,0 +1,157 @@
+.strategy {
+    background: #141C42;
+    position: relative;
+    padding-top: 35vw;
+    padding-bottom: 25vw;
+
+
+    .overlay {
+        position: absolute;
+
+        &__text {
+            position: absolute;
+            top: 33vw;
+            display: block;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            opacity: 0.1;
+            pointer-events: none;
+
+            h1 {
+                font-size: 11.4vw;
+
+            }
+        }
+
+        &__image {
+
+
+            &__top {
+                position: absolute;
+                height: auto;
+                width: 80%;
+                top: -22vw;
+                right: 0;
+
+
+                img {
+                    height: 100;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center center;
+                }
+            }
+
+            &__bottom {
+                position: absolute;
+                height: auto;
+                width: 80%;
+                bottom: -22vw;
+                left: 0;
+
+
+                img {
+                    height: 100;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center center;
+                }
+            }
+        }
+    }
+
+    &__section {
+        // background-color: blue;
+
+        &.--wrapper {
+            @include flex-content(flex-start, flex-start);
+            // display:;
+            position: relative;
+
+            .strategy__section {
+
+                &__steps {
+                    position: sticky;
+                    top: 22vw;
+                    width: 50%;
+
+                    ul {
+                        li {
+                            overflow: hidden;
+
+                            &:not(:first-child) {
+                                margin-top: 1vw;
+                            }
+
+
+                            &.active {
+                                position: relative;
+
+                                a {
+                                    opacity: 1;
+                                    margin-left: 0;
+                                }
+
+                            }
+
+
+                            a {
+                                color: #fff;
+                                opacity: 0.4;
+                                font-size: 3.82vw;
+                                margin-left: -3vw;
+                                transition: all .5s;
+
+                                &::before {
+                                    content: '';
+                                    position: relative;
+                                    z-index: 9;
+                                    background-image: url(./../../assets/svg/arrow-pink.svg);
+                                    background-size: 3vw;
+                                    background-repeat: no-repeat;
+                                    width: 3vw;
+                                    height: 1vw;
+                                    display: inline-block;
+                                    margin-top: -3vw;
+                                    top: -1vw;
+                                    transform: rotate(180deg);
+                                    margin-right: 1vw;
+
+                                }
+
+                            }
+                        }
+                    }
+                }
+
+                &__description {
+                    width: 50%;
+
+                    ul {
+
+                        li {
+
+                            &:not(:first-child) {
+                                margin-top: 1.75vw;
+                            }
+
+                            &.active {
+                                p {
+                                    opacity: 1;
+                                }
+                            }
+
+                            p {
+                                color: #fff;
+                                opacity: 0.4;
+                                transition: all .5s;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

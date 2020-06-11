@@ -1,0 +1,66 @@
+.services {
+    background-color: #F5F5F5;
+
+    .mdl__wrap {
+        margin-bottom: 4vw;
+
+        h2 {
+            color: #141C42;
+        }
+
+    }
+
+    .services__slider {
+        display: grid;
+        grid-template-columns: repeat(100, auto);
+        overflow: scroll;
+        -ms-overflow-style: none;
+        gap: 1vw;
+        
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        
+        
+        
+        &__item {
+            width: 33.3vw;
+            
+            &:first-child {
+                width: 23vw;
+                margin-left: 13.5vw;
+            }
+            
+            &:not(:first-child) {
+                padding: 0 3vw;
+            }
+
+            &__img {
+                height: 3vw;
+                width: 3vw;
+                margin-bottom: 2vw;
+
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            &__content {
+                h4 {
+                    font-size: 1.5vw;
+                    color: #141C42;
+                    margin-bottom: 1vw;
+                }
+
+                p {
+                    font-size: 1.04vw;
+                    line-height: 2vw;
+                    color: #8A8A8A;
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,15 @@
+.button,
+button {
+    border-bottom: none;
+    font-size: 1.2vw;
+
+    &.solid {
+        background-color: getColor(Primary);
+        padding: 1vw 4vw;
+    }
+
+    &:hover {
+        background-color: shade(getColor(Primary), 10);
+        cursor: pointer;
+    }
+}

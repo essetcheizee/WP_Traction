@@ -1,0 +1,69 @@
+.menus-wrapper {
+    position: fixed;
+    top: 4vw;
+    right: 5vw;
+    mix-blend-mode: exclusion;
+    z-index: 9999999999;
+
+    .toggle-menu {
+        cursor: pointer;
+        @include flex-content(center, center);
+        border: none;
+
+        span {
+            color: getColor(White);
+            margin-top: .5vw;
+            font-size: 1.4vw;
+            pointer-events: none;
+        }
+
+        &.close {
+            display: none
+        }
+
+        .svg-wrapper {
+            margin-left: 1vw;
+            width: 2vw;
+            height: 2vw;
+            @include flex-content(center, center);
+            color: #000;
+
+            img {
+                // height: 96%;
+                height: 80%;
+                width: 80%;
+                object-fit: contain;
+                object-position: center center;
+                filter: invert(1);
+            }
+
+            svg {
+                @include flex-content(center, center);
+                height: 2vw;
+                width: 2vw;
+
+
+                g,
+                path {
+                    fill: #000 !important;
+                }
+
+                line {
+                    fill: #000 !important;
+                }
+            }
+        }
+    }
+
+    &.mobile {
+
+        .open {
+            display: none;
+        }
+
+        .close {
+            display: flex;
+        }
+    }
+
+}

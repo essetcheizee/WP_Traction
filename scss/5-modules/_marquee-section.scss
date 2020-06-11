@@ -1,0 +1,39 @@
+.marquee__section {
+    @include flex-content(center, center);
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+
+    .marquee__section__track {
+        @include flex-content(center, center);
+        display: inline-flex;
+        animation: marqueeAnimation 20s linear infinite forwards;
+
+        &:first-child {
+            margin-right: 8vw;
+        }
+
+        .img-wrapper {
+            width: 13vw;
+            height: auto;
+
+            &:not(:first-child) {
+                margin-left: 5vw;
+            }
+
+            &:not(:last-child) {
+                margin-right: 5vw;
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+                object-position: center center;
+            }
+
+        }
+    }
+}

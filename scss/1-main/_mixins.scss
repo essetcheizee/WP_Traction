@@ -1,0 +1,12 @@
+@mixin flex-content($alignPosition, $justfyPosition) {
+  display: flex;
+  align-items: $alignPosition;
+  justify-content: $justfyPosition;
+}
+
+@mixin text-clamp($limitClamp) {
+  display: -webkit-box;
+  -webkit-line-clamp: $limitClamp;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

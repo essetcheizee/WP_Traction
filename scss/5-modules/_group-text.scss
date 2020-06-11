@@ -1,0 +1,44 @@
+.group__content {
+
+
+    .mdl__wrap {
+        padding-top: $grid*50;
+    }
+
+    &__wrapper {
+
+        @include flex-content(flex-start, center);
+
+        .group__content {
+
+            &__heading {
+                width: 50%;
+                margin-right: 13vw;
+
+                .title {
+                    color: #141C42;
+                    font-size: 2vw;
+                    line-height: 4vw;
+                }
+            }
+
+            &__text {
+                width: 50%;
+
+                p {
+                    color: #8A8A8A;
+                    font-size:.9vw;
+                    line-height: 2.2vw;
+
+                    &:not(:last-child) {
+                        margin-bottom: 1vw;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+
+}

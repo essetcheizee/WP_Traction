@@ -1,0 +1,15 @@
+.row {
+    margin-right: -16px;
+    margin-left: -16px;
+
+    &.no-gutters {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+.col,
+[class*='col-'] {
+    padding-left: $grid * 2;
+    padding-right: $grid * 2;
+}

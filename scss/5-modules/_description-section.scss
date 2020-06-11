@@ -1,0 +1,82 @@
+.description {
+    position: relative;
+    z-index: 9;
+    margin-top: -5vw;
+
+    .background {
+        top: 0;
+        left: 0;
+        position: absolute;
+        height: 100%;
+        width: 80vw;
+        z-index: 1;
+
+        .svg-wrapper {
+            display: none;
+        }
+
+        &.rotating-logo {
+            @include flex-content(center, flex-end);
+
+            .svg-wrapper {
+                display: block;
+                position: absolute;
+                right: -5.72vw;
+
+                height: 13.55vw;
+                width: 13.55vw;
+
+                svg {
+                    height: 13.55vw;
+                    width: 13.55vw;
+                }
+                // right: 0;
+            }
+        }
+
+
+    }
+
+    .mdl__wrap {
+        z-index: 2;
+        // max-width: ;
+
+        .content-wrapper {
+            padding: 2vw 0vw;
+            max-width: 46vw;
+            overflow: hidden;
+
+
+            p {
+                color: getColor(White);
+            }
+
+            .arrow-link {
+                margin-left: -1.5vw;
+                transition: all 0.5s linear;
+                
+                &:hover {
+                    margin-left: 0vw;
+
+                }
+
+                .svg-wrapper {
+
+                    g,
+                    path {
+                        fill: #F596BA
+                    }
+
+                    line {
+                        stroke: #F596BA;
+                    }
+                }
+
+                color: #F596BA;
+            }
+        }
+
+
+    }
+
+}

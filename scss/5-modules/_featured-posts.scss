@@ -1,0 +1,97 @@
+.featured {
+
+    .featured-box {
+        margin: 0 auto;
+        margin-bottom: -4vw;
+
+        .box {
+            display: block;
+            width: 100%;
+            max-width: 34vw;
+            margin-bottom: 4vw;
+            border-bottom: none;
+            padding: 0;
+
+            &:hover {
+
+                .featured__image {
+
+                    img {
+                        transform: scale(1.5);
+                        transition: all 10s linear;
+                    }
+                }
+            }
+
+            .featured__image {
+                height: 38vw;
+                width: 100%;
+                margin-bottom: 2.5vw;
+                overflow: hidden;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center center;
+                        transform: scale(1);
+                        transition: all 10s linear;
+                }
+            }
+
+            .featured__content {
+
+                .title {
+                    font-size: 1.64vw;
+                    margin-bottom: 0.4vw;
+                    color: #141C42;
+                }
+
+                .paragraph {
+
+                    p {
+                        color: #8A8A8A;
+                        line-height: 2vw;
+                        font-size: 1.06vw;
+                        @include text-clamp(3);
+                    }
+
+                }
+
+            }
+
+            &:nth-child(odd) {
+                float: left;
+            }
+
+            &:nth-child(even) {
+                float: right;
+            }
+
+            &.short {
+                // max-height: 30vw;
+                // height: 230px;
+
+                .featured__image {
+                    height: 33vw;
+                }
+            }
+        
+            @include md {
+                max-width: 100%;
+                margin: 0 auto;
+                float: none!important;
+
+                &:not(:last-child) {
+                    margin-bottom: 4vw;
+                }
+            }
+
+        }
+    }
+
+}
+
+*{
+    // border: 1px solid red;/
+}

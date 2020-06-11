@@ -1,0 +1,199 @@
+@for $i from 0 through 20 {
+
+    .--py-#{$i} {
+        padding-top: $i*.694445+vw;
+        padding-bottom: $i*.694445+vw;
+    }
+
+    .--px-#{$i} {
+        padding-left: $i*.694445+vw;
+        padding-right: $i*.694445+vw;
+    }
+
+    .--pt-#{$i} {
+        padding-top: $i*.694445+vw!important;
+    }
+
+    .--pb-#{$i} {
+        padding-bottom: $i*.694445+vw!important;
+    }
+
+    .--pl-#{$i} {
+        padding-left: $i*.694445+vw!important;
+    }
+
+    .--pr-#{$i} {
+        padding-right: $i*.694445+vw!important;
+    }
+
+
+}
+
+@include xl {
+
+    @for $i from 0 through 20 {
+
+        .--py-#{$i}-xl {
+            padding-top: $i*.694445+vw;
+            padding-bottom: $i*.694445+vw;
+        }
+
+        .--px-#{$i}-xl {
+            padding-left: $i*.694445+vw;
+            padding-right: $i*.694445+vw;
+        }
+
+        .--pt-#{$i}-xl {
+            padding-top: $i*.694445+vw!important;
+        }
+
+        .--pb-#{$i}-xl {
+            padding-bottom: $i*.694445+vw!important;
+        }
+
+        .--pl-#{$i}-xl {
+            padding-left: $i*.694445+vw!important;
+        }
+
+        .--pr-#{$i}-xl {
+            padding-right: $i*.694445+vw!important;
+        }
+
+    }
+}
+
+
+@include lg {
+
+    @for $i from 0 through 20 {
+
+        .--py-#{$i}-lg {
+            padding-top: $i*.694445+vw;
+            padding-bottom: $i*.694445+vw;
+        }
+
+        .--px-#{$i}-lg {
+            padding-left: $i*.694445+vw;
+            padding-right: $i*.694445+vw;
+        }
+
+        .--pt-#{$i}-lg {
+            padding-top: $i*.694445+vw!important;
+        }
+
+        .--pb-#{$i}-lg {
+            padding-bottom: $i*.694445+vw!important;
+        }
+
+        .--pl-#{$i}-lg {
+            padding-left: $i*.694445+vw!important;
+        }
+
+        .--pr-#{$i}-lg {
+            padding-right: $i*.694445+vw!important;
+        }
+
+    }
+}
+
+
+@include md {
+
+    @for $i from 0 through 20 {
+
+        .--py-#{$i}-md {
+            padding-top: $i*.694445+vw;
+            padding-bottom: $i*.694445+vw;
+        }
+
+        .--px-#{$i}-md {
+            padding-left: $i*.694445+vw;
+            padding-right: $i*.694445+vw;
+        }
+
+        .--pt-#{$i}-md {
+            padding-top: $i*.694445+vw!important;
+        }
+
+        .--pb-#{$i}-md {
+            padding-bottom: $i*.694445+vw!important;
+        }
+
+        .--pl-#{$i}-md {
+            padding-left: $i*.694445+vw!important;
+        }
+
+        .--pr-#{$i}-md {
+            padding-right: $i*.694445+vw!important;
+        }
+
+    }
+}
+
+
+@include sm {
+
+    @for $i from 0 through 20 {
+
+        .--py-#{$i}-sm {
+            padding-top: $i*.694445+vw;
+            padding-bottom: $i*.694445+vw;
+        }
+
+        .--px-#{$i}-sm {
+            padding-left: $i*.694445+vw;
+            padding-right: $i*.694445+vw;
+        }
+
+        .--pt-#{$i}-sm {
+            padding-top: $i*.694445+vw!important;
+        }
+
+        .--pb-#{$i}-sm {
+            padding-bottom: $i*.694445+vw!important;
+        }
+
+        .--pl-#{$i}-sm {
+            padding-left: $i*.694445+vw!important;
+        }
+
+        .--pr-#{$i}-sm {
+            padding-right: $i*.694445+vw!important;
+        }
+
+    }
+}
+
+
+@include xs {
+
+    @for $i from 0 through 20 {
+
+        .--py-#{$i}-xs {
+            padding-top: $i*.694445+vw;
+            padding-bottom: $i*.694445+vw;
+        }
+
+        .--px-#{$i}-xs {
+            padding-left: $i*.694445+vw;
+            padding-right: $i*.694445+vw;
+        }
+
+        .--pt-#{$i}-xs {
+            padding-top: $i*.694445+vw!important;
+        }
+
+        .--pb-#{$i}-xs {
+            padding-bottom: $i*.694445+vw!important;
+        }
+
+        .--pl-#{$i}-xs {
+            padding-left: $i*.694445+vw!important;
+        }
+
+        .--pr-#{$i}-xs {
+            padding-right: $i*.694445+vw!important;
+        }
+
+    }
+}

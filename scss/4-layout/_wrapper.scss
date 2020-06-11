@@ -1,0 +1,11 @@
+.mdl__wrap {
+    width: 73.5% !important;
+    margin: 0 auto;
+    position: relative;
+    z-index: 99999;
+
+    &.--mdl-wrap-extend {
+        width: 86%!important;
+    }
+    
+}

@@ -1,0 +1,186 @@
+/* navigation */
+
+.navigation {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 999999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 300ms, opacity 300ms;
+
+    &.mobile {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s linear 0s, opacity 300ms;
+
+
+        .navigation__wrapper {
+            animation: navigationOpen cubic-bezier(0.995, 0.000, 0.660, 0.680) 500ms;
+            width: 45%;
+
+            @include md {
+                animation: navigationOpenM cubic-bezier(0.995, 0.000, 0.660, 0.680) 500ms;
+                width: 100%;
+            }
+        }
+
+        .overlay {
+            // z-index: 9;
+            visibility: visible;
+            opacity: .3;
+        }
+
+    }
+
+    &.closeNav {
+        animation: navigationMainClose cubic-bezier(0.995, 0.000, 0.660, 0.680) 500ms;
+
+        @include md {
+            animation: navigationMainCloseM cubic-bezier(0.995, 0.000, 0.660, 0.680) 500ms;
+        }
+
+        .navigation__wrapper {
+            animation: navigationClose cubic-bezier(0.995, 0.000, 0.660, 0.680) 500ms;
+
+            @include md {
+                animation: navigationCloseM cubic-bezier(0.995, 0.000, 0.660, 0.680) 500ms;
+            }
+
+            .navigation__links {
+                visibility: hidden;
+                opacity: 0;
+                transition: visibility 0s linear 700ms, opacity 700ms;
+
+            }
+
+            .navigation__wrapper__inner {
+                visibility: hidden;
+                opacity: 0;
+                transition: visibility 0s linear 700ms, opacity 700ms;
+
+            }
+
+
+
+        }
+
+    }
+
+    &__wrapper {
+        position: absolute;
+        @include flex-content(center, center);
+        overflow: hidden;
+        width: 0%;
+        height: 100%;
+        background-color: #fff;
+        z-index: 9;
+        right: 0;
+        top: 0;
+
+        .navigation {
+
+            &__links {
+                visibility: visible;
+                opacity: 1;
+                transition: visibility 0s linear 0s, opacity 300ms;
+                margin-left: -5vw;
+
+                ul {
+
+                    li {
+                        margin-bottom: 1.5vw;
+
+                        a {
+                            font-size: 4vw;
+                            color: #141C42;
+
+                            &.active {
+                                color: #F596BA;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &__inner {
+            @include flex-content(flex-start, space-between);
+            position: absolute;
+            bottom: 0;
+            width: 80%;
+            overflow: hidden;
+            margin: 0 auto;
+            visibility: visible;
+            opacity: 1;
+            transition: visibility 0s linear 0s, opacity 300ms;
+
+            .navigation {
+
+                &__contact {
+
+                    ul {
+
+                        li {
+
+                            a {
+                                font-size: 1.15vw;
+                                color: #8A8A8A;
+                            }
+                        }
+                    }
+
+                }
+
+                &__social {
+                    ul {
+                        @include flex-content(center, center);
+
+                        li {
+
+                            &:not(:last-child) {
+                                margin-right: 1.6vw;
+                            }
+
+                            a {
+
+                                .svg-wrapper {
+                                    height: 2vw;
+                                    width: 2vw;
+
+                                    svg {
+                                        height: 2vw;
+                                        width: 2vw;
+
+                                        g {
+                                            fill: #8A8A8A;
+                                        }
+
+                                        path {
+                                            fill: #8A8A8A;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .overlay {
+        z-index: -1;
+        content: '';
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        width: 100%;
+        height: 100%;
+        position: sticky;
+        transition: all 1.2s;
+    }
+
+}

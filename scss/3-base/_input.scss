@@ -1,0 +1,21 @@
+input {
+    border: none;
+    border-bottom: 0.1vw solid getColor(White);
+    color: getColor(White);
+    font-size: 1.2vw;
+    padding: 0.7vw 0vw;
+
+    &.input-text {
+        background: transparent;
+    }
+
+    &::placeholder {
+        color: getColor(White);
+        font-size: 1.2vw;
+    }
+
+    &:focus {
+        outline: none;
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,21 @@
+.--arrow-down {
+
+    h1 {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: relative;
+            z-index: 9;
+            background-image: url(./../../assets/svg/arrow-down.svg);
+            background-size: 3vw;
+            background-repeat: no-repeat;
+            width: 3vw;
+            height: 1vw;
+            display: block;
+            margin-top: 5vw;
+            margin-left: -1vw;
+            transform: rotate(270deg);
+        }
+    }
+}

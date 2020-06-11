@@ -1,0 +1,34 @@
+.branding {
+    @include flex-content(center, center);
+    cursor: pointer;
+    border: none;
+    mix-blend-mode: exclusion;
+    
+    .svg-wrapper {
+        height: 2vw;
+        width: 2vw;
+        margin-right: 1vw;
+        pointer-events: none;
+        
+        svg {
+            height: 2vw;
+            width: 2vw;
+        }
+    }
+    
+    .brand-text {
+        color: getColor(White);
+        font-size: 2vw;
+        margin-top: 1vw;
+        pointer-events: none;
+        
+    }
+    
+    &.--header {
+        position: fixed;
+        top: 3vw;
+        left: 5vw;
+        z-index: 99999999999;
+    }
+
+}

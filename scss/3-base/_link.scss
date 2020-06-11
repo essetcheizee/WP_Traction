@@ -1,0 +1,42 @@
+a {
+
+    color: getColor(Primary);
+    text-decoration: none;
+    padding-bottom: 0.3vw;
+    display: inline-block;
+    font-size: 1vw;
+    font-weight: 400;
+
+    &.section-button {
+        margin-top: 3vw;
+        font-size: 1.6vw;
+    }
+
+    &.content-button {
+        margin-top: 1.5vw;
+        font-size: 1.3vw;
+    }
+
+
+    &.arrow-link {
+        @include flex-content(center, flex-start);
+        color: getColor(White);
+        font-size: 1.5vw;
+        margin-top: 2vw;
+        border-bottom: none;
+
+        .svg-wrapper {
+            height: 3vw;
+            width: 3vw;
+            transform: rotate(180deg);
+            margin-right: 1vw;
+            margin-top: -0.3vw;
+
+            svg {
+                height: 3vw;
+                width: 3vw;
+            }
+        }
+    }
+
+}

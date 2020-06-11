@@ -119,11 +119,12 @@ var st = $(this).scrollTop() / 10;
       $sliderIndex = $slider.data('slick-index'),
       $slideBg = $slider.find('img'),
       $pagination = $('.item-pagination.active'),
-      $nextSlide = $($slider).index()
+      $nextSlide = $($slider).next().index()
     $slideText1 = $slider.find('.title-first-line')
     $slideText2 = $slider.find('.title-second-line')
     $animationCircle = $($pagination).find('.outer-circle svg g')
-    $link = $slider.find('a')
+    $link = $slider.find('a')	
+	  console.log($nextSlide)
 
     TweenLite.set($slideBg, {
       scale: 1
@@ -202,9 +203,8 @@ var st = $(this).scrollTop() / 10;
 
         } else {
 
-          $('.featured-slider').slick('slickGoTo', parseInt($nextSlide), {
-            autoplay: true
-          })
+          $('.featured-slider').slick('slickGoTo', parseInt($nextSlide), false
+          )
         }
       });
     }

@@ -3,14 +3,13 @@ jQuery(function ($) {
 
   var timeline = new TimelineMax();
   $('.featured-slider').slick({
-    autoplay: true,
     arrow: false,
-    autoplaySpeed: 1e4,
     infinite: true,
-    speed: 1200,
+    speed:1200,
     draggable: false,
     swipe: false,
-    fade:true
+    fade:true,
+    cssEase: 'linear'
   });
   var timer;
 	
@@ -123,6 +122,7 @@ var st = $(this).scrollTop() / 10;
     $slideText1 = $slider.find('.title-first-line')
     $slideText2 = $slider.find('.title-second-line')
     $animationCircle = $($pagination).find('.outer-circle svg g')
+    $bgSlider = $('.hero').find('.bg-slider')
     $link = $slider.find('a')	
 	  console.log($nextSlide)
 
@@ -217,6 +217,7 @@ var st = $(this).scrollTop() / 10;
 
   $('.featured-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
     
+    var active = $($('.item-pagination')[nextSlide]).data('bg');
     $bgSlider = $('.hero').find('.bg-slider');
     clearTimeout(timer)
     timeline.timeScale(1)
@@ -255,14 +256,14 @@ var st = $(this).scrollTop() / 10;
       autoAlpha: 0,
       y: 50
     })
-    
-    TweenLite.to($bgSlider,.5, {width:"100%", opacity:.2, ease:Linear.easeNone})
-    
-    TweenLite.set($bgSlider, {width:0, opacity: .9})
+    TweenLite.set($bgSlider.find('img').attr('src', active), {opacity:1})
+    TweenMax.fromTo($bgSlider, 1.2, {x: "-100%"}, {x: "0%",  ease: Strong.easeOut}, 1);  
   })
   $('.featured-slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
     
     $bgSlider = $('.hero').find('.bg-slider');
+    
+    TweenMax.set($bgSlider, {x:'100%'})
     timeline.timeScale(1)
     $img = $(slick.$slides).find('img');
     $animationCircle = $('.item-pagination.active').find('.outer-circle svg g')

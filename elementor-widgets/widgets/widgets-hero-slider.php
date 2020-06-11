@@ -63,7 +63,9 @@ class custom_hero_slider extends Widget_Base {
    $slider     = new \WP_Query($args);
 
     ?>
-    <div class="bg-slider"></div>
+    <div class="bg-slider">
+    <img src="" alt="">
+    </div>
 <div class="featured-slider">
   
     <?php
@@ -123,7 +125,7 @@ class custom_hero_slider extends Widget_Base {
         $index = $slider->current_post + 1;
 ?>
 
-    <a href="#" class="item-pagination">
+    <a href="#" class="item-pagination" data-bg='<?= get_the_post_thumbnail_url()?>'>
         <?php echo $index ?>
 
         <div class="inner-circle">

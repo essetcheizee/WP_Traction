@@ -147,6 +147,7 @@ var st = $(this).scrollTop() / 10;
       y: 150
     })
 
+    TweenMax.fromTo($bgSlider, 1.2,{x:'0%'}, {x:'100%', ease: Sine.easeInOut}, 1)
     if ($($pagination).hasClass('active')) {
 
 

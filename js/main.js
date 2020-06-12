@@ -217,7 +217,7 @@ var st = $(this).scrollTop() / 10;
 
   $('.featured-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
     
-    var active = $($('.item-pagination')[nextSlide]).data('bg');
+    var active = $($('.item-pagination')[currentSlide]).data('bg');
     $bgSlider = $('.hero').find('.bg-slider');
     clearTimeout(timer)
     timeline.timeScale(1)
@@ -257,13 +257,13 @@ var st = $(this).scrollTop() / 10;
       y: 50
     })
     $bgSlider.find('img').attr('src', active)
-    TweenMax.fromTo($bgSlider, 1, {width: "0%", opacity:1}, {width: "100%",  opacity:1, ease: Linear.easeNone}, 1);  
+    TweenMax.fromTo($bgSlider, 1, {width: "100%", opacity:1}, {width: "0%",  opacity:1, ease: Linear.easeNone}, 1);  
   })
   $('.featured-slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
     
     $bgSlider = $('.hero').find('.bg-slider');
     
-    TweenMax.set($bgSlider, {width:'0%', opacity:0})
+    TweenMax.set($bgSlider, {width:'100%', opacity:0})
     timeline.timeScale(1)
     $img = $(slick.$slides).find('img');
     $animationCircle = $('.item-pagination.active').find('.outer-circle svg g')

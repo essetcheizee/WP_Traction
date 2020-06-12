@@ -1,6 +1,6 @@
 jQuery(function ($) {
 
-  TweenLite.set($('.bg-slider'), {scale:1.15})
+  TweenLite.set($('.hero .bg-slider'), {scale:1.15})
 
   var timeline = new TimelineMax();
   $('.featured-slider').slick({
@@ -259,6 +259,7 @@ var st = $(this).scrollTop() / 10;
       autoAlpha: 0,
       y: 50
     })
+    TweenLite.set($bgSlider.find('img').attr('src', active), {opacity:1 ,scale:1.15})
     TweenMax.fromTo($bgSlider, 1.2, {width: "100%"}, {width: "0%",  ease: Linear.easeNone}, 1);  
   })
   $('.featured-slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {

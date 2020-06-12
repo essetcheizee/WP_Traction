@@ -156,15 +156,14 @@
 }
 
 .bg-slider{
-  position:absolute;
   height: 100%;
   width: 0%;
   z-index: 2;
   transform: scale(1.15,1.15);
+  overflow: hidden;
   img{
     height: 100%;
-    width: 100%;
-    object-position: center center;
+    width: 100vw;
     transform: scale(1.15,1.15);
   }
 }

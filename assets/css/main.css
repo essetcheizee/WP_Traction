@@ -7124,6 +7124,8 @@ p {
   width: 0%;
   z-index: 2;
   overflow: hidden;
+  -webkit-transform: scale(1.15, 1.15);
+          transform: scale(1.15, 1.15);
 }
 
 .bg-slider img {
@@ -7131,6 +7133,8 @@ p {
   width: 100vw;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transform: scale(1.15, 1.15);
+          transform: scale(1.15, 1.15);
 }
 
 .elementor img {

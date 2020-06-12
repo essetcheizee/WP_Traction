@@ -160,10 +160,12 @@
   width: 0%;
   z-index: 2;
   overflow: hidden;
+  transform: scale(1.15,1.15);
   img{
     height: 100%;
     width: 100vw;
     object-fit: cover;
+    transform: scale(1.15,1.15);
   }
 }
 .elementor img{

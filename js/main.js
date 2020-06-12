@@ -5,7 +5,7 @@ jQuery(function ($) {
     arrow: false,
     infinite: true,
     autoplaySpeed:1e4,
-    speed:1000,
+    speed:1500,
     draggable: false,
     swipe: false,
     fade:true,
@@ -154,50 +154,44 @@ var st = $(this).scrollTop() / 10;
       $animationCircle = $($pagination).find('.outer-circle svg g')
 
       timeline
-        .to($animationCircle, 9, {
-          css: {
-            'stroke-dashoffset': 10
-          }
+      .to($animationCircle, 8, {
+        css: {
+          'stroke-dashoffset': 10
+        }
+      })
+      .to($slideBg, 8, {
+        scale: 1.15,
+        ease: Linear.easeOut
+      }, '-=8')
+      .to($link, 1, {
+        autoAlpha: 1,
+        y: 0
+      }, '-=8')
+      .to($slideText2, 2, {
+        y: 0,
+        autoAlpha: 1,
+        delay: .50,
+        ease: Power4.easeOut
+      }, '-=8')
+      .to($slideText1, 2, {
+        y: 0,
+        autoAlpha: 1,
+        delay: .75,
+        ease: Power4.easeOut
+      },'-=8')
+      .to($slideText1, .5,{ 
+        autoAlpha:0,
+         ease: Power4.easeOut
         })
-        .to($slideBg, 9, {
-          scale: 1.15,
-          ease: Linear.easeOut
-        }, '-=9')
-        .to($link, 1, {
-          autoAlpha: 1,
-          y: 0
-        }, '-=9')
-        .to($slideText2, 2, {
-          y: 0,
-          autoAlpha: 1,
-          delay: .50,
-          ease: Power4.easeOut
-        }, '-=9')
-        .to($slideText1, 2, {
-          y: 0,
-          autoAlpha: 1,
-          delay: .75,
-          ease: Power4.easeOut
-        }, '-=9')
-        .to($slideText2, .5, {
-          y: 150
-        })
-        .to($slideText1, .5, {
-          y: 150,
-          delay: .25
-        }, '-=.5')
-        .to($link, .5, {
-          y: 50,
-          autoAlpha: 0,
-          delay: .50
-        }, '-=.5')
-        .to($animationCircle, 1, {
-          css: {
-            'stroke-dashoffset': -150
-          },
-          ease: Quint.easeIn
-        }, '-=1')
-
+      .to($slideText2, .5,{
+        autoAlpha:0, 
+        ease: Power4.easeOut, 
+      }, '-=.5')
+      .to($link, .5, {
+        autoAlpha:0,
+        ease: Power4.easeOut, 
+      }, '-=.5')
+       
       timer = setInterval(function () {
         if (timeline.isActive()) {
 
@@ -216,7 +210,7 @@ var st = $(this).scrollTop() / 10;
   })
 
   $('.featured-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-    
+    var beforeChange = new TimelineMax();
     var active = $($('.item-pagination')[currentSlide]).data('bg');
     $bgSlider = $('.hero').find('.bg-slider');
     clearTimeout(timer)
@@ -246,7 +240,7 @@ var st = $(this).scrollTop() / 10;
     })
     TweenLite.set($slideText1, {
       autoAlpha: 0,
-      y: 150
+      y: 150,
     })
     TweenLite.set($slideText2, {
       autoAlpha: 0,
@@ -257,7 +251,36 @@ var st = $(this).scrollTop() / 10;
       y: 50
     })
     $bgSlider.find('img').attr('src', active)
-    TweenMax.fromTo($bgSlider, 1, {width: "100%", opacity:1}, {width: "0%",  opacity:1, ease: Linear.easeNone}, 1);  
+    
+    beforeChange.to($animationCircle, 1, {
+      css: {
+        'stroke-dashoffset': -150
+      },
+      ease: Quint.easeIn
+    })
+    //  .to($slideText2, .5, {
+    //   y: 150
+    // },'-=.5')
+    // .to($slideText1, .5, {
+    //   y: 150,
+    //   delay: .25
+    // }, '-=.5')
+    // .to($link, .5, {
+    //   y: 50,
+    //   delay: .50,
+    //   autoAlpha: 0
+    // }, '-=.5')
+  .fromTo($bgSlider, 1, {
+    width: "100%", 
+    opacity:1
+  },
+  {
+    width: "0%",  
+    opacity:1, 
+    ease: Linear.easeNone
+  },'-=.5') 
+    
+    
   })
   $('.featured-slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
     
@@ -306,7 +329,7 @@ var st = $(this).scrollTop() / 10;
 
 
         TweenLite.to(timeline, {
-          timeScale: 10.5,
+          timeScale: 8,
           ease: Strong.easeIn
         })
         var circle = document.querySelectorAll('a .outer-circle svg g');
@@ -351,50 +374,43 @@ var st = $(this).scrollTop() / 10;
       y: 150
     })
     timeline
-      .to($animationCircle, 9, {
+      .to($animationCircle, 8, {
         css: {
           'stroke-dashoffset': 10
         }
       })
-      .to($slideBg, 9, {
+      .to($slideBg, 8, {
         scale: 1.15,
         ease: Linear.easeOut
-      }, '-=9')
+      }, '-=8')
       .to($link, 1, {
         autoAlpha: 1,
         y: 0
-      }, '-=9')
+      }, '-=8')
       .to($slideText2, 2, {
         y: 0,
         autoAlpha: 1,
         delay: .50,
         ease: Power4.easeOut
-      }, '-=9')
+      }, '-=8')
       .to($slideText1, 2, {
         y: 0,
         autoAlpha: 1,
         delay: .75,
         ease: Power4.easeOut
-      }, '-=9')
-      .to($slideText2, .5, {
-        y: 150
+      },'-=8')
+      .to($slideText1, .5,{ 
+        autoAlpha:0, 
+        ease: Power4.easeOut
       })
-      .to($slideText1, .5, {
-        y: 150,
-        delay: .25
+      .to($slideText2, .5,{
+        autoAlpha:0, 
+        ease: Power4.easeOut, 
       }, '-=.5')
       .to($link, .5, {
-        y: 50,
-        delay: .50,
-        autoAlpha: 0
+        autoAlpha:0, 
+        ease: Power4.easeOut, 
       }, '-=.5')
-      .to($animationCircle, 1, {
-        css: {
-          'stroke-dashoffset': -150
-        },
-        ease: Quint.easeIn
-      }, '-=1')
-
   }
 
 

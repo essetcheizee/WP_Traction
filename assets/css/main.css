@@ -7133,6 +7133,10 @@ p {
      object-fit: cover;
 }
 
+.elementor img {
+  max-width: 0;
+}
+
 /* hover animation */
 @-webkit-keyframes marqueeAnimation {
   from {

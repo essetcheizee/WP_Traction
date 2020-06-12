@@ -156,12 +156,10 @@
 }
 
 .bg-slider{
-  position:absolute;
+  position: relative;;
   height: 100%;
   width: 0%;
-  background-color: #ffff;
   z-index: 2;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   transform: scale(1.15,1.15);
   img{
     height: 100%;
@@ -172,7 +170,7 @@
     transform: scale(1.15,1.15);
   }
   &::after {
-    position: absolute;
+    position: relative;
     content: '';
     bottom: 0;
     left: 0;

@@ -7120,13 +7120,10 @@ p {
 }
 
 .bg-slider {
-  position: absolute;
+  position: relative;
   height: 100%;
   width: 0%;
-  background-color: #ffff;
   z-index: 2;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(black), to(rgba(0, 0, 0, 0)));
-  background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0));
   -webkit-transform: scale(1.15, 1.15);
           transform: scale(1.15, 1.15);
 }
@@ -7145,7 +7142,7 @@ p {
 }
 
 .bg-slider::after {
-  position: absolute;
+  position: relative;
   content: '';
   bottom: 0;
   left: 0;

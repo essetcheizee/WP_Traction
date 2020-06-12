@@ -7120,7 +7120,7 @@ p {
 }
 
 .bg-slider {
-  position: relative;
+  position: absolute;
   height: 100%;
   width: 0%;
   z-index: 2;
@@ -7142,7 +7142,7 @@ p {
 }
 
 .bg-slider::after {
-  position: relative;
+  position: absolute;
   content: '';
   bottom: 0;
   left: 0;

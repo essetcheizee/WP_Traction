@@ -1,7 +1,6 @@
 jQuery(function ($) {
 
   TweenLite.set($('.bg-slider'), {scale:1.15})
-  TweenLite.set($('.bg-slider').find('img'), {opacity:1 ,scale:1.15})
 
   var timeline = new TimelineMax();
   $('.featured-slider').slick({

@@ -75,10 +75,10 @@ var lastScrollTop = 0;
 var st = $(this).scrollTop() / 10;
    
    if (st > lastScrollTop){
-       TweenLite.set($('.rotating-logo .svg-wrapper svg'), {rotation:st/10})
+       TweenLite.set($('.rotating-logo .svg-wrapper svg'), {rotation:st/2})
    } else {
       
-      TweenLite.set($('.rotating-logo .svg-wrapper svg' ), {rotation:st/10})
+      TweenLite.set($('.rotating-logo .svg-wrapper svg' ), {rotation:st/2})
    }
    lastScrollTop = st;
     var steps = $('.strategy__section.--wrapper .strategy__section__steps ul li');

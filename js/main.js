@@ -275,7 +275,7 @@ var st = $(this).scrollTop() / 10;
     width: "0%",  
     opacity:1, 
     ease: Linear.easeNone
-  },'-=.5') 
+  },'-=.75') 
     
     
   })

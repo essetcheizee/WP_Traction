@@ -253,7 +253,7 @@ var st = $(this).scrollTop() / 10;
       css: {
         'stroke-dashoffset': -150
       },
-      ease: Power2.easeIn
+      ease: Linear.easeNone
     })
     //  .to($slideText2, .5, {
     //   y: 150
@@ -274,7 +274,7 @@ var st = $(this).scrollTop() / 10;
   {
     width: "0%",  
     opacity:1, 
-    ease: Power2.easeIn
+    ease: Linear.easeNone
   },'-=1') 
     
     
@@ -283,7 +283,7 @@ var st = $(this).scrollTop() / 10;
     
     $bgSlider = $('.hero').find('.bg-slider');
     
-    TweenMax.set($bgSlider, {width:'100%', opacity:0})
+    TweenMax.set($bgSlider, {width:'0%', opacity:0})
     timeline.timeScale(1)
     $img = $(slick.$slides).find('img');
     $animationCircle = $('.item-pagination.active').find('.outer-circle svg g')

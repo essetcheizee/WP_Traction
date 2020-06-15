@@ -56,11 +56,19 @@
 
 .arrow-link {
   overflow: hidden;
+  visibility: hidden;
 }
 
 .title {
+ 
   padding-top: 1vw;
   overflow-y: hidden;
+  .title-first-line{
+  visibility: hidden;
+  } 
+  .title-second-line{
+    visibility: hidden;
+    }
 }
 
 .title:not(:last-child) {

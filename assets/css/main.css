@@ -7161,10 +7161,6 @@ p {
   opacity: 61%;
 }
 
-.elementor img {
-  max-width: 100vw;
-}
-
 /* hover animation */
 @-webkit-keyframes marqueeAnimation {
   from {

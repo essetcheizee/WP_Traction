@@ -253,7 +253,7 @@ var st = $(this).scrollTop() / 10;
       css: {
         'stroke-dashoffset': -150
       },
-      ease: Quint.easeIn
+      ease: Power2.easeIn
     })
     //  .to($slideText2, .5, {
     //   y: 150
@@ -274,8 +274,8 @@ var st = $(this).scrollTop() / 10;
   {
     width: "0%",  
     opacity:1, 
-    ease: Linear.easeNone
-  },'-=.75') 
+    ease: Power2.easeIn
+  },'-=1') 
     
     
   })

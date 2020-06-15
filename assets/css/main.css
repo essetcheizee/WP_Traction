@@ -7135,6 +7135,10 @@ p {
           transform: scale(1.15, 1.15);
 }
 
+.bg-slider .elementor img {
+  max-width: 100vw;
+}
+
 .bg-slider::after {
   position: absolute;
   content: '';

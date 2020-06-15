@@ -166,10 +166,6 @@
     object-fit: cover;
     transform: scale(1.15,1.15);
   }
-  
-  .elementor img{
-  max-width: 100vw;
-  }
   &::after {
     position: absolute;
     content: '';
@@ -194,3 +190,6 @@
     opacity: 61%;
 }
  }
+.elementor img{
+  max-width: 100vw;
+}

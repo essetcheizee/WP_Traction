@@ -126,9 +126,6 @@ var st = $(this).scrollTop() / 10;
     $link = $slider.find('a')	
 	  console.log($nextSlide)
 
-    TweenLite.set($slideBg, {
-      scale: 1
-    })
     TweenLite.set($animationCircle, {
       css: {
         'stroke-dashoffset': 160

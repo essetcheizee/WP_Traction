@@ -125,7 +125,7 @@ class custom_hero_slider extends Widget_Base {
         $index = $slider->current_post + 1;
 ?>
 
-    <a href="#" class="item-pagination" data-bg='<?= get_the_post_thumbnail_url()?>'>
+    <a href="javascript:void(0)" class="item-pagination" data-bg='<?= get_the_post_thumbnail_url()?>'>
         <?php echo $index ?>
 
         <div class="inner-circle">

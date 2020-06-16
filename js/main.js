@@ -209,7 +209,7 @@ var st = $(this).scrollTop() / 10;
     $bgSlider.find('img').attr('src', active)
     clearTimeout(timer)
     timeline.timeScale(1)
-    console.log(currentSlide)
+    console.log(active)
     //Current Slide Animation
     $currentSlide = $(slick.$slides[currentSlide]);
     $currentBg = $currentSlide.find('img');

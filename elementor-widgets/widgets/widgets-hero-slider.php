@@ -64,7 +64,7 @@ class custom_hero_slider extends Widget_Base {
 
     ?>
     <div class="bg-slider">
-    <img src="<?php echo get_template_directory_uri()?>/assets/img/hero1-1-scaled.jpg" alt="">
+    <img src="" alt="">
     </div>
 <div class="featured-slider">
   

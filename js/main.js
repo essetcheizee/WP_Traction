@@ -206,7 +206,6 @@ var st = $(this).scrollTop() / 10;
     var active = $($('.item-pagination')[currentSlide]).data('bg');
     $bgSlider = $('.hero').find('.bg-slider');
     
-    $bgSlider.find('img').attr('src', active)
     clearTimeout(timer)
     timeline.timeScale(1)
     console.log(active)
@@ -245,6 +244,7 @@ var st = $(this).scrollTop() / 10;
       y: 50
     })
    
+    $bgSlider.find('img').attr('src', active)
     beforeChange.to($animationCircle, 1, {
       css: {
         'stroke-dashoffset': -150

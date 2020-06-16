@@ -122,9 +122,7 @@ var st = $(this).scrollTop() / 10;
     $slideText1 = $slider.find('.title-first-line')
     $slideText2 = $slider.find('.title-second-line')
     $animationCircle = $($pagination).find('.outer-circle svg g')
-    $bgSlider = $('.hero').find('.bg-slider')
     $link = $slider.find('a')	
-    var active = $($('.item-pagination')[0]).data('bg');
     TweenLite.set($animationCircle, {
       css: {
         'stroke-dashoffset': 160
@@ -143,7 +141,6 @@ var st = $(this).scrollTop() / 10;
       y: 150
     })
 
-      $bgSlider.find('img').attr('src', active)
 
       $animationCircle = $($pagination).find('.outer-circle svg g')
 
@@ -268,22 +265,20 @@ var st = $(this).scrollTop() / 10;
     // }, '-=.5')
   .fromTo($bgSlider, 1, {
     width: "100%", 
-    opacity:1
   },
   {
-    width: "0%",  
-    opacity:1, 
+    width: "0%", 
     ease: Linear.easeNone
   },'-=1') 
     
     
   })
-  $('.featured-slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+  $('.featured-slider').on('afterChange', function (event, slick, currentSlide) {
     
     var active = $($('.item-pagination')[currentSlide]).data('bg');
     $bgSlider = $('.hero').find('.bg-slider');
     
-    TweenMax.set($bgSlider, {width:'0%', opacity:0})
+    TweenMax.set($bgSlider, {width:'0%'})
     $bgSlider.find('img').attr('src', active)
     
     timeline.timeScale(1)

@@ -292,8 +292,9 @@ var st = $(this).scrollTop() / 10;
     })
 
     if ($($pagination[currentSlide]).hasClass('active')) {
-      animateSlider()
-
+      setInterval(function(){
+        animateSlider()
+      }, 1000)
       timer = setInterval(function () {
         if (timeline.isActive()) {
 

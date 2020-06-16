@@ -78,7 +78,7 @@ class custom_featured_projects extends Widget_Base {
                     } ?>">
                         <div class="featured__image">
                         <?php if(has_post_thumbnail()){ ?>
-                            <?php the_post_thumbnail()?>
+                            <?php the_post_thumbnail('full')?>
                             <?php } ?>
                         </div>
                         <div class="featured__content">
@@ -138,7 +138,7 @@ class custom_featured_projects extends Widget_Base {
                     } ?>">
                         <div class="featured__image">
                         <?php if(has_post_thumbnail()){ ?>
-                            <?php the_post_thumbnail()?>
+                            <?php the_post_thumbnail('full')?>
                             <?php } ?>
                         </div>
                         <div class="featured__content">

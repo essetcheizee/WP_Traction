@@ -5,7 +5,7 @@ jQuery(function ($) {
     arrow: false,
     infinite: true,
     autoplaySpeed:1e4,
-    speed:470,
+    speed:770,
     draggable: false,
     swipe: false,
     fade:true,
@@ -301,7 +301,7 @@ var st = $(this).scrollTop() / 10;
 
           $('.featured-slider').slick('slickGoTo', parseInt(currentSlide + 1), {
             autoplay: true
-          }, 3000)
+          })
         }
       });
     }

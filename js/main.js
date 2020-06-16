@@ -150,7 +150,7 @@ var st = $(this).scrollTop() / 10;
           'stroke-dashoffset': 10
         }
       })
-      .to($slideBg, 8, {
+      .to($slideBg, 7, {
         scale: 1.15,
         ease: Linear.easeOut
       }, '-=8')
@@ -371,7 +371,7 @@ var st = $(this).scrollTop() / 10;
           'stroke-dashoffset': 10
         }
       })
-      .to($slideBg, 8, {
+      .to($slideBg, 7, {
         scale: 1.15,
         ease: Linear.easeOut
       }, '-=8')

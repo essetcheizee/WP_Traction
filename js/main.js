@@ -207,10 +207,14 @@ var st = $(this).scrollTop() / 10;
 
   $('.featured-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
     var beforeChange = new TimelineMax();
+    
+    var active = $($('.item-pagination')[currentSlide]).data('bg');
     $bgSlider = $('.hero').find('.bg-slider');
+    
+    $bgSlider.find('img').attr('src', active)
     clearTimeout(timer)
     timeline.timeScale(1)
-
+    console.log(currentSlide)
     //Current Slide Animation
     $currentSlide = $(slick.$slides[currentSlide]);
     $currentBg = $currentSlide.find('img');

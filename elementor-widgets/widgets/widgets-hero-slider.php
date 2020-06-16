@@ -77,7 +77,7 @@ class custom_hero_slider extends Widget_Base {
 
         <div class="background">
          <?php if(has_post_thumbnail()){ ?>
-                            <?php the_post_thumbnail('full')?>
+                            <?php the_post_thumbnail(array('class' => 'featured_image'))?>
                             <?php } ?>
         </div>
 

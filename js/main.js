@@ -143,8 +143,6 @@ var st = $(this).scrollTop() / 10;
       y: 150
     })
 
-    if ($($pagination).hasClass('active')) {
-
       $bgSlider.find('img').attr('src', active)
 
       $animationCircle = $($pagination).find('.outer-circle svg g')
@@ -197,7 +195,7 @@ var st = $(this).scrollTop() / 10;
           )
         }
       });
-    }
+    
   }
   $(window).on('load', function () {
 

@@ -5,7 +5,7 @@ jQuery(function ($) {
     arrow: false,
     infinite: true,
     autoplaySpeed:1e4,
-    speed:1500,
+    speed:500,
     draggable: false,
     swipe: false,
     fade:true,
@@ -244,7 +244,7 @@ var st = $(this).scrollTop() / 10;
       y: 50
     })
    
-    $bgSlider.find('img').attr('src', active)
+    var image = $bgSlider.find('img').attr('src', active)
     beforeChange.to($animationCircle, 1, {
       css: {
         'stroke-dashoffset': -150

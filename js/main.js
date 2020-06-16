@@ -5,7 +5,7 @@ jQuery(function ($) {
     arrow: false,
     infinite: true,
     autoplaySpeed:1e4,
-    speed:470,
+    speed:430,
     draggable: false,
     swipe: false,
     fade:true,

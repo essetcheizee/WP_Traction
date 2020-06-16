@@ -124,8 +124,7 @@ var st = $(this).scrollTop() / 10;
     $animationCircle = $($pagination).find('.outer-circle svg g')
     $bgSlider = $('.hero').find('.bg-slider')
     $link = $slider.find('a')	
-	  console.log($nextSlide)
-
+    var active = $($('.item-pagination')[0]).data('bg');
     TweenLite.set($animationCircle, {
       css: {
         'stroke-dashoffset': 160
@@ -146,7 +145,7 @@ var st = $(this).scrollTop() / 10;
 
     if ($($pagination).hasClass('active')) {
 
-
+      $bgSlider.find('img').attr('src', active)
 
       $animationCircle = $($pagination).find('.outer-circle svg g')
 
@@ -208,7 +207,6 @@ var st = $(this).scrollTop() / 10;
 
   $('.featured-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
     var beforeChange = new TimelineMax();
-    var active = $($('.item-pagination')[currentSlide]).data('bg');
     $bgSlider = $('.hero').find('.bg-slider');
     clearTimeout(timer)
     timeline.timeScale(1)
@@ -247,8 +245,7 @@ var st = $(this).scrollTop() / 10;
       autoAlpha: 0,
       y: 50
     })
-    $bgSlider.find('img').attr('src', active)
-    
+   
     beforeChange.to($animationCircle, 1, {
       css: {
         'stroke-dashoffset': -150
@@ -281,9 +278,12 @@ var st = $(this).scrollTop() / 10;
   })
   $('.featured-slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
     
+    var active = $($('.item-pagination')[currentSlide]).data('bg');
     $bgSlider = $('.hero').find('.bg-slider');
     
     TweenMax.set($bgSlider, {width:'0%', opacity:0})
+    $bgSlider.find('img').attr('src', active)
+    
     timeline.timeScale(1)
     $img = $(slick.$slides).find('img');
     $animationCircle = $('.item-pagination.active').find('.outer-circle svg g')

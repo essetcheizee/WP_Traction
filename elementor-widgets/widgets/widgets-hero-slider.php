@@ -63,13 +63,15 @@ class custom_hero_slider extends Widget_Base {
    $slider     = new \WP_Query($args);
 
     ?>
+    <?php
+     if ( $slider->have_posts() ) {
+         ?>
     <div class="bg-slider">
-    <img src="" alt="">
+    <?php the_post_thumbnail()?>
     </div>
 <div class="featured-slider">
   
     <?php
-     if ( $slider->have_posts() ) {
                 while ( $slider->have_posts() ) { $slider->the_post()
             ?>
 
@@ -114,9 +116,12 @@ class custom_hero_slider extends Widget_Base {
 
     <?php
                 }
-            }
-            wp_reset_postdata(); ?>
+          ?>
 </div>
+<?php 
+  }
+  wp_reset_postdata()
+?>
 <div class="hero-pagination">
 
 <?php

@@ -301,7 +301,7 @@ var st = $(this).scrollTop() / 10;
 
           $('.featured-slider').slick('slickGoTo', parseInt(currentSlide + 1), {
             autoplay: true
-          })
+          }, 500)
         }
       });
     }

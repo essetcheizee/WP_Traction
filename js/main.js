@@ -194,11 +194,9 @@ var st = $(this).scrollTop() / 10;
       });
     
   }
-  $(window).on('load', function () {
 
     firstLoadAnim()
 
-  })
 
   $('.featured-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
     var beforeChange = new TimelineMax();

@@ -275,11 +275,9 @@ var st = $(this).scrollTop() / 10;
   })
   $('.featured-slider').on('afterChange', function (event, slick, currentSlide) {
     
-    var active = $($('.item-pagination')[currentSlide]).data('bg');
     $bgSlider = $('.hero').find('.bg-slider');
     
     TweenMax.set($bgSlider, {width:'0%'})
-    $bgSlider.find('img').attr('src', active)
     
     timeline.timeScale(1)
     $img = $(slick.$slides).find('img');

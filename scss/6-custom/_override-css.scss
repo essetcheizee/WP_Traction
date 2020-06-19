@@ -155,19 +155,14 @@
 .elementor.elementor-88.elementor-88.elementor-edit-area.elementor-edit-mode.elementor-edit-area-active {
   background-color: #fff!important;
 }
-.bg-slider{
-  position:absolute;
-  height: 100%;
-  width: 0;
-  background-color: black;
-  z-index: 1000;
-}
 
 .bg-slider{
   height: 100%;
   width: 0%;
-  z-index: 2;
   overflow: hidden;
+  
+  position:absolute;
+  z-index: 99999;
   img{
     height: 100%;
     width: 100vw;

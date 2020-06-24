@@ -208,7 +208,6 @@ var st = $(this).scrollTop() / 10;
     
     clearTimeout(timer)
     timeline.timeScale(1)
-    console.log(active)
     //Current Slide Animation
     $currentSlide = $(slick.$slides[currentSlide]);
     $currentBg = $currentSlide.find('img');
@@ -344,11 +343,9 @@ var st = $(this).scrollTop() / 10;
   $('.hero').on('mousedown touchstart', function(){
     clearInterval(timer)
     timeline.pause()
-  console.log('touched')
   })
   $('.hero').on('mouseup touchend', function(){
     timeline.play()
-    console.log('released')
     timer = setInterval(function () {
       if (timeline.isActive()) {
 
@@ -466,7 +463,6 @@ var st = $(this).scrollTop() / 10;
   var slider = document.querySelectorAll('.services__slider__item');
   var trigger = $('.services__slider'),
     maxDragX = $('.services__slider__item').length * (-130);
-  console.log(maxDragX)
 
   Draggable.create(slider, {
     type: "x",
@@ -578,5 +574,4 @@ var st = $(this).scrollTop() / 10;
 
 window.addEventListener("scroll", function (event) {
     var scroll = this.scrollY;
-    console.log(scroll)
 });

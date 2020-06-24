@@ -62,7 +62,7 @@ var lastScrollTop = 0;
     var pData = $('.strategy__section.--wrapper .strategy__section__description ul li');
     pData.each(function () {
 
-      if (height > $(this).offset().top / 1.3) {
+      if (height > $(this).offset().top / 1.35) {
         $(this).addClass('active');
         $(this).prev().removeClass('active');
       } else {

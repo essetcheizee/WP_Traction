@@ -90,7 +90,7 @@ class custom_footer extends Widget_Base {
        
         ?>
     <footer class="footer-section">
-        <div class="mdl__wrap --py-8 --pad-extend">
+        <div class="mdl__wrap --py-12 --pad-extend">
 
             <div class="footer__container upper">
 

@@ -5,9 +5,9 @@ p {
     line-height: 3.2vw;
     color: getColor(Black);
 
-    span {
-
-        
+    @include lg {
+        font-size: 16px!important;
+        line-height: 1.6em!important;
     }
 }
 

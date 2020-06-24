@@ -188,4 +188,398 @@
             }
         }
     }
+
+    @include lg {
+
+        .footer__container {
+
+            &.upper {
+                justify-content: space-between;
+
+                .footer__wrapper {
+
+                    &.large {
+                        max-width: initial;
+
+                        .footer__section {
+
+                            &.contact {
+
+                                .contact-list {
+
+                                    li {
+
+                                        &:not(:last-child) {
+                                            margin-bottom: 16px;
+                                        }
+
+                                        a {
+                                            font-size: 20px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.small {
+                        justify-content: flex-end;
+
+                        .footer__section {
+
+                            &.link {
+                                display: none
+                            }
+
+
+                        }
+
+                        .footer__wrapper__inner {
+                            &.etc {
+                                .footer__section__inner {
+
+                                    &.extra-links {
+                                        ul {
+                                            li {
+                                                &:not(:last-child) {
+                                                    margin-bottom: 16px;
+                                                }
+
+                                                a {
+                                                    font-size: 16px;
+
+                                                    .svg-wrapper,
+                                                    .svg-wrapper svg {
+                                                        height: 24px;
+                                                        width: 24px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    &.social {
+                                        margin-bottom: 24px;
+
+                                        ul {
+                                            li {
+                                                &:not(:last-child) {
+                                                    margin-right: 16px;
+                                                }
+
+                                                a {
+
+                                                    .svg-wrapper,
+                                                    .svg-wrapper svg {
+                                                        height: 40px;
+                                                        width: 40px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.lower {
+                .footer__wrapper {
+                    .footer__section {
+                        &.traction {
+                            margin-right: 0;
+
+                            p {}
+                        }
+
+                        &.brand {
+                            a {
+                                .img-wrapper {
+                                    height: auto;
+                                    width: 200px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include md {
+
+        .footer__container {
+
+            &.upper {
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                .footer__wrapper {
+
+                    &.large {
+                        width: 100%;
+                        max-width: initial;
+
+                        .footer__section {
+
+                            &.contact {
+                                margin-bottom: 40px;
+
+                                h2 {
+                                    font-size: 34px !important;
+                                    margin-bottom: 24px;
+                                }
+
+                                .contact-list {
+
+                                    li {
+
+                                        &:not(:last-child) {
+                                            margin-bottom: 16px;
+                                        }
+
+                                        a {
+                                            font-size: 20px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.small {
+                        width: 100%;
+                        max-width: 100%;
+                        justify-content: flex-start;
+
+                        .footer__section {
+
+                            &.link {
+                                display: none
+                            }
+
+
+                        }
+
+                        .footer__wrapper__inner {
+                            &.etc {
+                                display: flex;
+                                flex-direction: column;
+
+                                .footer__section__inner {
+
+                                    &.extra-links {
+                                        order: 1;
+                                        margin-bottom: 40px;
+
+                                        ul {
+                                            li {
+                                                &:not(:last-child) {
+                                                    margin-bottom: 16px;
+                                                }
+
+                                                a {
+                                                    font-size: 18px;
+
+                                                    .svg-wrapper,
+                                                    .svg-wrapper svg {
+                                                        height: 24px;
+                                                        width: 24px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    &.social {
+                                        margin-bottom: 24px;
+                                        order: 2;
+
+                                        ul {
+                                            li {
+                                                &:not(:last-child) {
+                                                    margin-right: 16px;
+                                                }
+
+                                                a {
+
+                                                    .svg-wrapper,
+                                                    .svg-wrapper svg {
+                                                        height: 40px;
+                                                        width: 40px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.lower {
+                .footer__wrapper {
+                    .footer__section {
+                        &.traction {
+                            margin-right: 0;
+
+                            p {}
+                        }
+
+                        &.brand {
+                            a {
+                                .img-wrapper {
+                                    height: auto;
+                                    width: 200px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include sm {
+
+        .footer__container {
+
+            &.upper {
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                .footer__wrapper {
+
+                    &.large {
+                        width: 100%;
+                        max-width: initial;
+
+                        .footer__section {
+
+                            &.contact {
+                                margin-bottom: 40px;
+
+                                h2 {
+                                    font-size: 26px !important;
+                                    margin-bottom: 24px;
+                                }
+
+                                .contact-list {
+
+                                    li {
+
+                                        &:not(:last-child) {
+                                            margin-bottom: 16px;
+                                        }
+
+                                        a {
+                                            font-size: 16px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.small {
+                        width: 100%;
+                        max-width: 100%;
+                        justify-content: flex-start;
+
+                        .footer__section {
+
+                            &.link {
+                                display: none
+                            }
+
+
+                        }
+
+                        .footer__wrapper__inner {
+                            &.etc {
+                                display: flex;
+                                flex-direction: column;
+
+                                .footer__section__inner {
+
+                                    &.extra-links {
+                                        order: 1;
+                                        margin-bottom: 40px;
+
+                                        ul {
+                                            li {
+                                                &:not(:last-child) {
+                                                    margin-bottom: 16px;
+                                                }
+
+                                                a {
+                                                    font-size: 16px;
+
+                                                    .svg-wrapper,
+                                                    .svg-wrapper svg {
+                                                        height: 24px;
+                                                        width: 24px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    &.social {
+                                        margin-bottom: 24px;
+                                        order: 2;
+
+                                        ul {
+                                            li {
+                                                &:not(:last-child) {
+                                                    margin-right: 16px;
+                                                }
+
+                                                a {
+
+                                                    .svg-wrapper,
+                                                    .svg-wrapper svg {
+                                                        height: 40px;
+                                                        width: 40px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.lower {
+                .footer__wrapper {
+                    @include flex-content(flex-start, flex-start);
+                    flex-direction: column;
+
+                    .footer__section {
+
+                        &.traction {
+                            margin-right: 0;
+                        }
+                        
+                        &.brand {
+                            margin-bottom: 24px;
+                            
+                            a {
+                                .img-wrapper {
+                                    height: auto;
+                                    width: 160px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

@@ -47,6 +47,10 @@
   width: auto !important;
   bottom: .65vw !important;
   left: 7vw !important;
+
+  @include lg {
+    display: none!important
+  }
 }
 
 .testimonial .slick-dotted.slick-slider {
@@ -59,16 +63,19 @@
   visibility: hidden;
 }
 
+
 .title {
- 
+
   padding-top: 1vw;
   overflow-y: hidden;
-  .title-first-line{
-  visibility: hidden;
-  } 
-  .title-second-line{
+
+  .title-first-line {
     visibility: hidden;
-    }
+  }
+
+  .title-second-line {
+    visibility: hidden;
+  }
 }
 
 .title:not(:last-child) {
@@ -145,30 +152,34 @@
   height: 100%;
 }
 
-.col, [class*='col-'] {
-  padding: 0!important;
+.col,
+[class*='col-'] {
+  padding: 0 !important;
 }
 
 .elementor {
-  width: 100%!important;
-}
-.elementor.elementor-88.elementor-88.elementor-edit-area.elementor-edit-mode.elementor-edit-area-active {
-  background-color: #fff!important;
+  width: 100% !important;
 }
 
-.bg-slider{
+.elementor.elementor-88.elementor-88.elementor-edit-area.elementor-edit-mode.elementor-edit-area-active {
+  background-color: #fff !important;
+}
+
+.bg-slider {
   height: 100%;
   width: 0%;
   overflow: hidden;
-  
-  position:absolute;
+
+  position: absolute;
   z-index: 99999;
-  img{
+
+  img {
     height: 100%;
     width: 100vw;
     object-fit: cover;
-    transform: scale(1.15,1.15);
+    transform: scale(1.15, 1.15);
   }
+
   &::after {
     position: absolute;
     content: '';
@@ -179,9 +190,9 @@
     background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     z-index: 999;
     opacity: 35%;
-}
+  }
 
-&::before {
+  &::before {
     position: absolute;
     content: '';
     top: 0;
@@ -191,8 +202,9 @@
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     z-index: 999;
     opacity: 61%;
+  }
 }
- }
-.elementor img{
+
+.elementor img {
   max-width: 100vw;
 }

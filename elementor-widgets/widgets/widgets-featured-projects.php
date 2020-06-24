@@ -56,7 +56,7 @@ class custom_featured_projects extends Widget_Base {
         ?>
         <section class="featured mdl__wrap --py-12">
             <div class="section-heading">
-                <h2>Selected Projects</h2>
+                <h1>Selected Projects</h1>
             </div>
             
             <div class="featured-box">

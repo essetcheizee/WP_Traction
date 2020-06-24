@@ -36,4 +36,15 @@
 
         }
     }
+
+    @include lg {
+
+        .marquee__section__track {
+
+            .img-wrapper {
+
+                width: 25vw;
+            }
+        }
+    }
 }

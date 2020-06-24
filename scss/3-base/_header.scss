@@ -53,6 +53,19 @@
                 }
             }
         }
+
+        @include lg {
+            span {
+                font-size: 26px;
+            }
+
+            .svg-wrapper,
+            .svg-wrapper svg {
+                height: 40px;
+                width: 40px;
+            }
+        }
+
     }
 
     &.mobile {
@@ -66,4 +79,11 @@
         }
     }
 
+    @include sm {
+        .toggle-menu {
+            span {
+                display: none;
+            }
+        }
+    }
 }

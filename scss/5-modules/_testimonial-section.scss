@@ -33,6 +33,7 @@
                         &__name {
                             margin: 0 auto;
                             max-width: 40vw;
+
                         }
                     }
 
@@ -62,17 +63,74 @@
                             &__left {
                                 transform: rotate(180deg);
                                 margin-left: .5vw;
-                                
+
                             }
-                            
+
                             &__right {
                                 margin-right: .5vw;
 
                             }
                         }
                     }
+
+                    @include lg {
+
+                        &__item {
+
+                            &__quote {
+                                max-width: 100%;
+
+                                p {
+
+                                    font-size: 24px !important;
+                                }
+                            }
+
+                            &__name {
+                                max-width: 100%;
+
+                                h3 {
+                                    line-height: 1.5em;
+                                }
+                            }
+                        }
+
+                        &.control {
+                            display: none
+                        }
+                    }
+
+                    @include md {
+
+                        &__item {
+
+                            &__quote {
+                                max-width: 100%;
+
+                                p {
+
+                                    font-size: 16px !important;
+                                    margin-bottom: 24px;
+                                }
+                            }
+
+                            &__name {
+                                max-width: 100%;
+                            }
+                        }
+
+                        &.control {
+                            display: none
+                        }
+                    }
+
                 }
             }
         }
+    }
+
+    @include sm {
+        padding-bottom: $grid*20;
+        padding-top: $grid*20;
     }
 }

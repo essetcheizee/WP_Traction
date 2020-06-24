@@ -76,4 +76,22 @@
             }
         }
     }
+
+    @include lg {
+        width: 100%;
+        right: initial;
+
+        a {
+            font-size: 22px;
+
+            &:not(:last-child) {
+                margin-right: 24px;
+            }
+        }
+        a, .inner-circle, .outer-circle, .inner-circle svg, .outer-circle svg {
+            height: 50px!important;
+            width: 50px!important;
+        }
+    }
 }
+

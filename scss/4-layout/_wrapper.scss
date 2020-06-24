@@ -8,4 +8,13 @@
         width: 86%!important;
     }
     
+    @include lg {
+        width: 88%!important;
+    }
+
+    @include md {
+        padding-top: $grid*15!important;
+        padding-bottom: $grid*15!important;
+    }
+
 }

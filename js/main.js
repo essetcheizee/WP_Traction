@@ -345,7 +345,6 @@ var st = $(this).scrollTop() / 10;
     clearInterval(timer)
     timeline.pause()
     }else{
-      return
     }
   })
   $('.hero').on('mouseup touchend', function(){

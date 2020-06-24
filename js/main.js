@@ -352,15 +352,13 @@ var st = $(this).scrollTop() / 10;
       if (timeline.isActive()) {
 
       }else{
-
-        timer = setInterval(function () {
         $slider = $('.slick-active'),
         $nextSlide = $($slider).next().index()
         $('.featured-slider').slick('slickGoTo', parseInt($nextSlide), false
         )
-      })
+     
       }
-    ;
+    
   
   })
 

@@ -62,7 +62,7 @@ var lastScrollTop = 0;
     var pData = $('.strategy__section.--wrapper .strategy__section__description ul li');
     pData.each(function () {
 
-      if (height > $(this).offset().top / 1.3) {
+      if (height > $(this).offset().top / 1.36 ) {
         $(this).addClass('active');
         $(this).prev().removeClass('active');
       } else {
@@ -208,7 +208,6 @@ var st = $(this).scrollTop() / 10;
     
     clearTimeout(timer)
     timeline.timeScale(1)
-    console.log(active)
     //Current Slide Animation
     $currentSlide = $(slick.$slides[currentSlide]);
     $currentBg = $currentSlide.find('img');
@@ -341,7 +340,27 @@ var st = $(this).scrollTop() / 10;
     }
 
   })
+  $('.hero').on('mousedown touchstart', function(){
+    if(timeline.isActive()){
+    clearInterval(timer)
+    timeline.pause()
+    }else{
+    }
+  })
+  $('.hero').on('mouseup touchend', function(){
+    timeline.play()
+      if (timeline.isActive()) {
 
+      }else{
+        $slider = $('.slick-active'),
+        $nextSlide = $($slider).next().index()
+        $('.featured-slider').slick('slickGoTo', parseInt($nextSlide), false
+        )
+     
+      }
+    
+  
+  })
 
   function animateSlider() {
 
@@ -414,6 +433,7 @@ var st = $(this).scrollTop() / 10;
       $('.featured-slider').slick('slickPlay')
 
     } else {
+      
       $('.featured-slider').slick('slickPause')
     }
   })
@@ -446,7 +466,6 @@ var st = $(this).scrollTop() / 10;
   var slider = document.querySelectorAll('.services__slider__item');
   var trigger = $('.services__slider'),
     maxDragX = $('.services__slider__item').length * (-130);
-  console.log(maxDragX)
 
   Draggable.create(slider, {
     type: "x",
@@ -558,5 +577,4 @@ var st = $(this).scrollTop() / 10;
 
 window.addEventListener("scroll", function (event) {
     var scroll = this.scrollY;
-    console.log(scroll)
 });

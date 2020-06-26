@@ -340,53 +340,7 @@ var st = $(this).scrollTop() / 10;
     }
 
   })
-<<<<<<< HEAD
-  $('.hero').on('mousedown touchstart', function(){
-    if(timeline.isActive()){
-    clearInterval(timer)
-    timeline.pause()
-    }else{
-    }
-  })
-  $('.hero').on('mouseup touchend', function(){
-    timeline.play()
-      if (timeline.isActive()) {
-
-      }else{
-
-        timer = setInterval(function () {
-        $slider = $('.slick-active'),
-        $nextSlide = $($slider).next().index()
-        $('.featured-slider').slick('slickGoTo', parseInt($nextSlide), false
-        )
-      })
-      }
-    ;
-=======
-
-  // $('.hero').on('mousedown touchstart', function(){
-  //   if(timeline.isActive()){
-  //   clearInterval(timer)
-  //   timeline.pause()
-  //   }else{
-  //   }
-  // })
-  // $('.hero').on('mouseup touchend', function(){
-  //   timeline.play()
-  //     if (timeline.isActive()) {
-
-  //     }else{
-  //       $slider = $('.slick-active'),
-  //       $nextSlide = $($slider).next().index()
-  //       $('.featured-slider').slick('slickGoTo', parseInt($nextSlide), false
-  //       )
-     
-  //     }
-    
->>>>>>> 1ee3dd1b07ddb977895146119c5d0179e5af70fa
   
-  // })
-
   function animateSlider() {
 
     TweenLite.set($slideBg, {

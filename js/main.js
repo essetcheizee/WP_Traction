@@ -4,7 +4,7 @@ jQuery(function ($) {
   $('.featured-slider').slick({
     arrow: false,
     infinite: true,
-    autoplaySpeed:1e4,
+    autoplaySpeed:1.6e4,
     speed:430,
     draggable: false,
     swipe: false,
@@ -145,31 +145,31 @@ var st = $(this).scrollTop() / 10;
       $animationCircle = $($pagination).find('.outer-circle svg g')
 
       timeline
-      .to($animationCircle, 8, {
+      .to($animationCircle, 14, {
         css: {
           'stroke-dashoffset': 10
         }
       })
-      .to($slideBg, 7, {
+      .to($slideBg, 13, {
         scale: 1.15,
         ease: Linear.easeOut
-      }, '-=8')
+      }, '-=14')
       .to($link, 1, {
         autoAlpha: 1,
         y: 0
-      }, '-=8')
+      }, '-=14')
       .to($slideText2, 2, {
         y: 0,
         autoAlpha: 1,
         delay: .50,
         ease: Power4.easeOut
-      }, '-=8')
+      }, '-=14')
       .to($slideText1, 2, {
         y: 0,
         autoAlpha: 1,
         delay: .75,
         ease: Power4.easeOut
-      },'-=8')
+      },'-=14')
       .to($slideText1, .5,{ 
         autoAlpha:0,
          ease: Power4.easeOut
@@ -364,31 +364,31 @@ var st = $(this).scrollTop() / 10;
       y: 150
     })
     timeline
-      .to($animationCircle, 8, {
+      .to($animationCircle, 14, {
         css: {
           'stroke-dashoffset': 10
         }
       })
-      .to($slideBg, 7, {
+      .to($slideBg, 13, {
         scale: 1.15,
         ease: Linear.easeOut
-      }, '-=8')
+      }, '-=14')
       .to($link, 1, {
         autoAlpha: 1,
         y: 0
-      }, '-=8')
+      }, '-=14')
       .to($slideText2, 2, {
         y: 0,
         autoAlpha: 1,
         delay: .50,
         ease: Power4.easeOut
-      }, '-=8')
+      }, '-=14')
       .to($slideText1, 2, {
         y: 0,
         autoAlpha: 1,
         delay: .75,
         ease: Power4.easeOut
-      },'-=8')
+      },'-=14')
       .to($slideText1, .5,{ 
         autoAlpha:0, 
         ease: Power4.easeOut

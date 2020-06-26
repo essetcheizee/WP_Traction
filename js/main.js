@@ -320,7 +320,7 @@ var st = $(this).scrollTop() / 10;
 
 
         TweenLite.to(timeline, {
-          timeScale: 8,
+          timeScale: 14,
           ease: Strong.easeIn
         })
         var circle = document.querySelectorAll('a .outer-circle svg g');

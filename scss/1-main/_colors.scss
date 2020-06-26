@@ -1,5 +1,4 @@
-$colors: (
-    Primary: #1E3799,
+$colors: (Primary: #1E3799,
     Secondary: #E55039,
     FontColor: #535461,
     White: #FFFFFF,
@@ -12,7 +11,7 @@ $colors: (
 
 @function colorOpacity($color, $percentage) {
     $opacity: $percentage / 100;
-    @return rgba( $color, $opacity );
+    @return rgba($color, $opacity);
 }
 
 @function tint($color, $percentage) {

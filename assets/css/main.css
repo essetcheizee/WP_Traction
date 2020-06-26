@@ -7329,7 +7329,7 @@ p {
 }
 
 .strategy .overlay__text h1 {
-  font-size: 11.4vw;
+  font-size: 11.4vw !important;
 }
 
 .strategy .overlay__image__top {

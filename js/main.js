@@ -60,6 +60,8 @@ jQuery(function ($) {
 
   var position = $(window).scrollTop(); 
 
+
+
   var lastScrollTop = 0;
   $(window).scroll(function () {
     var height = $(window).scrollTop();
@@ -75,6 +77,18 @@ jQuery(function ($) {
       }
 
    });
+
+
+  var scroll = $(window).scrollTop();
+  if(scroll > position) {
+    $('.menus-wrapper').addClass('hide');
+    $('.menus-wrapper').removeClass('show');
+  } else {
+    $('.menus-wrapper').addClass('show');
+    $('.menus-wrapper').removeClass('hide');
+  }
+  position = scroll;
+    
 
 var st = $(this).scrollTop() / 10;
    

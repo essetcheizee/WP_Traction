@@ -67,13 +67,13 @@ jQuery(function ($) {
     // var pData = $('.strategy__section.--wrapper .strategy__section__description ul li');
     // pData.each(function () {
 
-    //   if (height > $(this).offset().top / 1.36 ) {
-    //     $(this).addClass('active');
-    //     $(this).prev().removeClass('active');
-    //   } else {
-    //     $(this).removeClass('active');
+      if (height > $(this).offset().top / 1.36 ) {
+        $(this).addClass('active');
+        $(this).prev().removeClass('active');
+      } else {
+        $(this).removeClass('active');
 
-    //   }
+      }
 
     // });
     
@@ -103,24 +103,24 @@ jQuery(function ($) {
     lastScrollTop = st;
     // var steps = $('.strategy__section.--wrapper .strategy__section__steps ul li');
 
-    // steps.each(function () {
-    //   var activeDesc = $('.strategy__section.--wrapper .strategy__section__description ul li.active');
-    //   if ($(this).attr('data-order') === $(activeDesc).attr('data-order')) {
-    //     $(this).prev().removeClass('active');
-    //     $(this).addClass('active');
-    //   } else {
-    //     $(this).removeClass('active');
+    steps.each(function () {
+      var activeDesc = $('.strategy__section.--wrapper .strategy__section__description ul li.active');
+      if ($(this).attr('data-order') === $(activeDesc).attr('data-order')) {
+        $(this).prev().removeClass('active');
+        $(this).addClass('active');
+      } else {
+        $(this).removeClass('active');
 
-    //   }
-    // });
+      }
+    });
 
-    // if (height < current - 30) {
-    //   $('.strategy__section.--wrapper .strategy__section__description ul li p').addClass('active');
+    if (height < current - 30) {
+      $('.strategy__section.--wrapper .strategy__section__description ul li p').addClass('active');
 
-    // } else {
-    //   // 
-    //   $('.strategy__section.--wrapper .strategy__section__description ul li p').removeClass('active');
-    // }
+    } else {
+      
+      $('.strategy__section.--wrapper .strategy__section__description ul li p').removeClass('active');
+    }
 
   });
 

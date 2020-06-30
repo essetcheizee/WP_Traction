@@ -65,15 +65,15 @@
 
                     g,
                     path {
-                        fill: #F596BA
+                        fill: getColor(Secondary);
                     }
 
                     line {
-                        stroke: #F596BA;
+                        stroke:getColor(Secondary);
                     }
                 }
 
-                color: #F596BA;
+                color: getColor(Secondary);
             }
         }
 

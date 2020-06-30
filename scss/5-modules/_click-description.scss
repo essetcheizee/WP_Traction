@@ -1,0 +1,168 @@
+.click-description {
+
+    .mdl__wrap {
+        @include flex-content(flex-start, flex-start);
+
+        .description-list {
+            width: 70%;
+            margin-right: 5vw;
+
+            ul {
+                position: relative;
+                overflow: hidden;
+
+                li {
+                    position: absolute;
+                    opacity: 0;
+                    top: 0;
+                    transition: all 0.5s linear;
+
+                    &.active {
+                        opacity: 1;
+                    }
+
+                    p {
+                        // display: none;
+                        color: getColor(Primary);
+                        line-height: 2em;
+                    }
+
+                    &:first-child {
+
+                        p {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            .arrow-link {
+                color: getColor(Secondary);
+                z-index: 9;
+
+                .svg-wrapper {
+                    margin: 0;
+                    margin-right: .5vw;
+
+                    svg {
+
+                        path,
+                        g {
+                            fill: getColor(Secondary);
+                        }
+
+                        line {
+                            stroke: getColor(Secondary) !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        .description-toggle {
+            width: 30%;
+
+            ul {
+
+                li {
+
+                    &:not(:last-child) {
+                        margin-bottom: .5vw;
+                    }
+
+                    a {
+                        &.active {
+                            color: getColor(Primary);
+                        }
+
+                        color: colorOpacity(getColor(Black), 40);
+                    }
+                }
+            }
+        }
+
+        @include md {
+            flex-wrap: wrap;
+
+            .description-list {
+                width: 100%;
+                order: 2;
+                margin: 0;
+            }
+
+            .description-toggle {
+                width: 100%;
+                order: 1;
+
+                ul {
+                    @include flex-content(center, flex-start);
+                    margin-bottom: 8px;
+
+                    li {
+                        &:not(:last-child) {
+                            margin-right: 16px;
+                        }
+
+                        a {
+                            text-align: center;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        @include sm {
+            flex-wrap: wrap;
+
+            .description-list {
+                width: 100%;
+                order: 2;
+                text-align: center;
+
+                ul {
+
+                    li {
+
+                        p {
+                            font-size: 14   px!important;
+                            text-align: center;
+                            margin-bottom: 16px;
+                        }
+                    }
+                }
+
+                .arrow-link {
+                    display: inline-block;
+                }
+            }
+
+            .description-toggle {
+                width: 100%;
+                order: 1;
+
+                ul {
+                    @include flex-content(center, center);
+                    margin-bottom: 24px;
+                    flex-wrap: wrap;
+
+                    li {
+                        @include flex-content(center, center);
+                        width: 100%;
+
+                        &:not(:last-child) {
+                            margin: 0;
+                            margin-bottom: 8px;
+                        }
+
+                        a {
+                            text-align: center;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@keyframes menuShow {
+    0% {
+        margin-top: -3vw;
+        opacity: 0;
+    }
+
+    100% {
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes menuHide {
+    0% {
+        margin-top: 0;
+        opacity: 1;
+    }
+
+    100% {
+        margin-top: -3vw;
+        opacity: 0;
+    }
+}

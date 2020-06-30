@@ -5,7 +5,7 @@
         margin-bottom: 4vw;
 
         h2 {
-            color: #141C42;
+            color: getcolor(Primary);
         }
 
     }
@@ -50,7 +50,7 @@
             &__content {
                 h4 {
                     font-size: 1.5vw;
-                    color: #141C42;
+                    color: getcolor(Primary);
                     margin-bottom: 1vw;
                 }
 

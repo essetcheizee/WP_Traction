@@ -1,0 +1,57 @@
+.preview {
+    margin-bottom: $grid*12!important;  
+    height: 30vw;
+    
+    .mdl__wrap {
+        height: 100%;
+        width: 100%;
+        padding: 0!important;
+
+        .img-wrapper {
+            height: 100%;
+            width: 100%;
+            
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &.--center {
+        height: 40vw;
+        width: 100%;
+
+    }
+
+    &.--right {
+        width: 80%;
+        margin: 0 auto;
+        margin-right: 0;
+
+        
+    }
+    &.--left {
+        width: 80%;
+        margin: 0 auto;
+        margin-left: 0;
+
+        
+    }
+
+    @include md {
+        width: 100%!important;
+
+        &.--center {
+            height: 60vw;
+        }
+
+        &.--left {
+            height: 40vw;
+        }
+        &.--right {
+            height: 40vw;
+        }
+    }
+}

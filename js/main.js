@@ -4,17 +4,17 @@ jQuery(function ($) {
   $('.featured-slider').slick({
     arrow: false,
     infinite: true,
-    autoplaySpeed:1.6e4,
-    speed:430,
+    autoplaySpeed: 1.6e4,
+    speed: 430,
     draggable: false,
     swipe: false,
-    fade:true,
+    fade: true,
     cssEase: 'linear'
   });
   var timer;
-	
-	
-	
+
+
+
 
   $('.item-pagination').eq(0).addClass('active')
 
@@ -56,8 +56,13 @@ jQuery(function ($) {
 
     // console.log('hello!');
   });
-var lastScrollTop = 0;
+
+
+  var position = $(window).scrollTop(); 
+
+  var lastScrollTop = 0;
   $(window).scroll(function () {
+
     // var height = $(window).scrollTop();
     // var pData = $('.strategy__section.--wrapper .strategy__section__description ul li');
     // pData.each(function () {
@@ -70,17 +75,32 @@ var lastScrollTop = 0;
 
     //   }
 
-   // });
+    // });
+    
+  var scroll = $(window).scrollTop();
+  if(scroll > position) {
+    $('.menus-wrapper').addClass('hide');
+    $('.menus-wrapper').removeClass('show');
+  } else {
+    $('.menus-wrapper').addClass('show');
+    $('.menus-wrapper').removeClass('hide');
+  }
+  position = scroll;
+    
 
-var st = $(this).scrollTop() / 10;
-   
-   if (st > lastScrollTop){
-       TweenLite.set($('.rotating-logo .svg-wrapper svg'), {rotation:st/2})
-   } else {
-      
-      TweenLite.set($('.rotating-logo .svg-wrapper svg' ), {rotation:st/2})
-   }
-   lastScrollTop = st;
+    var st = $(this).scrollTop() / 10;
+
+    if (st > lastScrollTop) {
+      TweenLite.set($('.rotating-logo .svg-wrapper svg'), {
+        rotation: st / 2
+      })
+    } else {
+
+      TweenLite.set($('.rotating-logo .svg-wrapper svg'), {
+        rotation: st / 2
+      })
+    }
+    lastScrollTop = st;
     // var steps = $('.strategy__section.--wrapper .strategy__section__steps ul li');
 
     // steps.each(function () {
@@ -104,50 +124,59 @@ var st = $(this).scrollTop() / 10;
 
   });
 
-//Lets try Scroll Magic
+  //Lets try Scroll Magic
 
-  var controller = new ScrollMagic.Controller({globalSceneOptions:{duration:'50%'}})
-   new ScrollMagic.Scene({
-    triggerElement: '#crawl',
-    triggerHook: 0.5,
-  })
-  .setClassToggle('#crawl', 'active')
-  .addIndicators()
-  .addTo(controller)
-  new ScrollMagic.Scene({triggerElement: "#walk"})
-  .setClassToggle("#walk", "active") // add class toggle
-  .addIndicators() // add indicators (requires plugin)
-  .addTo(controller);
-  new ScrollMagic.Scene({triggerElement: "#run"})
-  .setClassToggle("#run", "active") // add class toggle
-  .addIndicators() // add indicators (requires plugin)
-  .addTo(controller);
-setInterval(function(){
-if($('#crawl').hasClass('active')){
- var step1 = $('.strategy__section.--wrapper .strategy__section__steps ul li')[0];
- $(step1).addClass('active')
-}else{
-  
-  var step1 = $('.strategy__section.--wrapper .strategy__section__steps ul li')[0]
-  $(step1).removeClass('active')
-}
-if($('#walk').hasClass('active')){
-  var step1 = $('.strategy__section.--wrapper .strategy__section__steps ul li')[1];
-  $(step1).addClass('active')
- }else{
-   
-   var step1 = $('.strategy__section.--wrapper .strategy__section__steps ul li')[1]
-   $(step1).removeClass('active')
- }
- if($('#run').hasClass('active')){
-  var step1 = $('.strategy__section.--wrapper .strategy__section__steps ul li')[2];
-  $(step1).addClass('active')
- }else{
-   
-   var step1 = $('.strategy__section.--wrapper .strategy__section__steps ul li')[2]
-   $(step1).removeClass('active')
- }
-})
+  // var controller = new ScrollMagic.Controller({
+  //   globalSceneOptions: {
+  //     duration:'40%'
+  //   }
+  // })
+  // new ScrollMagic.Scene({
+  //     triggerElement: '#crawl',
+  //     triggerHook: 0.5,
+  //   })
+  //   .setClassToggle('#crawl', 'active')
+  //   .addIndicators()
+  //   .addTo(controller)
+  // new ScrollMagic.Scene({
+  //     triggerElement: "#walk"
+  //   })
+  //   .setClassToggle("#walk", "active") // add class toggle
+  //   .addIndicators() // add indicators (requires plugin)
+  //   .addTo(controller);
+  // new ScrollMagic.Scene({
+  //     triggerElement: "#run"
+  //   })
+  //   .setClassToggle("#run", "active") // add class toggle
+  //   .addIndicators() // add indicators (requires plugin)
+  //   .addTo(controller);
+  // setInterval(function () {
+  //   if ($('#crawl').hasClass('active')) {
+  //     var step1 = $('.strategy__section.--wrapper .strategy__section__steps ul li')[0];
+  //     $(step1).addClass('active')
+  //   } else {
+
+  //     var step1 = $('.strategy__section.--wrapper .strategy__section__steps ul li')[0]
+  //     $(step1).removeClass('active')
+  //   }
+  //   if ($('#walk').hasClass('active')) {
+  //     var step1 = $('.strategy__section.--wrapper .strategy__section__steps ul li')[1];
+  //     $(step1).addClass('active')
+  //   } else {
+
+  //     var step1 = $('.strategy__section.--wrapper .strategy__section__steps ul li')[1]
+  //     $(step1).removeClass('active')
+  //   }
+  //   if ($('#run').hasClass('active')) {
+  //     var step1 = $('.strategy__section.--wrapper .strategy__section__steps ul li')[2];
+  //     $(step1).addClass('active')
+  //   } else {
+
+  //     var step1 = $('.strategy__section.--wrapper .strategy__section__steps ul li')[2]
+  //     $(step1).removeClass('active')
+  //   }
+  // })
+
   function firstLoadAnim() {
     var $slider = $('.slick-active'),
       $sliderIndex = $slider.data('slick-index'),
@@ -157,7 +186,7 @@ if($('#walk').hasClass('active')){
     $slideText1 = $slider.find('.title-first-line')
     $slideText2 = $slider.find('.title-second-line')
     $animationCircle = $($pagination).find('.outer-circle svg g')
-    $link = $slider.find('a')	
+    $link = $slider.find('a')
     TweenLite.set($animationCircle, {
       css: {
         'stroke-dashoffset': 160
@@ -177,9 +206,10 @@ if($('#walk').hasClass('active')){
     })
 
 
-      $animationCircle = $($pagination).find('.outer-circle svg g')
 
-      timeline
+    $animationCircle = $($pagination).find('.outer-circle svg g')
+
+    timeline
       .to($animationCircle, 14, {
         css: {
           'stroke-dashoffset': 10
@@ -204,30 +234,29 @@ if($('#walk').hasClass('active')){
         autoAlpha: 1,
         delay: .75,
         ease: Power4.easeOut
-      },'-=14')
-      .to($slideText1, .5,{ 
-        autoAlpha:0,
-         ease: Power4.easeOut
-        })
-      .to($slideText2, .5,{
-        autoAlpha:0, 
-        ease: Power4.easeOut, 
+      }, '-=14')
+      .to($slideText1, .5, {
+        autoAlpha: 0,
+        ease: Power4.easeOut
+      })
+      .to($slideText2, .5, {
+        autoAlpha: 0,
+        ease: Power4.easeOut,
       }, '-=.5')
       .to($link, .5, {
-        autoAlpha:0,
-        ease: Power4.easeOut, 
+        autoAlpha: 0,
+        ease: Power4.easeOut,
       }, '-=.5')
-       
-      timer = setInterval(function () {
-        if (timeline.isActive()) {
 
-        } else {
+    timer = setInterval(function () {
+      if (timeline.isActive()) {
 
-          $('.featured-slider').slick('slickGoTo', parseInt($nextSlide), false
-          )
-        }
-      });
-    
+      } else {
+
+        $('.featured-slider').slick('slickGoTo', parseInt($nextSlide), false)
+      }
+    });
+
   }
   $(window).on('load', function () {
 
@@ -235,12 +264,35 @@ if($('#walk').hasClass('active')){
 
   })
 
+  var heightList = $('.description-list ul li.active').outerHeight();
+  $('.description-list ul').css('height', heightList + 'px');
+
+  $('.description-toggle ul li a').each(function () {
+    $(this).click(function (e) {
+      e.preventDefault();
+      $('.description-toggle ul li a.active').removeClass('active');
+      $(this).addClass('active');
+      $('.description-list ul li').filter(function () {
+        if ($('.description-toggle ul li a.active').data('target') === $(this).data('target')) {
+          $(this).addClass('active');
+
+          var heightList = $('.description-list ul li.active').outerHeight();
+          $('.description-list ul').css('height', heightList + 'px');
+        } else {
+          $(this).removeClass('active');
+        }
+      });
+    })
+  })
+
+
+
   $('.featured-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
     var beforeChange = new TimelineMax();
-    
+
     var active = $($('.item-pagination')[currentSlide]).data('bg');
     $bgSlider = $('.hero').find('.bg-slider');
-    
+
     clearTimeout(timer)
     timeline.timeScale(1)
     //Current Slide Animation
@@ -277,42 +329,43 @@ if($('#walk').hasClass('active')){
       autoAlpha: 0,
       y: 50
     })
-   
+
     var image = $bgSlider.find('img').attr('src', active)
     beforeChange.to($animationCircle, .85, {
-      css: {
-        'stroke-dashoffset': -150
-      },
-      ease: Linear.easeNone
-    })
-    //  .to($slideText2, .5, {
-    //   y: 150
-    // },'-=.5')
-    // .to($slideText1, .5, {
-    //   y: 150,
-    //   delay: .25
-    // }, '-=.5')
-    // .to($link, .5, {
-    //   y: 50,
-    //   delay: .50,
-    //   autoAlpha: 0
-    // }, '-=.5')
-  .fromTo($bgSlider, .85, {
-    width: "100%", 
-  },
-  {
-    width: "0%", 
-    ease: Linear.easeNone
-  },'-=.75') 
-    
-    
+        css: {
+          'stroke-dashoffset': -150
+        },
+        ease: Linear.easeNone
+      })
+      //  .to($slideText2, .5, {
+      //   y: 150
+      // },'-=.5')
+      // .to($slideText1, .5, {
+      //   y: 150,
+      //   delay: .25
+      // }, '-=.5')
+      // .to($link, .5, {
+      //   y: 50,
+      //   delay: .50,
+      //   autoAlpha: 0
+      // }, '-=.5')
+      .fromTo($bgSlider, .85, {
+        width: "100%",
+      }, {
+        width: "0%",
+        ease: Linear.easeNone
+      }, '-=.75')
+
+
   })
   $('.featured-slider').on('afterChange', function (event, slick, currentSlide) {
-    
+
     $bgSlider = $('.hero').find('.bg-slider');
-    
-    TweenMax.set($bgSlider, {width:'0%'})
-    
+
+    TweenMax.set($bgSlider, {
+      width: '0%'
+    })
+
     timeline.timeScale(1)
     $img = $(slick.$slides).find('img');
     $animationCircle = $('.item-pagination.active').find('.outer-circle svg g')
@@ -375,7 +428,7 @@ if($('#walk').hasClass('active')){
     }
 
   })
-  
+
   function animateSlider() {
 
     TweenLite.set($slideBg, {
@@ -423,18 +476,18 @@ if($('#walk').hasClass('active')){
         autoAlpha: 1,
         delay: .75,
         ease: Power4.easeOut
-      },'-=14')
-      .to($slideText1, .5,{ 
-        autoAlpha:0, 
+      }, '-=14')
+      .to($slideText1, .5, {
+        autoAlpha: 0,
         ease: Power4.easeOut
       })
-      .to($slideText2, .5,{
-        autoAlpha:0, 
-        ease: Power4.easeOut, 
+      .to($slideText2, .5, {
+        autoAlpha: 0,
+        ease: Power4.easeOut,
       }, '-=.5')
       .to($link, .5, {
-        autoAlpha:0, 
-        ease: Power4.easeOut, 
+        autoAlpha: 0,
+        ease: Power4.easeOut,
       }, '-=.5')
   }
 
@@ -447,7 +500,7 @@ if($('#walk').hasClass('active')){
       $('.featured-slider').slick('slickPlay')
 
     } else {
-      
+
       $('.featured-slider').slick('slickPause')
     }
   })
@@ -550,7 +603,7 @@ if($('#walk').hasClass('active')){
 
 
 
-  if($('ul.menu li.menu-item').hasClass('current_page_item')){
+  if ($('ul.menu li.menu-item').hasClass('current_page_item')) {
     $('ul.menu li.menu-item.current_page_item').find('a').addClass('active')
   }
 
@@ -569,8 +622,8 @@ if($('#walk').hasClass('active')){
 
     })
   });
-	
-	
+
+
   $(window).on('elementor/frontend/init', function () {
     elementorFrontend.hooks.addAction('frontend/element_ready/traction_testi.default', function ($scope, $) {
 
@@ -590,5 +643,5 @@ if($('#walk').hasClass('active')){
 })(jQuery)
 
 window.addEventListener("scroll", function (event) {
-    var scroll = this.scrollY;
+  var scroll = this.scrollY;
 });

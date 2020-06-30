@@ -69,7 +69,7 @@
                 transform: rotate(270deg);
 
                 g {
-                    stroke: #F596BA;
+                    stroke: getColor(Secondary);
                     stroke-dashoffset: 160px;
                     stroke-dasharray: 160px;
                 }

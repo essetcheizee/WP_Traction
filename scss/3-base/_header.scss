@@ -5,14 +5,24 @@
     mix-blend-mode: exclusion;
     z-index: 9999999999;
 
+    
+    &.show {
+        animation: menuShow 0.3s linear forwards;
+    }
+
+    &.hide {
+        animation: menuHide 0.3s linear forwards;
+    }
+
+
     .toggle-menu {
         cursor: pointer;
         @include flex-content(center, center);
         border: none;
 
+
         span {
             color: getColor(White);
-            margin-top: .5vw;
             font-size: 1.4vw;
             pointer-events: none;
         }

@@ -95,10 +95,10 @@
 
                         a {
                             font-size: 4vw;
-                            color: #141C42;
+                            color: getcolor(Primary);
 
                             &.active {
-                                color: #F596BA;
+                                color: getcolor(Secondary);
                             }
                         }
                     }

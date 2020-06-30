@@ -1031,11 +1031,11 @@ ul li {
 
 .navigation__wrapper .navigation__links ul li a {
   font-size: 4vw;
-  color: getcolor(Primary);
+  color: #141C42;
 }
 
 .navigation__wrapper .navigation__links ul li a.active {
-  color: getcolor(Secondary);
+  color: #F596BA;
 }
 
 .navigation__wrapper__inner {
@@ -6544,7 +6544,7 @@ p {
 }
 
 .section-heading h1 {
-  color: getcolor(Primary);
+  color: #141C42;
   font-size: 2.4vw;
 }
 
@@ -7042,7 +7042,7 @@ p {
 .featured .featured-box .box .featured__content .title {
   font-size: 1.64vw;
   margin-bottom: 0.4vw;
-  color: getcolor(Primary);
+  color: #141C42;
 }
 
 .featured .featured-box .box .featured__content .paragraph p {
@@ -7287,12 +7287,12 @@ p {
 }
 
 .page__content__title {
-  color: getcolor(Primary);
+  color: #141C42;
   line-height: 4.5vw;
 }
 
 .page__content__title span {
-  color: getcolor(Secondary);
+  color: #F596BA;
 }
 
 .--arrow-down h1 {
@@ -7316,7 +7316,7 @@ p {
 }
 
 .strategy {
-  background: getcolor(Primary);
+  background: #141C42;
   position: relative;
   padding-top: 35vw;
   padding-bottom: 25vw;
@@ -7479,7 +7479,7 @@ p {
 }
 
 .group__content__wrapper .group__content__heading .title {
-  color: getcolor(Primary);
+  color: #141C42;
   font-size: 2vw;
   line-height: 4vw;
 }
@@ -7507,7 +7507,7 @@ p {
 }
 
 .services .mdl__wrap h2 {
-  color: getcolor(Primary);
+  color: #141C42;
 }
 
 .services .services__slider {
@@ -7552,7 +7552,7 @@ p {
 
 .services .services__slider__item__content h4 {
   font-size: 1.5vw;
-  color: getcolor(Primary);
+  color: #141C42;
   margin-bottom: 1vw;
 }
 
@@ -7813,7 +7813,7 @@ p {
   }
   .click-description .mdl__wrap .description-toggle ul li a {
     text-align: center;
-    font-size: 12px;
+    font-size: 18px;
   }
 }
 

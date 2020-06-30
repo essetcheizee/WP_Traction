@@ -2,11 +2,11 @@
     margin-bottom: $grid*20;
 
     &__title {  
-        color:getcolor(Primary);
+        color:getColor(Primary);
         line-height: 4.5vw;
 
         span {
-            color: getcolor(Secondary);
+            color: getColor(Secondary);
 
         }
     }

@@ -62,10 +62,9 @@ jQuery(function ($) {
 
   var lastScrollTop = 0;
   $(window).scroll(function () {
-
-    // var height = $(window).scrollTop();
-    // var pData = $('.strategy__section.--wrapper .strategy__section__description ul li');
-    // pData.each(function () {
+    var height = $(window).scrollTop();
+    var pData = $('.strategy__section.--wrapper .strategy__section__description ul li');
+    pData.each(function () {
 
       if (height > $(this).offset().top / 1.36 ) {
         $(this).addClass('active');
@@ -75,33 +74,18 @@ jQuery(function ($) {
 
       }
 
-    // });
-    
-  var scroll = $(window).scrollTop();
-  if(scroll > position) {
-    $('.menus-wrapper').addClass('hide');
-    $('.menus-wrapper').removeClass('show');
-  } else {
-    $('.menus-wrapper').addClass('show');
-    $('.menus-wrapper').removeClass('hide');
-  }
-  position = scroll;
-    
+   });
 
-    var st = $(this).scrollTop() / 10;
-
-    if (st > lastScrollTop) {
-      TweenLite.set($('.rotating-logo .svg-wrapper svg'), {
-        rotation: st / 2
-      })
-    } else {
-
-      TweenLite.set($('.rotating-logo .svg-wrapper svg'), {
-        rotation: st / 2
-      })
-    }
-    lastScrollTop = st;
-    // var steps = $('.strategy__section.--wrapper .strategy__section__steps ul li');
+var st = $(this).scrollTop() / 10;
+   
+   if (st > lastScrollTop){
+       TweenLite.set($('.rotating-logo .svg-wrapper svg'), {rotation:st/2})
+   } else {
+      
+      TweenLite.set($('.rotating-logo .svg-wrapper svg' ), {rotation:st/2})
+   }
+   lastScrollTop = st;
+    var steps = $('.strategy__section.--wrapper .strategy__section__steps ul li');
 
     steps.each(function () {
       var activeDesc = $('.strategy__section.--wrapper .strategy__section__description ul li.active');
@@ -112,15 +96,18 @@ jQuery(function ($) {
         $(this).removeClass('active');
 
       }
+
+      if (height < $(this).offset().top  - 1.35) {
+        $('.strategy__section.--wrapper .strategy__section__description ul li p').addClass('active');
+  
+      } else {
+        
+        $('.strategy__section.--wrapper .strategy__section__description ul li p').removeClass('active');
+      }
+
+
     });
 
-    if (height < current - 30) {
-      $('.strategy__section.--wrapper .strategy__section__description ul li p').addClass('active');
-
-    } else {
-      
-      $('.strategy__section.--wrapper .strategy__section__description ul li p').removeClass('active');
-    }
 
   });
 
@@ -177,6 +164,50 @@ jQuery(function ($) {
   //   }
   // })
 
+//   var controller = new ScrollMagic.Controller({globalSceneOptions:{duration:'200'}})
+//    new ScrollMagic.Scene({
+//     triggerElement: '#crawl',
+//     triggerHook: 0.5,
+//   })
+//   .setClassToggle('#crawl', 'active')
+//   .addIndicators()
+//   .addTo(controller)
+//   new ScrollMagic.Scene({triggerElement: "#walk"})
+//   .setClassToggle("#walk", "active") // add class toggle
+//   .addIndicators() // add indicators (requires plugin)
+//   .addTo(controller);
+//   new ScrollMagic.Scene({triggerElement: "#run"})
+//   .setClassToggle("#run", "active") // add class toggle
+//   .addIndicators() // add indicators (requires plugin)
+//   .addTo(controller);
+
+//   //check Active 
+// setInterval(function(){
+// if($('#crawl').hasClass('active')){
+//  var step1 = $('.strategy__section.--wrapper .strategy__section__steps ul li')[0];
+//  $(step1).addClass('active')
+// }else{
+  
+//   var step1 = $('.strategy__section.--wrapper .strategy__section__steps ul li')[0]
+//   $(step1).removeClass('active')
+// }
+// if($('#walk').hasClass('active')){
+//   var step1 = $('.strategy__section.--wrapper .strategy__section__steps ul li')[1];
+//   $(step1).addClass('active')
+//  }else{
+   
+//    var step1 = $('.strategy__section.--wrapper .strategy__section__steps ul li')[1]
+//    $(step1).removeClass('active')
+//  }
+//  if($('#run').hasClass('active')){
+//   var step1 = $('.strategy__section.--wrapper .strategy__section__steps ul li')[2];
+//   $(step1).addClass('active')
+//  }else{
+   
+//    var step1 = $('.strategy__section.--wrapper .strategy__section__steps ul li')[2]
+//    $(step1).removeClass('active')
+//  }
+// })
   function firstLoadAnim() {
     var $slider = $('.slick-active'),
       $sliderIndex = $slider.data('slick-index'),

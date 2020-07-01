@@ -52,7 +52,6 @@
 <?php endif; ?>
 
 
-<?php wp_reset_postdata(); ?>
 	<?php 
         // $prev_post = get_adjacent_post(false, '', true);
         $next_post = get_adjacent_post(false, '', false);
@@ -64,7 +63,7 @@
     <?php if(!empty($next_post)){ ?>
         <a href="<?php get_permalink($next_post->ID)?>">
             <h1>Next Project</h1>
-            <span><?= $next_post->post_title ?>
+            <span><?= $next_post->post_title() ?>
                 <div class="svg-wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" width="142.9" height="44.948"
                         viewBox="0 0 142.9 44.948">
@@ -107,6 +106,7 @@ wp_reset_query();
     </div>
 </section>
 	
+<?php wp_reset_postdata(); ?>
 
 </main>
 <?php get_footer(); ?>

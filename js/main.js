@@ -470,13 +470,7 @@ var st = $(this).scrollTop() / 10;
           })
         }, 1300)
       }
-    } else {
-      timer = setTimeout(function () {
-        $('.featured-slider').slick('slickGoTo', parseInt($sliderIndex), {
-          autoplay: true
-        })
-      }, 500)
-    }
+    } 
 
   })
 

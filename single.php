@@ -50,9 +50,9 @@
 <section class="post-pagination">
     <div class="mdl__wrap">
     <?php if(!empty($next_post)){ ?>
-        <a href="<?php get_permalink($next_post->ID)?>">
+        <a href="<?php echo get_permalink($next_post->ID)?>">
             <h1>Next Project</h1>
-            <span><?= $next_post->post_title() ?>
+            <span><?= $next_post->post_title ?>
                 <div class="svg-wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" width="142.9" height="44.948"
                         viewBox="0 0 142.9 44.948">

@@ -445,6 +445,8 @@ var st = $(this).scrollTop() / 10;
 
   $('.item-pagination').on('click', function (e) {
     clearInterval(timer);
+    
+    $(this).off('click')
     e.preventDefault;
     var $sliderIndex = $(this).index(),
       $slideIndex = $('.slick-active').data('slick-index');

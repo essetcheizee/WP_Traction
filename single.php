@@ -8,11 +8,13 @@
 
     <section class="page-banner">
     <div class="background">
-        <img src="./../assets/img/hero1.jpg">
+        <?php if(has_post_thumbnail()){ ?>
+        <?php the_post_thumbnail() ?>
+        <?php } ?>
     </div>
     <div class="mdl__wrap --py-20">
         <div class="content">
-            <h1 class="content__title"><?php the_title()?>/h1>
+            <h1 class="content__title"><?php the_title()?></h1>
             <a href="javascript:void(0);" class="content__arrow">
                 <div class="svg-wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" width="142.9" height="44.948"

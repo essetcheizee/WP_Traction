@@ -50,7 +50,7 @@
 <section class="post-pagination">
     <div class="mdl__wrap">
     <?php if(!empty($next_post)){ ?>
-        <a href="<?= get_permalink($next_post->ID)?>">
+        <a href="<?php echo get_permalink($next_post->ID)?>">
             <h1>Next Project</h1>
             <span><?= $next_post->post_title ?>
                 <div class="svg-wrapper">
@@ -70,7 +70,7 @@
     <?php }else{
             $first = new WP_Query({'category_name' => 'Featured', 'post_per_page' => 1, 'order' => 'ASC'}); $first->the_post();   
         ?>
-             <a href="<?= get_permalink($first->ID)?>">
+             <a href="<?php echo get_permalink($first->ID)?>">
              <h1>Next Project</h1>
              <span><?= $first->post_title ?>
                  <div class="svg-wrapper">

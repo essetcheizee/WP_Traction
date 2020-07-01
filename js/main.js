@@ -446,7 +446,6 @@ var st = $(this).scrollTop() / 10;
   $('.item-pagination').on('click', function (e) {
     clearInterval(timer);
     
-    $(this).off('click')
     e.preventDefault;
     var $sliderIndex = $(this).index(),
       $slideIndex = $('.slick-active').data('slick-index');
@@ -472,7 +471,7 @@ var st = $(this).scrollTop() / 10;
         }, 1300)
       }
     } else {
-      return
+      return false
     }
 
   })

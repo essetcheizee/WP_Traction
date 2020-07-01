@@ -33,17 +33,6 @@
     </div>
 </section>
 
-        <!-- <div class= -->
-
-        <section class="post-featured">
-            <div class="global-wrapper section-padding npt npb">
-                <div class="img-wrapper">
-                    <?php if(has_post_thumbnail()){ ?>
-                    <?php the_post_thumbnail() ?>
-                    <?php } ?>
-                </div>
-            </div>
-        </section>
 	
 	<?php the_content(); ?>
 

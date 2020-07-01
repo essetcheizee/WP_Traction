@@ -73,10 +73,10 @@
             'post_type'     => 'post',
             'post_per_page' => 1,
             'order'         => 'ASC'
-        )
+        );
             $first = new WP_Query($args); $first->the_post();   
         ?>
-             <a href="<?php get_permalink($first->ID)?>">
+             <a href="<?php echo get_permalink($first->ID)?>">
              <h1>Next Project</h1>
              <span><?= $first->post_title ?>
                  <div class="svg-wrapper">

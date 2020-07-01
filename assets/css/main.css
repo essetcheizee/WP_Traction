@@ -1191,8 +1191,8 @@ p {
 
 @media (max-width: 768px) {
   .mdl__wrap {
-    padding-top: 10.41667vw !important;
-    padding-bottom: 10.41667vw !important;
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
   }
 }
 
@@ -1743,7 +1743,7 @@ p {
   padding-right: 13.8889vw !important;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .--my-0-xl {
     padding-top: 0vw;
     padding-bottom: 0vw;
@@ -4404,7 +4404,7 @@ p {
   padding-right: 13.8889vw !important;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .--py-0-xl {
     padding-top: 0vw;
     padding-bottom: 0vw;
@@ -7295,6 +7295,54 @@ p {
   color: #F596BA;
 }
 
+@media (max-width: 768px) {
+  .page__content {
+    padding-top: 10vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  .page__content__title {
+    font-size: 44px !important;
+    line-height: initial !important;
+    margin-bottom: 12vw;
+  }
+  .page__content.--arrow-down h1::after {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .page__content {
+    padding-top: 10vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  .page__content__title {
+    font-size: 32px !important;
+    line-height: initial !important;
+    margin-bottom: 12vw;
+  }
+  .page__content.--arrow-down h1::after {
+    display: none;
+  }
+}
+
 .--arrow-down h1 {
   position: relative;
 }
@@ -7388,6 +7436,10 @@ p {
   position: relative;
 }
 
+.strategy__section.--wrapper.--desktop .strategy__section__description ul li h3 {
+  display: none;
+}
+
 .strategy__section.--wrapper .strategy__section__steps {
   position: -webkit-sticky;
   position: sticky;
@@ -7446,15 +7498,76 @@ p {
   margin-top: 1.75vw;
 }
 
-.strategy__section.--wrapper .strategy__section__description ul li.active p {
+.strategy__section.--wrapper .strategy__section__description ul li.active p,
+.strategy__section.--wrapper .strategy__section__description ul li.active h3 {
   opacity: 1;
 }
 
-.strategy__section.--wrapper .strategy__section__description ul li p {
+.strategy__section.--wrapper .strategy__section__description ul li p,
+.strategy__section.--wrapper .strategy__section__description ul li h3 {
   color: #fff;
   opacity: 0.4;
   -webkit-transition: all .5s;
   transition: all .5s;
+}
+
+@media (max-width: 1024px) {
+  .strategy__section.--wrapper {
+    margin-top: 60px;
+  }
+  .strategy__section.--wrapper .strategy__section__steps {
+    display: none;
+  }
+  .strategy__section.--wrapper .strategy__section__description {
+    width: 100%;
+  }
+  .strategy__section.--wrapper .strategy__section__description ul li:not(:last-child) {
+    margin-bottom: 80px;
+  }
+  .strategy__section.--wrapper .strategy__section__description ul li p {
+    font-size: 26px !important;
+  }
+  .strategy__section.--wrapper .strategy__section__description ul li h3 {
+    font-size: 48px !important;
+    display: block !important;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .strategy {
+    padding-top: 50vw;
+    padding-bottom: 50vw;
+  }
+  .strategy .overlay__text {
+    top: 45vw;
+  }
+  .strategy .overlay__image__top {
+    width: 100%;
+  }
+  .strategy .overlay__image__bottom {
+    width: 100%;
+  }
+  .strategy__section.--wrapper {
+    margin-top: 60px;
+  }
+  .strategy__section.--wrapper .strategy__section__steps {
+    display: none;
+  }
+  .strategy__section.--wrapper .strategy__section__description {
+    width: 100%;
+  }
+  .strategy__section.--wrapper .strategy__section__description ul li:not(:last-child) {
+    margin-bottom: 80px;
+  }
+  .strategy__section.--wrapper .strategy__section__description ul li p {
+    font-size: 20px !important;
+  }
+  .strategy__section.--wrapper .strategy__section__description ul li h3 {
+    font-size: 32px !important;
+    display: block !important;
+    margin-bottom: 16px;
+  }
 }
 
 .group__content .mdl__wrap {
@@ -7496,6 +7609,26 @@ p {
 
 .group__content__wrapper .group__content__text p:not(:last-child) {
   margin-bottom: 1vw;
+}
+
+@media (max-width: 768px) {
+  .group__content .mdl__wrap {
+    padding-top: 34.72225vw !important;
+  }
+  .group__content__wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .group__content__wrapper .group__content__heading {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .group__content__wrapper .group__content__heading h2 {
+    line-height: initial !important;
+  }
+  .group__content__wrapper .group__content__text {
+    width: 100%;
+  }
 }
 
 .services {
@@ -7560,6 +7693,69 @@ p {
   font-size: 1.04vw;
   line-height: 2vw;
   color: #8A8A8A;
+}
+
+@media (max-width: 992px) {
+  .services .mdl__wrap {
+    padding-top: 20px !important;
+    padding-bottom: 0px !important;
+  }
+  .services .mdl__wrap h2 {
+    margin-bottom: 50px;
+  }
+  .services .services__slider {
+    -ms-touch-action: initial !important;
+        touch-action: initial !important;
+    padding-bottom: 20px !important;
+  }
+  .services .services__slider__item {
+    width: 50vw;
+  }
+  .services .services__slider__item:first-child {
+    width: 50vw;
+    margin-left: 6.5vw;
+  }
+  .services .services__slider__item:not(:first-child) {
+    padding: 0 3vw;
+  }
+  .services .services__slider__item__img {
+    height: 40px;
+    width: 40px;
+  }
+  .services .services__slider__item__img img {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .services .services__slider {
+    -ms-touch-action: initial !important;
+        touch-action: initial !important;
+  }
+  .services .services__slider__item {
+    width: 80vw;
+  }
+  .services .services__slider__item:first-child {
+    width: 80vw;
+    margin-left: 6.5vw;
+  }
+  .services .services__slider__item:not(:first-child) {
+    padding: 0 3vw;
+  }
+  .services .services__slider__item__img {
+    height: 40px;
+    width: 40px;
+  }
+  .services .services__slider__item__img img {
+    height: 40px;
+    width: 40px;
+  }
+  .services .services__slider__item__content p {
+    font-size: 14px !important;
+    line-height: 2vw;
+    color: #8A8A8A;
+  }
 }
 
 .page-banner {

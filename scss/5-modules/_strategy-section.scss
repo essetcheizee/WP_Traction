@@ -1,5 +1,5 @@
 .strategy {
-    background:getColor(Primary);
+    background: getColor(Primary);
     position: relative;
     padding-top: 35vw;
     padding-bottom: 25vw;
@@ -19,7 +19,7 @@
             pointer-events: none;
 
             h1 {
-                font-size: 11.4vw!important;
+                font-size: 11.4vw !important;
 
             }
         }
@@ -68,6 +68,29 @@
             @include flex-content(flex-start, flex-start);
             // display:;
             position: relative;
+
+            &.--desktop {
+
+                .strategy__section {
+
+                    &__description {
+
+                        ul {
+
+                            li {
+
+                                h3 {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                    }
+
+                }
+
+
+            }
 
             .strategy__section {
 
@@ -137,16 +160,121 @@
                             }
 
                             &.active {
-                                p {
+
+                                p,
+                                h3 {
                                     opacity: 1;
                                 }
                             }
 
-                            p {
+                            p,
+                            h3 {
                                 color: #fff;
                                 opacity: 0.4;
                                 transition: all .5s;
 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include xl {
+
+        &__section {
+
+            &.--wrapper {
+                margin-top: 60px;
+
+                .strategy__section {
+
+                    &__steps {
+                        display: none;
+                    }
+
+                    &__description {
+                        width: 100%;
+
+                        ul {
+
+                            li {
+
+                                &:not(:last-child) {
+                                    margin-bottom: 80px;
+                                }
+
+                                p {
+                                    font-size: 26px !important;
+                                }
+
+                                h3 {
+                                    font-size: 48px !important;
+                                    display: block !important;
+                                    margin-bottom: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include sm {
+        padding-top: 50vw;
+        padding-bottom: 50vw;
+
+        .overlay {
+
+            &__text {
+                top: 45vw;
+            }
+
+            &__image {
+
+                &__top {
+                    width: 100%;
+                }
+
+                &__bottom {
+                    width: 100%;
+                }
+            }
+        }
+
+        &__section {
+
+            &.--wrapper {
+                margin-top: 60px;
+
+                .strategy__section {
+
+                    &__steps {
+                        display: none;
+                    }
+
+                    &__description {
+                        width: 100%;
+
+                        ul {
+
+                            li {
+
+                                &:not(:last-child) {
+                                    margin-bottom: 80px;
+                                }
+
+                                p {
+                                    font-size: 20px !important;
+                                }
+
+                                h3 {
+                                    font-size: 32px !important;
+                                    display: block !important;
+                                    margin-bottom: 16px;
+                                }
                             }
                         }
                     }

@@ -40,5 +40,33 @@
 
     }
 
+    @include md {
+
+        .mdl__wrap {
+            padding-top: $grid*50!important;
+        }
+
+        &__wrapper {
+            flex-wrap: wrap;
+
+            .group__content {
+
+                &__heading {
+                    width: 100%;
+                    margin-bottom: 24px;
+
+                    h2 {
+                        line-height: initial!important;
+                    }
+                }
+
+                &__text {
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+
 
 }

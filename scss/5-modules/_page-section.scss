@@ -1,13 +1,57 @@
 .page__content {
     margin-bottom: $grid*20;
 
-    &__title {  
-        color:getColor(Primary);
+    &__title {
+        color: getColor(Primary);
         line-height: 4.5vw;
 
         span {
             color: getColor(Secondary);
 
+        }
+    }
+
+    @include md {
+        padding-top: 10vw;
+        @include flex-content(center, center);
+        text-align: center;
+
+        &__title {
+            font-size: 44px !important;
+            line-height: initial !important;
+            margin-bottom: 12vw;
+        }
+
+        &.--arrow-down {
+
+            h1 {
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @include sm {
+        padding-top: 10vw;
+        @include flex-content(center, center);
+        text-align: center;
+
+        &__title {
+            font-size: 32px !important;
+            line-height: initial !important;
+            margin-bottom: 12vw;
+        }
+
+        &.--arrow-down {
+
+            h1 {
+
+                &::after {
+                    display: none;
+                }
+            }
         }
     }
 }

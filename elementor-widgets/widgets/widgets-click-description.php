@@ -36,6 +36,14 @@ class custom_click_desc extends Widget_Base {
 			]
         );
         $repeater->add_control(
+			'website_link',
+			[
+				'label' => __( 'Website Link', 'elementor' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => __( 'Type your link here', 'elementor' ),
+			]
+        );
+        $repeater->add_control(
             'toggle_title',
             [
                 'label' => __('Title', 'elementor'),
@@ -96,13 +104,7 @@ class custom_click_desc extends Widget_Base {
                             <?php } }?>
                     </ul>
 
-                    <a class="arrow-link" href="<?php
-                    if(!the_meta()){
-                        echo '#';
-                    }else{
-                        the_meta();
-                    }
-                    ?>">
+                    <a class="arrow-link" href="<?= $item['website_link'] ?>">
                         <div class="svg-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="142.9" height="44.948"
                                 viewBox="0 0 142.9 44.948">
                                 <g id="Group_112" data-name="Group 112" transform="translate(-1194 -71)">
@@ -162,13 +164,7 @@ class custom_click_desc extends Widget_Base {
                                 <# }); } #>
                     </ul>
 
-                    <a class="arrow-link" href="<?php
-                    if(!the_meta()){
-                        echo '#';
-                    }else{
-                        the_meta();
-                    }
-                    ?>">
+                    <a class="arrow-link" href="{{item.website_link}}">
                         <div class="svg-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="142.9" height="44.948"
                                 viewBox="0 0 142.9 44.948">
                                 <g id="Group_112" data-name="Group 112" transform="translate(-1194 -71)">

@@ -78,7 +78,7 @@
         ?>
              <a href="<?php echo get_permalink($first->ID)?>">
              <h1>Next Project</h1>
-             <span><?= $first->the_title ?>
+             <span><?= $first->the_title() ?>
                  <div class="svg-wrapper">
                      <svg xmlns="http://www.w3.org/2000/svg" width="142.9" height="44.948"
                          viewBox="0 0 142.9 44.948">

@@ -67,12 +67,12 @@
                 </div>
             </span>
         </a>
-    <?php }else{
-            $first = new WP_Query('posts_per_page=1&order=ASC'); $first->the_post();   
+    <?php }//else{
+           // $first = new WP_Query('posts_per_page=1&order=ASC'); $first->the_post();   
         ?>
-             <a href="<?php get_permalink($first->ID)?>">
+             <!-- <a href="<?php// get_permalink($first->ID)?>">
              <h1>Next Project</h1>
-             <span><?= $first->post_title ?>
+             <span><?=// $first->post_title ?>
                  <div class="svg-wrapper">
                      <svg xmlns="http://www.w3.org/2000/svg" width="142.9" height="44.948"
                          viewBox="0 0 142.9 44.948">
@@ -86,11 +86,11 @@
                      </svg>
                  </div>
              </span>
-         </a>
+         </a> -->
 
 <?php
-wp_reset_query();
-    }?>
+//wp_reset_query();
+  //  }?>
 
     </div>
 </section>

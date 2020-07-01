@@ -453,7 +453,7 @@ var st = $(this).scrollTop() / 10;
       if ($sliderIndex === $slideIndex) {
         return
       } else {
-        $(this).click(function(){
+        $(this).on('click',function(){
           return false;
         })
         

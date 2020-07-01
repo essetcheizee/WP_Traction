@@ -14,7 +14,10 @@ jQuery(function ($) {
   var timer;
 
 
-
+  var desc_list = $('.click-description .description-list ul li')[0];
+  var desc_toggle = $('.click-description .description-toggle ul li a')[0];
+  $(desc_list).addClass('active')
+  $(desc_toggle).addClass('active')
 
   $('.item-pagination').eq(0).addClass('active')
 
@@ -668,7 +671,16 @@ var st = $(this).scrollTop() / 10;
     })
   });
 
+  $(window).on('elementor/frontend/init', function () {
+    elementorFrontend.hooks.addAction('frontend/element_ready/click_desc.default', function ($scope, $) {
 
+      var desc_list = $('.click-description .description-list ul li')[0];
+      var desc_toggle = $('.click-description .description-toggle ul li a')[0];
+      $(desc_list).addClass('active')
+      $(desc_toggle).addClass('active')
+
+    })
+  });
   $(window).on('elementor/frontend/init', function () {
     elementorFrontend.hooks.addAction('frontend/element_ready/traction_testi.default', function ($scope, $) {
 

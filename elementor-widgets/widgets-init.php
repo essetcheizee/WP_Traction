@@ -25,6 +25,8 @@ class My_Elementor_Widgets {
         require_once( get_theme_file_path( '/elementor-widgets/widgets/widgets-services-slider.php' ) );
         require_once( get_theme_file_path( '/elementor-widgets/widgets/widgets-hero-slider.php' ) );
         require_once( get_theme_file_path( '/elementor-widgets/widgets/widgets-featured-projects.php' ) );
+        require_once( get_theme_file_path( '/elementor-widgets/widgets/widgets-post-image.php' ) );
+        require_once( get_theme_file_path( '/elementor-widgets/widgets/widgets-click-description.php' ) );
 
 
 
@@ -45,6 +47,8 @@ class My_Elementor_Widgets {
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\custom_services_slider() );
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\custom_hero_slider() );
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\custom_featured_projects() );
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\custom_post_image() );
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\custom_click_desc() );
       
       
       	}

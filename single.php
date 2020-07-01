@@ -68,7 +68,13 @@
             </span>
         </a>
     <?php }else{
-            $first = new WP_Query('posts_per_page=1&order=ASC'); $first->the_post();   
+        $args = array(
+            'category_name' => 'Featured',
+            'post_type'     => 'post',
+            'post_per_page' => 1,
+            'order'         => 'ASC'
+        )
+            $first = new WP_Query($args); $first->the_post();   
         ?>
              <a href="<?php get_permalink($first->ID)?>">
              <h1>Next Project</h1>

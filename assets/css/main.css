@@ -7462,6 +7462,7 @@ p {
 .strategy__section.--wrapper .strategy__section__steps ul li.active a {
   opacity: 1;
   margin-left: 0;
+  cursor: default;
 }
 
 .strategy__section.--wrapper .strategy__section__steps ul li a {

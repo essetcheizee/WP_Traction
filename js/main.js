@@ -453,8 +453,10 @@ var st = $(this).scrollTop() / 10;
       if ($sliderIndex === $slideIndex) {
         return
       } else {
-
-
+        $(this).click(function(){
+          return false;
+        })
+        
         TweenLite.to(timeline, {
           timeScale: 16,
           ease: Strong.easeIn

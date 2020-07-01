@@ -23,4 +23,4 @@ define('THEME_DEV_MODE', true);
 //Require
 
 
-    // require_once( get_theme_file_path( '/elementor-widgets/widgets-init.php' ) );
+    require_once( get_theme_file_path( '/elementor-widgets/widgets-init.php' ) );

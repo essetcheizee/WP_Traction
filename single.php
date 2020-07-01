@@ -74,7 +74,7 @@
                 </div>
             </span>
         </a>
-    <?php} else{
+    <?php}else{
             $first = new WP_Query('posts_per_page=1&order=ASC'); $first->the_post();   
         ?>
              <a href="<?php get_permalink($first->ID)?>">

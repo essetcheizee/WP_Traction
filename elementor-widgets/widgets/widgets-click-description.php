@@ -26,6 +26,15 @@ class custom_click_desc extends Widget_Base {
 				'label' => __( 'Traction - Click Description', 'elementor' ),
 			]
         );
+        
+        $this->add_control(
+			'website_link',
+			[
+				'label' => __( 'Website Link', 'elementor' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => __( 'Type your link here', 'elementor' ),
+			]
+        );
         $repeater = new \Elementor\Repeater();
         $repeater->add_control(
 			'description',
@@ -33,14 +42,6 @@ class custom_click_desc extends Widget_Base {
 				'label' => __( 'Description', 'elementor' ),
                 'type' => \Elementor\Controls_Manager::TEXTAREA,
 				'placeholder' => __( 'Type your description here', 'elementor' ),
-			]
-        );
-        $repeater->add_control(
-			'website_link',
-			[
-				'label' => __( 'Website Link', 'elementor' ),
-                'type' => \Elementor\Controls_Manager::TEXT,
-				'placeholder' => __( 'Type your link here', 'elementor' ),
 			]
         );
         $repeater->add_control(
@@ -104,7 +105,7 @@ class custom_click_desc extends Widget_Base {
                             <?php } }?>
                     </ul>
 
-                    <a class="arrow-link" href="<?= $item['website_link'] ?>">
+                    <a class="arrow-link" href="<?= $settings['website_link'] ?>">
                         <div class="svg-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="142.9" height="44.948"
                                 viewBox="0 0 142.9 44.948">
                                 <g id="Group_112" data-name="Group 112" transform="translate(-1194 -71)">
@@ -164,7 +165,7 @@ class custom_click_desc extends Widget_Base {
                                 <# }); } #>
                     </ul>
 
-                    <a class="arrow-link" href="{{item.website_link}}">
+                    <a class="arrow-link" href="{{settings.website_link}}">
                         <div class="svg-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="142.9" height="44.948"
                                 viewBox="0 0 142.9 44.948">
                                 <g id="Group_112" data-name="Group 112" transform="translate(-1194 -71)">

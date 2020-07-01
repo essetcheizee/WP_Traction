@@ -27,12 +27,12 @@
 
     }
 
-    function builder_enqueue_script(){
-        $ver                = THEME_DEV_MODE ? time() : false;
-        $uri    = get_theme_file_uri();
+    // function builder_enqueue_script(){
+    //     $ver                = THEME_DEV_MODE ? time() : false;
+    //     $uri    = get_theme_file_uri();
 
-        wp_register_script( 'elementor_script', $uri . '/js/elementor-scripts.js', [], $ver);
+    //     wp_register_script( 'elementor_script', $uri . '/js/elementor-scripts.js', [], $ver);
 
-        wp_enqueue_script('elementor_script');
+    //     wp_enqueue_script('elementor_script');
 
-    }
+    // }

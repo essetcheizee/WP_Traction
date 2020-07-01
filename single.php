@@ -48,6 +48,9 @@
     <?php endwhile; ?>
 
 <?php endif; ?>
+
+
+<?php wp_reset_postdata(); ?>
 	<?php 
         // $prev_post = get_adjacent_post(false, '', true);
         $next_post = get_adjacent_post(false, '', false);
@@ -74,7 +77,7 @@
                 </div>
             </span>
         </a>
-    <?php}else{
+    <?php }else{
             $first = new WP_Query('posts_per_page=1&order=ASC'); $first->the_post();   
         ?>
              <a href="<?php get_permalink($first->ID)?>">
@@ -101,8 +104,6 @@ wp_reset_query();
 
     </div>
 </section>
-
-<?php wp_reset_postdata(); ?>
 	
 
 </main>

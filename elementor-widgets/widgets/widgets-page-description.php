@@ -37,7 +37,7 @@ class custom_page_description extends Widget_Base {
         $this->add_control(
 			'show_arrow',
 			[
-				'label' => __( 'Show Title', 'elementor' ),
+				'label' => __( 'Show Arrow', 'elementor' ),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
 				'label_on' => __( 'Show', 'elementor' ),
 				'label_off' => __( 'Hide', 'elementor' ),
@@ -73,7 +73,7 @@ class custom_page_description extends Widget_Base {
        
         ?>
          <section class="page__content <?php
-         	if ( 'yes' === $settings['show_title'] ) {
+         	if ( 'yes' === $settings['show_arrow'] ) {
                 echo '--arrow-down';
              }
         ?>">

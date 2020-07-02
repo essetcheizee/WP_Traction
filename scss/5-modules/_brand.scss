@@ -4,6 +4,10 @@
     border: none;
     mix-blend-mode: exclusion;
 
+    &:hover {
+        text-decoration: none;
+    }
+
     .svg-wrapper {
         height: 2vw;
         width: 2vw;
@@ -15,6 +19,7 @@
             width: 2vw;
         }
     }
+
 
     .brand-text {
         color: getColor(White);
@@ -29,6 +34,16 @@
         top: 3vw;
         left: 5vw;
         z-index: 99999999999;
+
+        &.show {
+            animation: menuShow 0.3s linear forwards;
+            z-index: 9999999999;
+        }
+
+        &.hide {
+            animation: menuHide 0.3s linear forwards;
+        }
+
     }
 
     @include lg {
@@ -38,13 +53,16 @@
             height: 50px;
             width: 50px;
         }
+
         .brand-text {
             font-size: 32px;
         }
     }
 
     @include sm {
-        .brand-text {display: none;}
+        .brand-text {
+            display: none;
+        }
     }
 
 }

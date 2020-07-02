@@ -81,7 +81,7 @@ class custom_header extends Widget_Base {
        
         ?>
  
- <a class="branding --header">
+ <a class="branding --header" href="<?php echo home_url() ?>">
         <div class="svg-wrapper --header">
             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34.971" viewBox="0 0 35 34.971">
                 <g id="Page-1" transform="translate(0 -0.029)">

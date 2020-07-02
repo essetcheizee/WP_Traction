@@ -8,7 +8,7 @@ class custom_services_slider extends Widget_Base {
 	}
 	
 	public function get_title() {
-		return 'Traction - Slider';
+		return 'Traction - Service Slider';
 	}
 	
 	public function get_icon() {

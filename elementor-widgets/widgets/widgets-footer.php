@@ -35,14 +35,14 @@ class custom_footer extends Widget_Base {
                 'placeholder'   => __('Type your title here', 'elementor'),
 			]
 		);
-        $this->add_control(
-			'link_num',
-			[
-				'label' => __( 'Link Contact', 'elementor' ),
-                'type' => \Elementor\Controls_Manager::TEXT,
-                'placeholder'   => __('Type your contact', 'elementor'),
-			]
-		);
+        // $this->add_control(
+		// 	'link_num',
+		// 	[
+		// 		'label' => __( 'Link Contact', 'elementor' ),
+        //         'type' => \Elementor\Controls_Manager::TEXT,
+        //         'placeholder'   => __('Type your contact', 'elementor'),
+		// 	]
+		// );
 
         $this->add_control(
 			'link_web',
@@ -100,10 +100,10 @@ class custom_footer extends Widget_Base {
                         <h2><?= $settings['title'] ?></h2>
 
                         <ul class="contact-list">
-                            <li>
-                                <a href="tel:<?= $settings['link_num'] ?>"><?= $settings['link_num']  ?></a>
+                           <!-- <li>
+                                <a href="tel:"></a>
 
-                            </li>
+                            </li> -->
                             <li>
                                 <a href="mailto:<?= $settings['link_web'] ?>"><?= $settings['link_web']?></a>
                             </li>
@@ -250,10 +250,11 @@ class custom_footer extends Widget_Base {
                         <h2>{{ settings.title }}</h2>
 
                         <ul class="contact-list">
+                        <!--
                             <li>
                                 <a href="tel:{{settings.link_num}}">{{settings.link_num}}</a>
 
-                            </li>
+                            </li> -->
                             <li>
                                 <a href="mailto:settings.link_web">{{settings.link_web}}</a>
                             </li>

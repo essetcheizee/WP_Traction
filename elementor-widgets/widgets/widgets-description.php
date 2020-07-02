@@ -26,7 +26,7 @@ class custom_description extends Widget_Base {
         $pages = new \WP_Query($args);
         $output = '';
         foreach($pages as $page){
-            $output .= '<option value="'. the_permalink($page->ID) .'">'.$page->name.'</option>';
+            $output .= '<option>'.$page->name.'</option>';
         }
 		$this->start_controls_section(
 			'section_content',

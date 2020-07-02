@@ -19,7 +19,6 @@ class custom_description extends Widget_Base {
 		return [ 'trc-category' ];
 	}
 	protected function _register_controls() {
-        $output = wp_list_pages();
 		$this->start_controls_section(
 			'section_content',
 			[
@@ -51,7 +50,7 @@ class custom_description extends Widget_Base {
 			[
 				'label' => __( 'Page Links', 'elementor' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
-				'options' => [$output],
+				'options' => [],
 			]
 		);
         $this->add_control(

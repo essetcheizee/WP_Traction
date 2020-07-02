@@ -190,8 +190,8 @@ class custom_header extends Widget_Base {
                                 </div>
                             </a></li>
                     <?php } ?>
-                    <?php if(!empty(get_the_author_meta('facebook', $post->post_author))){ ?>
-                        <li><a href="<?= the_author_meta('facebook', $post->post_author) ?>">
+                    <?php if(!empty(get_the_author_meta('linkedin', $post->post_author))){ ?>
+                        <li><a href="<?= the_author_meta('linkedin', $post->post_author) ?>">
                                 <div class="svg-wrapper">
                                     <svg height="512pt" viewBox="0 0 512 512" width="512pt"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -201,8 +201,8 @@ class custom_header extends Widget_Base {
                                 </div>
                             </a></li>
                     <?php } ?>
-                    <?php if(!empty(get_the_author_meta('facebook', $post->post_author))){ ?>
-                        <li><a href="<?= the_author_meta('facebook', $post->post_author) ?>">
+                    <?php if(!empty(get_the_author_meta('instagram', $post->post_author))){ ?>
+                        <li><a href="<?= the_author_meta('instagram', $post->post_author) ?>">
                                 <div class="svg-wrapper">
                                     <svg height="511pt" viewBox="0 0 511 511.9" width="511pt"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -349,8 +349,8 @@ class custom_header extends Widget_Base {
                                 </div>
                             </a></li>
                     <?php } ?>
-                    <?php if(!empty(get_the_author_meta('facebook', $post->post_author))){ ?>
-                        <li><a href="<?= the_author_meta('facebook', $post->post_author) ?>">
+                    <?php if(!empty(get_the_author_meta('linkedin', $post->post_author))){ ?>
+                        <li><a href="<?= the_author_meta('linkedin', $post->post_author) ?>">
                                 <div class="svg-wrapper">
                                     <svg height="512pt" viewBox="0 0 512 512" width="512pt"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -360,8 +360,8 @@ class custom_header extends Widget_Base {
                                 </div>
                             </a></li>
                     <?php } ?>
-                    <?php if(!empty(get_the_author_meta('facebook', $post->post_author))){ ?>
-                        <li><a href="<?= the_author_meta('facebook', $post->post_author) ?>">
+                    <?php if(!empty(get_the_author_meta('instagram', $post->post_author))){ ?>
+                        <li><a href="<?= the_author_meta('instagram', $post->post_author) ?>">
                                 <div class="svg-wrapper">
                                     <svg height="511pt" viewBox="0 0 511 511.9" width="511pt"
                                         xmlns="http://www.w3.org/2000/svg">

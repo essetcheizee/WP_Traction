@@ -87,6 +87,7 @@ class custom_footer extends Widget_Base {
 	
     protected function render() {
         $settings = $this->get_settings_for_display();
+        global $post
        
         ?>
     <footer class="footer-section">
@@ -135,8 +136,9 @@ class custom_footer extends Widget_Base {
                         <div class="footer__section__inner social">
 
                             <ul>
+                            <?php if(!empty(get_the_author_meta('facebook', $post->post_author))){ ?>
                                 <li>
-                                    <a href="https://www.facebook.com/wearetraction/" target="_blank">
+                                    <a href="<?= the_author_meta('facebook', $post->post_author) ?>" target="_blank">
                                         <div class="svg-wrapper">
                                             <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -145,9 +147,10 @@ class custom_footer extends Widget_Base {
                                         </div>
                                     </a>
                                 </li>
-
+                            <?php }?>
+                            <?php if(!empty(get_the_author_meta('facebook', $post->post_author))){ ?>
                                 <li>
-                                    <a href="https://www.linkedin.com/company/traction-consulting-ltd/" target="_blank">
+                                    <a href="<?= the_author_meta('facebook', $post->post_author) ?>" target="_blank">
                                         <div class="svg-wrapper"><svg height="512pt" viewBox="0 0 512 512" width="512pt"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -156,10 +159,11 @@ class custom_footer extends Widget_Base {
                                         </div>
                                     </a>
                                 </li>
-
+                            <?php }?>
+                            <?php if(!empty(get_the_author_meta('facebook', $post->post_author))){ ?>
 
                                 <li>
-                                    <a href="https://www.instagram.com/wearetraction/" target="_blank">
+                                    <a href="<?= the_author_meta('facebook', $post->post_author) ?>" target="_blank">
                                         <div class="svg-wrapper"><svg height="511pt" viewBox="0 0 511 511.9"
                                                 width="511pt" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -172,6 +176,7 @@ class custom_footer extends Widget_Base {
                                         </div>
                                     </a>
                                 </li>
+                            <?php}?> 
                             </ul>
 
                         </div>
@@ -237,6 +242,7 @@ class custom_footer extends Widget_Base {
      * @access protected
      */
     protected function _content_template() {
+        global $post;
 
     ?>
     
@@ -286,9 +292,10 @@ class custom_footer extends Widget_Base {
 
                         <div class="footer__section__inner social">
 
-                            <ul>
+                        ul>
+                            <?php if(!empty(get_the_author_meta('facebook', $post->post_author))){ ?>
                                 <li>
-                                    <a href="#">
+                                    <a href="<?= the_author_meta('facebook', $post->post_author) ?>" target="_blank">
                                         <div class="svg-wrapper">
                                             <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -297,9 +304,10 @@ class custom_footer extends Widget_Base {
                                         </div>
                                     </a>
                                 </li>
-
+                            <?php }?>
+                            <?php if(!empty(get_the_author_meta('facebook', $post->post_author))){ ?>
                                 <li>
-                                    <a href="#">
+                                    <a href="<?= the_author_meta('facebook', $post->post_author) ?>" target="_blank">
                                         <div class="svg-wrapper"><svg height="512pt" viewBox="0 0 512 512" width="512pt"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -308,10 +316,11 @@ class custom_footer extends Widget_Base {
                                         </div>
                                     </a>
                                 </li>
-
+                            <?php }?>
+                            <?php if(!empty(get_the_author_meta('facebook', $post->post_author))){ ?>
 
                                 <li>
-                                    <a href="#">
+                                    <a href="<?= the_author_meta('facebook', $post->post_author) ?>" target="_blank">
                                         <div class="svg-wrapper"><svg height="511pt" viewBox="0 0 511 511.9"
                                                 width="511pt" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -324,6 +333,7 @@ class custom_footer extends Widget_Base {
                                         </div>
                                     </a>
                                 </li>
+                            <?php}?> 
                             </ul>
 
                         </div>

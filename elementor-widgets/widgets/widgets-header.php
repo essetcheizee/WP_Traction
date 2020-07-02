@@ -78,6 +78,7 @@ class custom_header extends Widget_Base {
 	
     protected function render() {
         $settings = $this->get_settings_for_display();
+        global $post;
        
         ?>
  
@@ -178,8 +179,9 @@ class custom_header extends Widget_Base {
                         ?>
                 </div>
                 <div class="navigation__social">
-                    <ul>
-                        <li><a href="#">
+                <ul>
+                    <?php if(!empty(get_the_author_meta('facebook', $post->post_author))){ ?>
+                        <li><a href="<?= the_author_meta('facebook', $post->post_author) ?>">
                                 <div class="svg-wrapper">
                                     <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -187,7 +189,9 @@ class custom_header extends Widget_Base {
                                     </svg>
                                 </div>
                             </a></li>
-                        <li><a href="#">
+                    <?php } ?>
+                    <?php if(!empty(get_the_author_meta('facebook', $post->post_author))){ ?>
+                        <li><a href="<?= the_author_meta('facebook', $post->post_author) ?>">
                                 <div class="svg-wrapper">
                                     <svg height="512pt" viewBox="0 0 512 512" width="512pt"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -196,7 +200,9 @@ class custom_header extends Widget_Base {
                                     </svg>
                                 </div>
                             </a></li>
-                        <li><a href="#">
+                    <?php } ?>
+                    <?php if(!empty(get_the_author_meta('facebook', $post->post_author))){ ?>
+                        <li><a href="<?= the_author_meta('facebook', $post->post_author) ?>">
                                 <div class="svg-wrapper">
                                     <svg height="511pt" viewBox="0 0 511 511.9" width="511pt"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -209,6 +215,7 @@ class custom_header extends Widget_Base {
                                     </svg>
                                 </div>
                             </a></li>
+                    <?php } ?>
                     </ul>
                 </div>
             </div>
@@ -229,6 +236,7 @@ class custom_header extends Widget_Base {
      * @access protected
      */
     protected function _content_template() {
+        global $post;
 
     ?>
     
@@ -331,7 +339,8 @@ class custom_header extends Widget_Base {
                 </div>
                 <div class="navigation__social">
                     <ul>
-                        <li><a href="#">
+                    <?php if(!empty(get_the_author_meta('facebook', $post->post_author))){ ?>
+                        <li><a href="<?= the_author_meta('facebook', $post->post_author) ?>">
                                 <div class="svg-wrapper">
                                     <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -339,7 +348,9 @@ class custom_header extends Widget_Base {
                                     </svg>
                                 </div>
                             </a></li>
-                        <li><a href="#">
+                    <?php } ?>
+                    <?php if(!empty(get_the_author_meta('facebook', $post->post_author))){ ?>
+                        <li><a href="<?= the_author_meta('facebook', $post->post_author) ?>">
                                 <div class="svg-wrapper">
                                     <svg height="512pt" viewBox="0 0 512 512" width="512pt"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -348,7 +359,9 @@ class custom_header extends Widget_Base {
                                     </svg>
                                 </div>
                             </a></li>
-                        <li><a href="#">
+                    <?php } ?>
+                    <?php if(!empty(get_the_author_meta('facebook', $post->post_author))){ ?>
+                        <li><a href="<?= the_author_meta('facebook', $post->post_author) ?>">
                                 <div class="svg-wrapper">
                                     <svg height="511pt" viewBox="0 0 511 511.9" width="511pt"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -361,6 +374,7 @@ class custom_header extends Widget_Base {
                                     </svg>
                                 </div>
                             </a></li>
+                    <?php } ?>
                     </ul>
                 </div>
             </div>

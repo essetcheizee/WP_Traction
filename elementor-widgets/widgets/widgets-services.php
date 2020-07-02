@@ -1,14 +1,14 @@
 <?php
 namespace Elementor;
 
-class custom_services extends Widget_Base {
+class custom_group_content extends Widget_Base {
 
 	public function get_name() {
-		return 'Services';
+		return 'Group Content';
 	}
 	
 	public function get_title() {
-		return 'Traction - Services';
+		return 'Traction - Group Content';
 	}
 	
 	public function get_icon() {
@@ -31,16 +31,16 @@ class custom_services extends Widget_Base {
 			'title',
 			[
 				'label' => __( 'Title', 'elementor' ),
-                'type' => \Elementor\Controls_Manager::TEXT,
+                'type' => \Elementor\Controls_Manager::TEXTAREA,
                 'placeholder'   => __('Type your title here', 'elementor'),
 			]
         );
         $this->add_control(
 			'content',
 			[
-				'label' => __( 'Content', 'plugin-domain' ),
+				'label' => __( 'Content', 'elementor' ),
 				'type' => \Elementor\Controls_Manager::WYSIWYG,
-				'placeholder' => __( 'Type your Content here', 'plugin-domain' ),
+				'placeholder' => __( 'Type your Content here', 'elementor' ),
 			]
 		);
         $this->end_controls_section();
@@ -70,22 +70,20 @@ class custom_services extends Widget_Base {
         $settings = $this->get_settings_for_display();
        
         ?>
-        <section class="group__text">
-            <div class="mdl__wrap --py-12 --pt-20">
-                <div class="group__text__wrapper">
-                    <div class="group__text__heading">
-                        <h2>
-                            <?= $settings['title']?>
+          <section class="group__content">
+            <div class="mdl__wrap --py-12 --pt-50">
+                <div class="group__content__wrapper">
+                    <div class="group__content__heading">
+                        <h2 class="title">
+                           <?= $settings['title'] ?>
                         </h2>
                     </div>
-                    <div class="group__text__text">
+                    <div class="group__content__text">
                         <p><?= $settings['content']?>
                         </p>
 
-
                     </div>
                 </div>
-            </div>
         </section>
 
         <?php
@@ -105,23 +103,22 @@ class custom_services extends Widget_Base {
 
     ?>
     
-    <section class="group__text">
-            <div class="mdl__wrap --py-12 --pt-20">
-                <div class="group__text__wrapper">
-                    <div class="group__text__heading">
-                        <h2>
-                            {{settings.title}}
+    <section class="group__content">
+            <div class="mdl__wrap --py-12 --pt-50">
+                <div class="group__content__wrapper">
+                    <div class="group__content__heading">
+                        <h2 class="title">
+                           {{settings.title}}
                         </h2>
                     </div>
-                    <div class="group__text__text">
+                    <div class="group__content__text">
                         <p>{{settings.content}}
                         </p>
 
-
                     </div>
                 </div>
-            </div>
         </section>
+
     <?php
     }
 }

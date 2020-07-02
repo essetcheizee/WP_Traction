@@ -18,7 +18,7 @@ class My_Elementor_Widgets {
         require_once( get_theme_file_path( '/elementor-widgets/widgets/widgets-testimonials.php' ) );
         require_once( get_theme_file_path( '/elementor-widgets/widgets/widgets-header.php' ) );
         require_once( get_theme_file_path( '/elementor-widgets/widgets/widgets-footer.php' ) );
-        require_once( get_theme_file_path( '/elementor-widgets/widgets/widgets-services.php' ) );
+        // require_once( get_theme_file_path( '/elementor-widgets/widgets/widgets-services.php' ) );
         require_once( get_theme_file_path( '/elementor-widgets/widgets/widgets-page-description.php' ) );
         require_once( get_theme_file_path( '/elementor-widgets/widgets/widgets-strategy.php' ) );
         require_once( get_theme_file_path( '/elementor-widgets/widgets/widgets-group-content.php' ) );
@@ -40,7 +40,7 @@ class My_Elementor_Widgets {
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\custom_testimonials() );
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\custom_header() );
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\custom_footer() );
-        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\custom_services() );
+        // \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\custom_services() );
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\custom_page_description() );
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\custom_strategy() );
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\custom_group_content() );

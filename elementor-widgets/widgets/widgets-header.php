@@ -36,23 +36,23 @@ class custom_header extends Widget_Base {
 			]
         );
         
-        $this->add_control(
-			'contact',
-			[
-				'label' => __( 'Contact Number', 'elementor' ),
-                'type' => \Elementor\Controls_Manager::TEXT,
-                'placeholder'   => __('Type your title here', 'elementor'),
-			]
-        );
+        // $this->add_control(
+		// 	'contact',
+		// 	[
+		// 		'label' => __( 'Contact Number', 'elementor' ),
+        //         'type' => \Elementor\Controls_Manager::TEXT,
+        //         'placeholder'   => __('Type your title here', 'elementor'),
+		// 	]
+        // );
         
-        $this->add_control(
-			'mail',
-			[
-				'label' => __( 'Email or Website', 'elementor' ),
-                'type' => \Elementor\Controls_Manager::TEXT,
-                'placeholder'   => __('Type your title here', 'elementor'),
-			]
-		);
+        // $this->add_control(
+		// 	'mail',
+		// 	[
+		// 		'label' => __( 'Email or Website', 'elementor' ),
+        //         'type' => \Elementor\Controls_Manager::TEXT,
+        //         'placeholder'   => __('Type your title here', 'elementor'),
+		// 	]
+		// );
         $this->end_controls_section();
     
 		// $this->start_controls_section(
@@ -165,18 +165,17 @@ class custom_header extends Widget_Base {
 
             <div class="navigation__wrapper__inner --py-5">
                 <div class="navigation__contact">
-                    <ul>
-                        <li>
-                            <a href="tel:<?= $settings['contact']?>">
-                                <?= $settings['contact']?>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mailto:<?= $settings['mail'] ?>">
-                                <?= $settings['mail'] ?>
-                            </a>
-                        </li>
-                    </ul>
+                <?php
+                            if(has_nav_menu('contacts')){
+                                wp_nav_menu( [
+                                    'theme_location'    => 'contacts',
+                                    'container'         => false,
+                                    'fallback_cb'       => false,
+                                    'depth'             => 0,
+                                    'menu_class'        => 'contact-list'
+                                ] );
+                            }
+                        ?>
                 </div>
                 <div class="navigation__social">
                     <ul>
@@ -318,18 +317,17 @@ class custom_header extends Widget_Base {
 
             <div class="navigation__wrapper__inner --py-5">
                 <div class="navigation__contact">
-                    <ul>
-                        <li>
-                            <a href="tel:{{settings.contact}}">
-                                {{settings.contact}}
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mailto:{{settings.mail}}">
-                                {{settings.mail}}
-                            </a>
-                        </li>
-                    </ul>
+                <?php
+                            if(has_nav_menu('contacts')){
+                                wp_nav_menu( [
+                                    'theme_location'    => 'contacts',
+                                    'container'         => false,
+                                    'fallback_cb'       => false,
+                                    'depth'             => 0,
+                                    'menu_class'        => 'contact-list'
+                                ] );
+                            }
+                        ?>
                 </div>
                 <div class="navigation__social">
                     <ul>

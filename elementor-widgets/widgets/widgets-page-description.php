@@ -35,14 +35,16 @@ class custom_page_description extends Widget_Base {
 			]
         );
         $this->add_control(
-            'className',
-            [
-                'label' => __('Section ClassName', 'elementor'),
-                'type'  =>\Elementor\Controls_Manager::TEXT,
-                'default' => __('arrow-down', 'elementor'),
-                'placeholder'   => __('Type the class of your section here', 'elementor')
-            ]
-            );
+			'show_arrow',
+			[
+				'label' => __( 'Show Arrow', 'elementor' ),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => __( 'Show', 'elementor' ),
+				'label_off' => __( 'Hide', 'elementor' ),
+				'return_value' => 'yes',
+				'default' => 'yes',
+			]
+		);
         $this->end_controls_section();
     
 		// $this->start_controls_section(
@@ -70,7 +72,11 @@ class custom_page_description extends Widget_Base {
         $settings = $this->get_settings_for_display();
        
         ?>
-         <section class="page__content --<?= $settings['className'] ?>">
+         <section class="page__content <?php
+         	if ( 'yes' === $settings['show_arrow'] ) {
+                echo '--arrow-down';
+             }
+        ?>">
             <div class="mdl__wrap --py-20">
                 <h1 class="page__content__title"><?= $settings['description'] ?></h1>
             </div>
@@ -91,14 +97,5 @@ class custom_page_description extends Widget_Base {
      */
     protected function _content_template() {
 
-    ?>
-      <section class="page__content --{{settings.className}}">
-            <div class="mdl__wrap --py-20">
-                <h1 class="page__content__title">{{settings.description}}</h1>
-            </div>
-        </section>
-
-
-    <?php
     }
 }

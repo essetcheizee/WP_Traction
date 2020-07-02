@@ -21,7 +21,6 @@ class custom_description extends Widget_Base {
 	protected function _register_controls() {
         $args = array(
             'post_type' => 'page',
-            'post_parent' => '0'
         );
         $pages = new \WP_Query($args);
         $output = '';

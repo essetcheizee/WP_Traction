@@ -292,7 +292,7 @@ class custom_footer extends Widget_Base {
 
                         <div class="footer__section__inner social">
 
-                        ul>
+                        <ul>
                             <?php if(!empty(get_the_author_meta('facebook', $post->post_author))){ ?>
                                 <li>
                                     <a href="<?= the_author_meta('facebook', $post->post_author) ?>" target="_blank">

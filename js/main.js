@@ -84,11 +84,21 @@ jQuery(function ($) {
 
   var scroll = $(window).scrollTop();
   if(scroll > position) {
-    $('.menus-wrapper').addClass('hide');
-    $('.menus-wrapper').removeClass('show');
+
+    if($('.menus-wrapper').hasClass('mobile')) {
+
+    }else {
+      $('.menus-wrapper').addClass('hide');
+      $('.menus-wrapper').removeClass('show');
+      $('.branding.--header').addClass('hide');
+      $('.branding.--header').removeClass('show');
+    }
+
   } else {
     $('.menus-wrapper').addClass('show');
     $('.menus-wrapper').removeClass('hide');
+    $('.branding.--header').removeClass('hide');
+    $('.branding.--header').addClass('show');
   }
   position = scroll;
     

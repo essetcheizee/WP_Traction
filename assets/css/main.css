@@ -852,6 +852,10 @@ a.content-button {
   font-size: 1.3vw;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 a.arrow-link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6723,6 +6727,10 @@ p {
   mix-blend-mode: exclusion;
 }
 
+.branding:hover {
+  text-decoration: none;
+}
+
 .branding .svg-wrapper {
   height: 2vw;
   width: 2vw;
@@ -6747,6 +6755,17 @@ p {
   top: 3vw;
   left: 5vw;
   z-index: 99999999999;
+}
+
+.branding.--header.show {
+  -webkit-animation: menuShow 0.3s linear forwards;
+          animation: menuShow 0.3s linear forwards;
+  z-index: 9999999999;
+}
+
+.branding.--header.hide {
+  -webkit-animation: menuHide 0.3s linear forwards;
+          animation: menuHide 0.3s linear forwards;
 }
 
 @media (max-width: 992px) {
@@ -7010,6 +7029,14 @@ p {
   margin-bottom: 4vw;
   border-bottom: none;
   padding: 0;
+}
+
+.featured .featured-box .box:hover {
+  text-decoration: none;
+}
+
+.featured .featured-box .box:hover h2 {
+  text-decoration: underline;
 }
 
 .featured .featured-box .box:hover .featured__image img {
@@ -7462,7 +7489,6 @@ p {
 .strategy__section.--wrapper .strategy__section__steps ul li.active a {
   opacity: 1;
   margin-left: 0;
-  cursor: default;
 }
 
 .strategy__section.--wrapper .strategy__section__steps ul li a {
@@ -7472,6 +7498,11 @@ p {
   margin-left: -3vw;
   -webkit-transition: all .5s;
   transition: all .5s;
+  cursor: default;
+}
+
+.strategy__section.--wrapper .strategy__section__steps ul li a:hover {
+  text-decoration: none;
 }
 
 .strategy__section.--wrapper .strategy__section__steps ul li a::before {

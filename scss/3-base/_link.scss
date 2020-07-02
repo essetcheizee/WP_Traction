@@ -17,6 +17,10 @@ a {
         font-size: 1.3vw;
     }
 
+    &:hover {
+        text-decoration: underline;
+    }
+
 
     &.arrow-link {
         @include flex-content(center, flex-start);

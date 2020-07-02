@@ -114,7 +114,6 @@
                                 a {
                                     opacity: 1;
                                     margin-left: 0;
-                                    cursor: default;
                                 }
 
                             }
@@ -126,6 +125,11 @@
                                 font-size: 3.82vw;
                                 margin-left: -3vw;
                                 transition: all .5s;
+                                cursor: default;
+
+                                &:hover {
+                                    text-decoration: none;
+                                }
 
                                 &::before {
                                     content: '';

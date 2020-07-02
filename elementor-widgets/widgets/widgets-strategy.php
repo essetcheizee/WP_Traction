@@ -120,7 +120,7 @@ class custom_strategy extends Widget_Base {
 
                 <div class="mdl__wrap --py-12">
 
-                    <div class="strategy__section --wrapper">
+                    <div class="strategy__section --wrapper --desktop">
 
 
                         <div class="strategy__section__steps">
@@ -190,7 +190,7 @@ class custom_strategy extends Widget_Base {
 
                 <div class="mdl__wrap --py-12">
 
-                    <div class="strategy__section --wrapper">
+                    <div class="strategy__section --wrapper --desktop">
 
 
                         <div class="strategy__section__steps">

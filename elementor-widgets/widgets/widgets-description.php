@@ -49,7 +49,7 @@ class custom_description extends Widget_Base {
         $this->add_control(
 			'link_title',
 			[
-				'label' => __( 'Link Title', 'plugin-domain' ),
+				'label' => __( 'Link Title', 'elementor' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 			]
 		);

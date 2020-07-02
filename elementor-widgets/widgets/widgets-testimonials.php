@@ -57,7 +57,36 @@ class custom_testimonials extends Widget_Base {
 		);
 
         $this->end_controls_section();
-    
+        $this->start_controls_section(
+			'marquee_section',
+			[
+				'label' => __( 'Traction - Marquee Section', 'elementor' ),
+			]
+        );
+        $repeater = new \Elementor\Repeater();
+
+        $repeater->add_control(
+			'image',
+			[
+				'label' => __( 'Choose Image', 'elementor' ),
+				'type' => \Elementor\Controls_Manager::MEDIA,
+				'default' => [
+					'url' => \Elementor\Utils::get_placeholder_image_src(),
+				],
+			]
+		);
+       
+        $this->add_control(
+			'list_section',
+			[
+				'label' => __( 'Repeater List', 'elementor' ),
+				'type' => \Elementor\Controls_Manager::REPEATER,
+				'fields' => $repeater->get_controls(),
+				'title_field' => 'Marquee Image',
+			]
+		);
+
+        $this->end_controls_section();
 		// $this->start_controls_section(
 		// 	'content_section',
 		// 	[
@@ -144,33 +173,21 @@ class custom_testimonials extends Widget_Base {
                 <div class="marquee__section">
 
                     <div class="marquee__section__track">
+                    <?php if ( $settings['list_section'] ) { ?>
+                                <?php  foreach (  $settings['list_section'] as $item_section ) { ?>
                         <div class="img-wrapper">
-                            <img src="<?=  get_template_directory_uri();?>/assets/img/Group 27 Copy 4.png">
+                            <img src="<?= $item_section['image']['url'] ?>">
                         </div>
-                        <div class="img-wrapper">
-                            <img src="<?=  get_template_directory_uri();?>/assets/img/Group 27 Copy 4.png">
-                        </div>
-                        <div class="img-wrapper">
-                            <img src="<?=  get_template_directory_uri();?>/assets/img/Group 27 Copy 4.png">
-                        </div>
-                        <div class="img-wrapper">
-                            <img src="<?=  get_template_directory_uri();?>/assets/img/Group 27 Copy 4.png">
-                        </div>
+                                <?php } }?>
                     </div>
 
                     <div class="marquee__section__track">
+                    <?php if ( $settings['list_section'] ) { ?>
+                                <?php  foreach (  $settings['list_section'] as $item_section ) { ?>
                         <div class="img-wrapper">
-                            <img src="<?=  get_template_directory_uri();?>/assets/img/Group 27 Copy 4.png">
+                            <img src="<?= $item_section['image']['url'] ?>">
                         </div>
-                        <div class="img-wrapper">
-                            <img src="<?=  get_template_directory_uri();?>/assets/img/Group 27 Copy 4.png">
-                        </div>
-                        <div class="img-wrapper">
-                            <img src="<?=  get_template_directory_uri();?>/assets/img/Group 27 Copy 4.png">
-                        </div>
-                        <div class="img-wrapper">
-                            <img src="<?=  get_template_directory_uri();?>/assets/img/Group 27 Copy 4.png">
-                        </div>
+                                <?php } }?>
                     </div>
 
                 </div>
@@ -257,33 +274,22 @@ class custom_testimonials extends Widget_Base {
             <div class="marquee__section">
 
                 <div class="marquee__section__track">
+                <# if ( settings.list_section.length ) { #> 
+                            <# _.each( settings.list_section, function( item_section ) { #>
                     <div class="img-wrapper">
-                        <img src="<?=  get_template_directory_uri();?>/assets/img/Group 27 Copy 4.png">
+                        <img src="{{ item_section.image.url}}">
                     </div>
-                    <div class="img-wrapper">
-                        <img src="<?=  get_template_directory_uri();?>/assets/img/Group 27 Copy 4.png">
-                    </div>
-                    <div class="img-wrapper">
-                        <img src="<?=  get_template_directory_uri();?>/assets/img/Group 27 Copy 4.png">
-                    </div>
-                    <div class="img-wrapper">
-                        <img src="<?=  get_template_directory_uri();?>/assets/img/Group 27 Copy 4.png">
-                    </div>
+                    <# }); } #>
+                 
                 </div>
 
                 <div class="marquee__section__track">
+                <# if ( settings.list_section.length ) { #> 
+                            <# _.each( settings.list_section, function( item_section ) { #>
                     <div class="img-wrapper">
-                        <img src="<?=  get_template_directory_uri();?>/assets/img/Group 27 Copy 4.png">
+                        <img src="{{ item_section.image.url}}">
                     </div>
-                    <div class="img-wrapper">
-                        <img src="<?=  get_template_directory_uri();?>/assets/img/Group 27 Copy 4.png">
-                    </div>
-                    <div class="img-wrapper">
-                        <img src="<?=  get_template_directory_uri();?>/assets/img/Group 27 Copy 4.png">
-                    </div>
-                    <div class="img-wrapper">
-                        <img src="<?=  get_template_directory_uri();?>/assets/img/Group 27 Copy 4.png">
-                    </div>
+                    <# }); } #>
                 </div>
 
             </div>

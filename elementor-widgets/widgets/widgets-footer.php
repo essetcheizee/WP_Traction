@@ -212,7 +212,7 @@ class custom_footer extends Widget_Base {
                 <div class="footer__wrapper">
 
                     <div class="footer__section brand">
-                        <a href="<?php home_url() ?>">
+                        <a href="<?php echo home_url() ?>">
                             <div class="img-wrapper">
                                 <img src="<?= $settings['image']['url']?>" alt="Brand">
                             </div>
@@ -369,7 +369,7 @@ class custom_footer extends Widget_Base {
                 <div class="footer__wrapper">
 
                     <div class="footer__section brand">
-                        <a href="<?php home_url()?>">
+                        <a href="<?php echo home_url()?>">
                             <div class="img-wrapper">
                                 <img src="{{settings.image.url}}" alt="Brand">
                             </div>

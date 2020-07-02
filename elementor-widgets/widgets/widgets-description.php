@@ -46,6 +46,13 @@ class custom_description extends Widget_Base {
 				'default' => 'yes',
 			]
         );
+         $this->add_control(
+			'link',
+			[
+				'label' => __( 'Link Title', 'elementor' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+			]
+		);
         $this->add_control(
 			'link_title',
 			[
@@ -222,7 +229,7 @@ class custom_description extends Widget_Base {
                 <div class="content-wrapper">
                     <p><?=  $settings['description'] ?></p>
 
-                    <a class="arrow-link" href="#">
+                    <a class="arrow-link" href="<?= $settings['link']?>">
                         <div class="svg-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="142.9" height="44.948"
                                 viewBox="0 0 142.9 44.948">
                                 <g id="Group_112" data-name="Group 112" transform="translate(-1194 -71)">
@@ -396,7 +403,7 @@ class custom_description extends Widget_Base {
                 <div class="content-wrapper">
                     <p>{{ settings.description }}</p>
 
-                    <a class="arrow-link" href="#">
+                    <a class="arrow-link" href="{{settings.link}}">
                         <div class="svg-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="142.9" height="44.948"
                                 viewBox="0 0 142.9 44.948">
                                 <g id="Group_112" data-name="Group 112" transform="translate(-1194 -71)">

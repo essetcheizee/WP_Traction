@@ -19,14 +19,15 @@ class custom_description extends Widget_Base {
 		return [ 'trc-category' ];
 	}
 	protected function _register_controls() {
-        // $args = array(
-        //     'post_type' => 'page',
-        // );
-        // $pages = new \WP_Query($args);
-        // $output = '';
-        // foreach($pages as $page){
-        //     $output .= '<option value="'. the_permalink($page->ID) .'">'.$page->name.'</option>';
-        // }
+        $args = array(
+            'post_type' => 'page',
+            'post_status'   => 'publish'
+        );
+        $pages = new \WP_Query($args);
+        $output = '';
+        foreach($pages as $page){
+            $output .= '<option value="'. the_permalink($page->ID) .'">'.$page->name.'</option>';
+        }
 		$this->start_controls_section(
 			'section_content',
 			[
@@ -53,14 +54,14 @@ class custom_description extends Widget_Base {
 				'default' => 'yes',
 			]
         );
-        //  $this->add_control(
-		// 	'link',
-		// 	[
-		// 		'label' => __( 'Page Links', 'elementor' ),
-		// 		'type' => \Elementor\Controls_Manager::SELECT,
-		// 		'options' => [$output],
-		// 	]
-		// );
+         $this->add_control(
+			'link',
+			[
+				'label' => __( 'Page Links', 'elementor' ),
+				'type' => \Elementor\Controls_Manager::SELECT,
+				'options' => [$pages],
+			]
+		);
         $this->add_control(
 			'link_title',
 			[

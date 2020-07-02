@@ -19,7 +19,15 @@ class custom_description extends Widget_Base {
 		return [ 'trc-category' ];
 	}
 	protected function _register_controls() {
-     
+        $args = array(
+            'post_type' => 'page',
+            'post_parent' => '0'
+        );
+        $pages = new \WP_Query($args);
+        $output = '';
+        foreach($pages as $page){
+            $output .= '<option value="'. the_permalink($page->ID) .'">'.$page->name.'</option>';
+        }
 		$this->start_controls_section(
 			'section_content',
 			[
@@ -49,8 +57,9 @@ class custom_description extends Widget_Base {
          $this->add_control(
 			'link',
 			[
-				'label' => __( 'Link', 'elementor' ),
-				'type' => \Elementor\Controls_Manager::TEXT,
+				'label' => __( 'Page Links', 'elementor' ),
+				'type' => \Elementor\Controls_Manager::SELECT,
+				'options' => [$output],
 			]
 		);
         $this->add_control(

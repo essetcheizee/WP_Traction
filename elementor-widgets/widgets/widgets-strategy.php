@@ -137,8 +137,8 @@ class custom_strategy extends Widget_Base {
                                     <h3>Crawl</h3>
                                     <p><?= $settings['crawl'] ?></p>
                                 </li>
-                                    <h3>Walk</h3>
                                 <li id="walk"  data-order="order2">
+                                    <h3>Walk</h3>
                                     <p><?= $settings['walk']?></p>
                                 </li>
                                 <li id="run"  data-order="order3">

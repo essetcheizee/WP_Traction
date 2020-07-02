@@ -134,12 +134,15 @@ class custom_strategy extends Widget_Base {
                         <div class="strategy__section__description">
                             <ul>
                                 <li class="active" id="crawl" data-order="order1">
+                                    <h3>Crawl</h3>
                                     <p><?= $settings['crawl'] ?></p>
                                 </li>
+                                    <h3>Walk</h3>
                                 <li id="walk"  data-order="order2">
                                     <p><?= $settings['walk']?></p>
                                 </li>
                                 <li id="run"  data-order="order3">
+                                    <h3>Run</h3>
                                     <p><?= $settings['run'] ?></p>
                                 </li>
                             </ul>
@@ -201,12 +204,15 @@ class custom_strategy extends Widget_Base {
                         <div class="strategy__section__description">
                             <ul>
                                 <li class="active" id="crawl" data-order="order1">
+                                    <h3>Crawl</h3>
                                     <p>{{settings.crawl}}</p>
                                 </li>
                                 <li id="walk"  data-order="order2">
+                                    <h3>Walk</h3>
                                     <p>{{settings.walk}}</p>
                                 </li>
                                 <li id="run"  data-order="order3">
+                                    <h3>Run</h3>
                                     <p>{{settings.run}}</p>
                                 </li>
                             </ul>

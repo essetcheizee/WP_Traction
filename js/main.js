@@ -84,11 +84,21 @@ jQuery(function ($) {
 
   var scroll = $(window).scrollTop();
   if(scroll > position) {
-    $('.menus-wrapper').addClass('hide');
-    $('.menus-wrapper').removeClass('show');
+
+    if($('.menus-wrapper').hasClass('mobile')) {
+
+    }else {
+      $('.menus-wrapper').addClass('hide');
+      $('.menus-wrapper').removeClass('show');
+      $('.branding.--header').addClass('hide');
+      $('.branding.--header').removeClass('show');
+    }
+
   } else {
     $('.menus-wrapper').addClass('show');
     $('.menus-wrapper').removeClass('hide');
+    $('.branding.--header').removeClass('hide');
+    $('.branding.--header').addClass('show');
   }
   position = scroll;
     
@@ -309,11 +319,12 @@ var st = $(this).scrollTop() / 10;
   $(window).on('load', function () {
 
     firstLoadAnim()
+	  $('.click-description .mdl__wrap .description-toggle ul li a.active').click();
 
   })
 
-  var heightList = $('.description-list ul li.active').outerHeight();
-  $('.description-list ul').css('height', heightList + 'px');
+//   var heightList = $('.description-list ul li.active').outerHeight();
+//   $('.description-list ul').css('height', heightList + 'px');
 
   $('.description-toggle ul li a').each(function () {
     $(this).click(function (e) {

@@ -136,7 +136,7 @@ class custom_footer extends Widget_Base {
 
                             <ul>
                                 <li>
-                                    <a href="#">
+                                    <a href="https://www.facebook.com/wearetraction/" target="_blank">
                                         <div class="svg-wrapper">
                                             <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -147,7 +147,7 @@ class custom_footer extends Widget_Base {
                                 </li>
 
                                 <li>
-                                    <a href="#">
+                                    <a href="https://www.linkedin.com/company/traction-consulting-ltd/" target="_blank">
                                         <div class="svg-wrapper"><svg height="512pt" viewBox="0 0 512 512" width="512pt"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -159,7 +159,7 @@ class custom_footer extends Widget_Base {
 
 
                                 <li>
-                                    <a href="#">
+                                    <a href="https://www.instagram.com/wearetraction/" target="_blank">
                                         <div class="svg-wrapper"><svg height="511pt" viewBox="0 0 511 511.9"
                                                 width="511pt" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -207,7 +207,7 @@ class custom_footer extends Widget_Base {
                 <div class="footer__wrapper">
 
                     <div class="footer__section brand">
-                        <a href="#">
+                        <a href="<?php home_url() ?>">
                             <div class="img-wrapper">
                                 <img src="<?= $settings['image']['url']?>" alt="Brand">
                             </div>

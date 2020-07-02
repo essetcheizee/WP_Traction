@@ -29,7 +29,7 @@ class custom_post_image extends Widget_Base {
         $this->add_control(
 			'image_position',
 			[
-				'label' => __( 'Border Style', 'elementor' ),
+				'label' => __( 'Image Position', 'elementor' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'default' => '--center',
 				'options' => [

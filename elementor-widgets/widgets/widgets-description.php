@@ -8,7 +8,7 @@ class custom_description extends Widget_Base {
 	}
 	
 	public function get_title() {
-		return 'Traction - Description';
+		return 'Traction - Logo with Description';
 	}
 	
 	public function get_icon() {
@@ -49,7 +49,7 @@ class custom_description extends Widget_Base {
          $this->add_control(
 			'link',
 			[
-				'label' => __( 'Link Title', 'elementor' ),
+				'label' => __( 'Link', 'elementor' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 			]
 		);

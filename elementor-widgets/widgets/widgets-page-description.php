@@ -8,7 +8,7 @@ class custom_page_description extends Widget_Base {
 	}
 	
 	public function get_title() {
-		return 'Traction - Page Description';
+		return 'Traction - Page Title';
 	}
 	
 	public function get_icon() {
@@ -23,13 +23,13 @@ class custom_page_description extends Widget_Base {
 		$this->start_controls_section(
 			'section_content',
 			[
-				'label' => __( 'Traction - Page Description', 'elementor' ),
+				'label' => __( 'Traction - Page Title', 'elementor' ),
 			]
         );
         $this->add_control(
 			'description',
 			[
-				'label' => __( 'Page Description', 'elementor' ),
+				'label' => __( 'Page title', 'elementor' ),
                 'type' => \Elementor\Controls_Manager::WYSIWYG,
 				'placeholder' => __( 'Type your description here', 'elementor' ),
 			]

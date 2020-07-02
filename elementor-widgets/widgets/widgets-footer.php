@@ -44,14 +44,14 @@ class custom_footer extends Widget_Base {
 		// 	]
 		// );
 
-        $this->add_control(
-			'link_web',
-			[
-				'label' => __( 'Link Web', 'elementor' ),
-                'type' => \Elementor\Controls_Manager::TEXT,
-                'placeholder'   => __('Type here', 'elementor'),
-			]
-        );
+        // $this->add_control(
+		// 	'link_web',
+		// 	[
+		// 		'label' => __( 'Link Web', 'elementor' ),
+        //         'type' => \Elementor\Controls_Manager::TEXT,
+        //         'placeholder'   => __('Type here', 'elementor'),
+		// 	]
+        // );
         $this->add_control(
 			'image',
 			[
@@ -99,16 +99,17 @@ class custom_footer extends Widget_Base {
                     <div class="footer__section contact">
                         <h2><?= $settings['title'] ?></h2>
 
-                        <ul class="contact-list">
-                           <!-- <li>
-                                <a href="tel:"></a>
-
-                            </li> -->
-                            <li>
-                                <a href="mailto:<?= $settings['link_web'] ?>"><?= $settings['link_web']?></a>
-                            </li>
-                        </ul>
-
+                        <?php
+                            if(has_nav_menu('contacts')){
+                                wp_nav_menu( [
+                                    'theme_location'    => 'contacts',
+                                    'container'         => false,
+                                    'fallback_cb'       => false,
+                                    'depth'             => 0,
+                                    'menu_class'        => 'contact-list'
+                                ] );
+                            }
+                        ?>
                     </div>
                 </div>
 
@@ -249,16 +250,17 @@ class custom_footer extends Widget_Base {
                     <div class="footer__section contact">
                         <h2>{{ settings.title }}</h2>
 
-                        <ul class="contact-list">
-                        <!--
-                            <li>
-                                <a href="tel:{{settings.link_num}}">{{settings.link_num}}</a>
-
-                            </li> -->
-                            <li>
-                                <a href="mailto:settings.link_web">{{settings.link_web}}</a>
-                            </li>
-                        </ul>
+                        <?php
+                            if(has_nav_menu('contacts')){
+                                wp_nav_menu( [
+                                    'theme_location'    => 'contacts',
+                                    'container'         => false,
+                                    'fallback_cb'       => false,
+                                    'depth'             => 0,
+                                    'menu_class'        => 'contact-list'
+                                ] );
+                            }
+                        ?>
 
                     </div>
                 </div>

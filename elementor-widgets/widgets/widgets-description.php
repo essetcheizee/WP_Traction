@@ -26,7 +26,7 @@ class custom_description extends Widget_Base {
         $pages = new \WP_Query($args);
         $output = '';
         foreach($pages as $page){
-            $output .= $page->title;
+            $output .= $page->ID;
         }
 		$this->start_controls_section(
 			'section_content',

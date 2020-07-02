@@ -176,7 +176,7 @@ class custom_footer extends Widget_Base {
                                         </div>
                                     </a>
                                 </li>
-                            <?php}?> 
+                            <?php } ?> 
                             </ul>
 
                         </div>
@@ -333,7 +333,7 @@ class custom_footer extends Widget_Base {
                                         </div>
                                     </a>
                                 </li>
-                            <?php}?> 
+                            <?php }?> 
                             </ul>
 
                         </div>

@@ -25,7 +25,9 @@ class custom_description extends Widget_Base {
         );
         $pages = new \WP_Query($args);
         $output = '';
-        echo $pages;
+        foreach($pages as $page){
+            $output .= echo $page;
+        }
 		$this->start_controls_section(
 			'section_content',
 			[

@@ -19,6 +19,17 @@ class custom_description extends Widget_Base {
 		return [ 'trc-category' ];
 	}
 	protected function _register_controls() {
+         
+        $args = array(
+            'orderby' => 'name',
+            'order'   => 'ASC'
+        );
+        $pages = get_pages($args);
+        $output = '';
+        foreach($pages as $page){
+            $output .= '<option value="'. the_permalink($page->ID).'">'.$page->name.'</option>'.',';
+            // print_r($category);
+        }
 		$this->start_controls_section(
 			'section_content',
 			[
@@ -50,7 +61,7 @@ class custom_description extends Widget_Base {
 			[
 				'label' => __( 'Page Links', 'elementor' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
-				'options' => [],
+				'options' => [$output],
 			]
 		);
         $this->add_control(

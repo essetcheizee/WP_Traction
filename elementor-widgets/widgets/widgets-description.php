@@ -27,7 +27,7 @@ class custom_description extends Widget_Base {
         $pages = get_pages($args);
         $output = '';
         foreach($pages as $page){
-            $output .= '<option value="'. get_permalink($page->ID).'">'.$page->name.'</option>'.',';
+            $output .= '<option value="'. get_permalink($page->ID).'">'.get_title($page->ID).'</option>'.',';
             // print_r($category);
         }
 		$this->start_controls_section(

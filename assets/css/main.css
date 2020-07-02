@@ -738,6 +738,9 @@ button:hover {
   .footer-section .footer__container.lower .footer__wrapper .footer__section.traction {
     margin-right: 0;
   }
+  .footer-section .footer__container.lower .footer__wrapper .footer__section.traction p {
+    font-size: 12px !important;
+  }
   .footer-section .footer__container.lower .footer__wrapper .footer__section.brand {
     margin-bottom: 24px;
   }
@@ -7362,7 +7365,7 @@ p {
   }
   .page__content__title {
     font-size: 32px !important;
-    line-height: initial !important;
+    line-height: 1.6em !important;
     margin-bottom: 12vw;
   }
   .page__content.--arrow-down h1::after {
@@ -7568,17 +7571,23 @@ p {
 
 @media (max-width: 576px) {
   .strategy {
-    padding-top: 50vw;
-    padding-bottom: 50vw;
-  }
-  .strategy .overlay__text {
-    top: 45vw;
+    padding-top: 65vw;
+    padding-bottom: 85vw;
   }
   .strategy .overlay__image__top {
     width: 100%;
   }
+  .strategy .overlay__image__top img {
+    height: 100vw;
+  }
   .strategy .overlay__image__bottom {
     width: 100%;
+  }
+  .strategy .overlay__image__bottom img {
+    height: 100vw;
+  }
+  .strategy .overlay__text {
+    top: 45vw;
   }
   .strategy__section.--wrapper {
     margin-top: 60px;
@@ -7656,7 +7665,7 @@ p {
     margin-bottom: 24px;
   }
   .group__content__wrapper .group__content__heading h2 {
-    line-height: initial !important;
+    line-height: 1.4em !important;
   }
   .group__content__wrapper .group__content__text {
     width: 100%;
@@ -7778,12 +7787,14 @@ p {
   .services .services__slider__item__img {
     height: 40px;
     width: 40px;
+    margin-bottom: 16px;
   }
   .services .services__slider__item__img img {
     height: 40px;
     width: 40px;
   }
   .services .services__slider__item__content p {
+    margin-top: 16px;
     font-size: 14px !important;
     line-height: 2vw;
     color: #8A8A8A;

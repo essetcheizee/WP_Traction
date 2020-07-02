@@ -228,25 +228,34 @@
     }
 
     @include sm {
-        padding-top: 50vw;
-        padding-bottom: 50vw;
+        padding-top: 65vw;
+        padding-bottom: 85vw;
 
         .overlay {
-
-            &__text {
-                top: 45vw;
-            }
 
             &__image {
 
                 &__top {
                     width: 100%;
+
+                    img {
+                        height: 100vw;
+                    }
                 }
 
                 &__bottom {
                     width: 100%;
+
+                    img {
+                        height: 100vw;
+                    }
                 }
             }
+
+            &__text {
+                top: 45vw;
+            }
+
         }
 
         &__section {

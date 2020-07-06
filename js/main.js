@@ -456,7 +456,7 @@ var st = $(this).scrollTop() / 10;
 
   $('.item-pagination').on('click', function (e) {
     clearInterval(timer);
-    
+    e.preventDefault
     var $sliderIndex = $(this).index(),
       $slideIndex = $('.slick-active').data('slick-index');
 
@@ -464,6 +464,7 @@ var st = $(this).scrollTop() / 10;
       if ($sliderIndex === $slideIndex) {
         return
       } else {
+        TweenLite.set($('.item-pagination'),{css:{'pointer-events' : 'none'}})
         TweenLite.to(timeline, {
           timeScale: 16,
           ease: Strong.easeInOut
@@ -474,30 +475,37 @@ var st = $(this).scrollTop() / 10;
             'stroke-dashoffset': 160
           }
         });
-        timer = setTimeout(function () {
+        timer = setInterval(function () {
           $('.featured-slider').slick('slickGoTo', parseInt($sliderIndex), {
             autoplay: true
           })
+          
+        TweenLite.set($('.item-pagination'),{css:{'pointer-events' : 'auto'}})
         }, 1300)
       }
-    }else{
-      TweenLite.to(timeline, {
-        timeScale: 16,
-        ease: Strong.easeInOut
-      })
-      var circle = document.querySelectorAll('a .outer-circle svg g');
-      TweenLite.set(circle, {
-        css: {
-          'stroke-dashoffset': 160
-        }
-      });
-      timer = setTimeout(function () {
-        $('.featured-slider').slick('slickGoTo', parseInt($sliderIndex), {
-          autoplay: true
-        })
-      }, 500)
-    } 
-
+     }
+  // else{
+  //     if ($sliderIndex === $slideIndex) {
+  //       return
+  //     }else{
+  //     TweenLite.to(timeline, {
+  //       timeScale: 16,
+  //       ease: Strong.easeIn
+  //     })
+  //     var circle = document.querySelectorAll('a .outer-circle svg g');
+  //     TweenLite.set(circle, {
+  //       css: {
+  //         'stroke-dashoffset': 160
+  //       }
+  //     });
+  //     timer = setInterval(function () {
+  //       $('.featured-slider').slick('slickGoTo', parseInt($sliderIndex), {
+  //         autoplay: true
+  //       })
+  //       TweenLite.set($('.item-pagination'),{css:{'pointer-events' : 'auto'}})
+  //     }, 500)
+  //   } 
+  // }
   })
 
   function animateSlider() {

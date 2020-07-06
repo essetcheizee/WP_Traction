@@ -482,7 +482,7 @@ var st = $(this).scrollTop() / 10;
       }
     }else{
       TweenLite.to(timeline, {
-        timeScale: 20,
+        timeScale: 16,
         ease: Strong.easeInOut
       })
       var circle = document.querySelectorAll('a .outer-circle svg g');

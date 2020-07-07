@@ -34,6 +34,15 @@ jQuery(function ($) {
   $('.testimonial__carousel__left').on('click', function (e) {
     e.preventDefault();
     $('.testimonial button.slick-next.slick-arrow').click();
+    
+    var titleHeight = $('.testimonial__carousel__item.slick-active .testimonial__carousel__item__name h3').position().top;
+    var titleHeightByTwo = $('.testimonial__carousel__item.slick-active .testimonial__carousel__item__name h3').position().top / 14;
+
+    var total =  titleHeight + titleHeightByTwo;
+
+    $('.testimonial .testimonial__wrapper .testimonial__section .mdl__wrap .testimonial__carousel.control').css('top', total + "px");
+    $('.testimonial .slick-dots').css('top', total + "px");
+    
   });
 
 
@@ -41,6 +50,15 @@ jQuery(function ($) {
   $('.testimonial__carousel__right').on('click', function (e) {
     e.preventDefault();
     $('.testimonial button.slick-prev.slick-arrow').click();
+    
+    var titleHeight = $('.testimonial__carousel__item.slick-active .testimonial__carousel__item__name h3').position().top;
+    var titleHeightByTwo = $('.testimonial__carousel__item.slick-active .testimonial__carousel__item__name h3').position().top / 14;
+
+    var total =  titleHeight + titleHeightByTwo;
+
+    $('.testimonial .testimonial__wrapper .testimonial__section .mdl__wrap .testimonial__carousel.control').css('top', total + "px");
+    $('.testimonial .slick-dots').css('top', total + "px");
+    
   });
 
 
@@ -326,7 +344,6 @@ jQuery(function ($) {
 
     $('.click-description .mdl__wrap .description-toggle ul li a.active').click();
     
-    $('.click-description .mdl__wrap .description-toggle ul li a.active').click();
 
     var titleHeight = $('.testimonial__carousel__item.slick-active .testimonial__carousel__item__name h3').position().top;
     var titleHeightByTwo = $('.testimonial__carousel__item.slick-active .testimonial__carousel__item__name h3').position().top / 14;

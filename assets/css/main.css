@@ -7289,8 +7289,8 @@ p {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-animation: marqueeAnimation 20s linear infinite forwards;
-          animation: marqueeAnimation 20s linear infinite forwards;
+  -webkit-animation: marqueeAnimation 40s linear infinite forwards;
+          animation: marqueeAnimation 40s linear infinite forwards;
 }
 
 .marquee__section .marquee__section__track:first-child {
@@ -7298,7 +7298,7 @@ p {
 }
 
 .marquee__section .marquee__section__track .img-wrapper {
-  width: 13vw;
+  width: 8vw;
   height: auto;
 }
 
@@ -7317,6 +7317,7 @@ p {
      object-fit: contain;
   -o-object-position: center center;
      object-position: center center;
+  opacity: 0.8;
 }
 
 @media (max-width: 992px) {

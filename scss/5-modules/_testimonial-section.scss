@@ -19,6 +19,10 @@
                         outline: none;
                         border: none;
                         cursor: grab;
+                        
+                        &:not(.slick-active) {
+                            height: 0;
+                        }
 
                         &__quote {
                             margin: 0 auto;
@@ -42,18 +46,19 @@
                         display: inline-block;
                         position: absolute;
                         top: 11.7vw;
-                        right: 12vw;
+                        right: 7vw;
 
                         a {
                             padding: 0;
 
                             .svg-wrapper {
-                                height: 3vw;
+                                @include flex-content(center, center);
+                                height: auto;
                                 width: 3vw;
 
                                 svg {
                                     width: 3vw;
-                                    height: 3vw;
+                                    height: auto;
                                 }
                             }
                         }
@@ -77,6 +82,7 @@
                     @include lg {
 
                         &__item {
+
 
                             &__quote {
                                 max-width: 100%;

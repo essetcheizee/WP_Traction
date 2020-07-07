@@ -1,6 +1,9 @@
 .slick-track {
   height: 100%;
   /* width: 100%!important; */
+  // display: flex!important;
+  // align-items: center!important;
+  // justify-content: center!important;
 }
 
 .slick-list.draggable {
@@ -45,7 +48,8 @@
 
 .testimonial .slick-dots {
   width: auto !important;
-  bottom: .65vw !important;
+  top: .65vw;
+  bottom: 0!important;
   left: 7vw !important;
 
   @include lg {

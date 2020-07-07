@@ -7156,6 +7156,10 @@ p {
   cursor: grab;
 }
 
+.testimonial .testimonial__wrapper .testimonial__section .mdl__wrap .testimonial__carousel__item:not(.slick-active) {
+  height: 0;
+}
+
 .testimonial .testimonial__wrapper .testimonial__section .mdl__wrap .testimonial__carousel__item__quote {
   margin: 0 auto;
   margin-bottom: 2vw;
@@ -7175,7 +7179,7 @@ p {
   display: inline-block;
   position: absolute;
   top: 11.7vw;
-  right: 12vw;
+  right: 7vw;
 }
 
 .testimonial .testimonial__wrapper .testimonial__section .mdl__wrap .testimonial__carousel.control a {
@@ -7183,13 +7187,22 @@ p {
 }
 
 .testimonial .testimonial__wrapper .testimonial__section .mdl__wrap .testimonial__carousel.control a .svg-wrapper {
-  height: 3vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: auto;
   width: 3vw;
 }
 
 .testimonial .testimonial__wrapper .testimonial__section .mdl__wrap .testimonial__carousel.control a .svg-wrapper svg {
   width: 3vw;
-  height: 3vw;
+  height: auto;
 }
 
 .testimonial .testimonial__wrapper .testimonial__section .mdl__wrap .testimonial__carousel.control .testimonial__carousel__left {
@@ -8306,7 +8319,8 @@ p {
 
 .testimonial .slick-dots {
   width: auto !important;
-  bottom: .65vw !important;
+  top: .65vw;
+  bottom: 0 !important;
   left: 7vw !important;
 }
 

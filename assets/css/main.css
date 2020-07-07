@@ -8498,7 +8498,7 @@ p {
 }
 
 .testimonial .testimonial__wrapper .testimonial__section .mdl__wrap .testimonial__carousel.control, .testimonial .slick-dots {
-  display: none !important;
+  display: none;
 }
 
 /* hover animation */

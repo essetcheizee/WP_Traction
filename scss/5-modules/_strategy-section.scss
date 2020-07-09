@@ -234,6 +234,7 @@
         .overlay {
 
             &__image {
+                z-index: 9;
 
                 &__top {
                     width: 100%;

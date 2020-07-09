@@ -1,5 +1,5 @@
 .group__content {
-
+    background: getColor(White);
 
     .mdl__wrap {
         padding-top: $grid*50;
@@ -27,7 +27,7 @@
 
                 p {
                     color: #8A8A8A;
-                    font-size:.9vw;
+                    font-size: .9vw;
                     line-height: 2.2vw;
 
                     &:not(:last-child) {
@@ -43,7 +43,7 @@
     @include md {
 
         .mdl__wrap {
-            padding-top: $grid*50!important;
+            padding-top: $grid*50 !important;
         }
 
         &__wrapper {
@@ -56,7 +56,7 @@
                     margin-bottom: 24px;
 
                     h2 {
-                        line-height: 1.4em!important;
+                        line-height: 1.4em !important;
                     }
                 }
 

@@ -7588,6 +7588,9 @@ p {
     padding-top: 65vw;
     padding-bottom: 85vw;
   }
+  .strategy .overlay__image {
+    z-index: 9;
+  }
   .strategy .overlay__image__top {
     width: 100%;
   }
@@ -7623,6 +7626,10 @@ p {
     display: block !important;
     margin-bottom: 16px;
   }
+}
+
+.group__content {
+  background: #FFFFFF;
 }
 
 .group__content .mdl__wrap {

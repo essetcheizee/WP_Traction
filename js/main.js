@@ -661,12 +661,12 @@ jQuery(function ($) {
     });
   }
   $(document).ready(function () {
-    $('.services').attachDragger();
+    $('.services_slider').attachDragger();
 
   });
   var slider = document.querySelectorAll('.services__slider__item');
-  var trigger = $('.services__slider'),
-    maxDragX = $('.services__slider__item').length * (-170);
+  var trigger = document.querySelector('.services__slider'),
+    maxDragX = $('.services__slider__item img').length * (-170);
 
   Draggable.create(slider, {
     type: "x",

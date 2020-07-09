@@ -7588,17 +7588,16 @@ p {
     padding-top: 65vw;
     padding-bottom: 85vw;
   }
-  .strategy .overlay__image {
-    z-index: 9;
-  }
   .strategy .overlay__image__top {
     width: 100%;
+    z-index: 9;
   }
   .strategy .overlay__image__top img {
     height: 100vw;
   }
   .strategy .overlay__image__bottom {
     width: 100%;
+    z-index: 9;
   }
   .strategy .overlay__image__bottom img {
     height: 100vw;

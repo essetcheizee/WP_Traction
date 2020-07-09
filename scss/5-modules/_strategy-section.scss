@@ -234,10 +234,10 @@
         .overlay {
 
             &__image {
-                z-index: 9;
 
                 &__top {
                     width: 100%;
+                    z-index: 9;
 
                     img {
                         height: 100vw;
@@ -246,6 +246,7 @@
 
                 &__bottom {
                     width: 100%;
+                    z-index: 9;
 
                     img {
                         height: 100vw;

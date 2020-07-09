@@ -7439,6 +7439,7 @@ p {
   width: 80%;
   top: -22vw;
   right: 0;
+  z-index: 9;
 }
 
 .strategy .overlay__image__top img {
@@ -7456,6 +7457,7 @@ p {
   width: 80%;
   bottom: -22vw;
   left: 0;
+  z-index: 9;
 }
 
 .strategy .overlay__image__bottom img {
@@ -7590,14 +7592,12 @@ p {
   }
   .strategy .overlay__image__top {
     width: 100%;
-    z-index: 9;
   }
   .strategy .overlay__image__top img {
     height: 100vw;
   }
   .strategy .overlay__image__bottom {
     width: 100%;
-    z-index: 9;
   }
   .strategy .overlay__image__bottom img {
     height: 100vw;

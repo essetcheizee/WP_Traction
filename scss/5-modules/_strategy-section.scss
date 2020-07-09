@@ -33,6 +33,7 @@
                 width: 80%;
                 top: -22vw;
                 right: 0;
+                z-index: 9;
 
 
                 img {
@@ -49,6 +50,7 @@
                 width: 80%;
                 bottom: -22vw;
                 left: 0;
+                z-index: 9;
 
 
                 img {
@@ -237,7 +239,6 @@
 
                 &__top {
                     width: 100%;
-                    z-index: 9;
 
                     img {
                         height: 100vw;
@@ -246,7 +247,6 @@
 
                 &__bottom {
                     width: 100%;
-                    z-index: 9;
 
                     img {
                         height: 100vw;

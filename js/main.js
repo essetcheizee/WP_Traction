@@ -25,9 +25,10 @@ jQuery(function ($) {
   $('.testimonial__carousel.slick').slick({
     dots: true,
     infinite: true,
-    speed:130,
+    speed:100,
     fade: true,
     cssEase: 'linear',
+    autoplaySpeed: 10000,
     autoplay: true
   });
 
@@ -648,13 +649,14 @@ jQuery(function ($) {
   });
   var slider = document.querySelectorAll('.services__slider__item');
   var trigger = $('.services__slider'),
-    maxDragX = $('.services__slider__item').length * (-130);
+    maxDragX = $('.services__slider__item').length * (-170);
 
   Draggable.create(slider, {
     type: "x",
     trigger: trigger,
     edgeResistance: .90,
     dragResistance: .50,
+    lockAxis:true,
     bounds: {
       minX: 0,
       maxX: maxDragX

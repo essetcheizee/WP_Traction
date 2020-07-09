@@ -14,6 +14,7 @@
         wp_register_script( 'gsap_core', $uri . '/js/gsap.min.js', [], $ver ) ;
         wp_register_script( 'draggable', $uri . '/js/Draggable.min.js', [], $ver);
         wp_register_script( 'slick_js', $uri . '/js/slick.min.js', [], $ver );
+        wp_register_script( 'scrollmagic', $uri . '/js/ScrollMagic.min.js', [], $ver);
 
         wp_enqueue_style( 'main_css' );
         wp_enqueue_style( 'slick_css');
@@ -24,6 +25,7 @@
         wp_enqueue_script( 'draggable');
         wp_enqueue_script( 'main_js' );
         wp_enqueue_script( 'slick_js');
+        wp_enqueue_script( 'scrollmagic');
 
     }
 

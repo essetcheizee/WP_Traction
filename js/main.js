@@ -25,9 +25,10 @@ jQuery(function ($) {
   $('.testimonial__carousel.slick').slick({
     dots: true,
     infinite: true,
-    speed:130,
+    speed:100,
     fade: true,
     cssEase: 'linear',
+    autoplaySpeed: 10000,
     autoplay: true
   });
 
@@ -86,18 +87,18 @@ jQuery(function ($) {
   var lastScrollTop = 0;
   $(window).scroll(function () {
     var height = $(window).scrollTop();
-    var pData = $('.strategy__section.--wrapper .strategy__section__description ul li');
-    pData.each(function () {
+    // var pData = $('.strategy__section.--wrapper .strategy__section__description ul li');
+    // pData.each(function () {
 
-      if (height > $(this).offset().top / 1.36) {
-        $(this).addClass('active');
-        $(this).prev().removeClass('active');
-      } else {
-        $(this).removeClass('active');
+    //   if (height > $(this).offset().top / 1.36) {
+    //     $(this).addClass('active');
+    //     $(this).prev().removeClass('active');
+    //   } else {
+    //     $(this).removeClass('active');
 
-      }
+    //   }
 
-    });
+    // });
 
 
     var scroll = $(window).scrollTop();
@@ -134,101 +135,95 @@ jQuery(function ($) {
       })
     }
     lastScrollTop = st;
-    var steps = $('.strategy__section.--wrapper .strategy__section__steps ul li');
+    // var steps = $('.strategy__section.--wrapper .strategy__section__steps ul li');
 
-    steps.each(function () {
-      var activeDesc = $('.strategy__section.--wrapper .strategy__section__description ul li.active');
-      if ($(this).attr('data-order') === $(activeDesc).attr('data-order')) {
-        $(this).prev().removeClass('active');
-        $(this).addClass('active');
-      } else {
-        $(this).removeClass('active');
+    // steps.each(function () {
+    //   var activeDesc = $('.strategy__section.--wrapper .strategy__section__description ul li.active');
+    //   if ($(this).attr('data-order') === $(activeDesc).attr('data-order')) {
+    //     $(this).prev().removeClass('active');
+    //     $(this).addClass('active');
+    //   } else {
+    //     $(this).removeClass('active');
 
-      }
+    //   }
 
-      if (height < $(this).offset().top - 1.35) {
-        $('.strategy__section.--wrapper .strategy__section__description ul li p').addClass('active');
+    //   if (height < $(this).offset().top - 1.35) {
+    //     $('.strategy__section.--wrapper .strategy__section__description ul li p').addClass('active');
 
-      } else {
+    //   } else {
 
-        $('.strategy__section.--wrapper .strategy__section__description ul li p').removeClass('active');
-      }
+    //     $('.strategy__section.--wrapper .strategy__section__description ul li p').removeClass('active');
+    //   }
 
 
-    });
+    // });
 
 
   });
 
   //Lets try Scroll Magic
 
-  // var controller = new ScrollMagic.Controller({
-  //   globalSceneOptions: {
-  //     duration:'40%'
-  //   }
-  // })
-  // new ScrollMagic.Scene({
-  //     triggerElement: '#crawl',
-  //     triggerHook: 0.5,
-  //   })
-  //   .setClassToggle('#crawl', 'active')
-  //   .addIndicators()
-  //   .addTo(controller)
-  // new ScrollMagic.Scene({
-  //     triggerElement: "#walk"
-  //   })
-  //   .setClassToggle("#walk", "active") // add class toggle
-  //   .addIndicators() // add indicators (requires plugin)
-  //   .addTo(controller);
-  // new ScrollMagic.Scene({
-  //     triggerElement: "#run"
-  //   })
-  //   .setClassToggle("#run", "active") // add class toggle
-  //   .addIndicators() // add indicators (requires plugin)
-  //   .addTo(controller);
-  // setInterval(function () {
-  //   if ($('#crawl').hasClass('active')) {
-  //     var step1 = $('.strategy__section.--wrapper .strategy__section__steps ul li')[0];
-  //     $(step1).addClass('active')
-  //   } else {
+  var controller = new ScrollMagic.Controller({
+    globalSceneOptions: {
+      duration:'40%'
+    }
+  })
+  new ScrollMagic.Scene({
+      triggerElement: '#crawl',
+      triggerHook: 0.5,
+    })
+    .setClassToggle('#crawl', 'active')
+    .addTo(controller)
+  new ScrollMagic.Scene({
+      triggerElement: "#walk"
+    })
+    .setClassToggle("#walk", "active") // add class toggle
+    .addTo(controller);
+  new ScrollMagic.Scene({
+      triggerElement: "#run"
+    })
+    .setClassToggle("#run", "active") // add class toggle
+    .addTo(controller);
+  setInterval(function () {
+    if ($('#crawl').hasClass('active')) {
+      var step1 = $('.strategy__section.--wrapper .strategy__section__steps ul li')[0];
+      $(step1).addClass('active')
+    } else {
 
-  //     var step1 = $('.strategy__section.--wrapper .strategy__section__steps ul li')[0]
-  //     $(step1).removeClass('active')
-  //   }
-  //   if ($('#walk').hasClass('active')) {
-  //     var step1 = $('.strategy__section.--wrapper .strategy__section__steps ul li')[1];
-  //     $(step1).addClass('active')
-  //   } else {
+      var step1 = $('.strategy__section.--wrapper .strategy__section__steps ul li')[0]
+      $(step1).removeClass('active')
+    }
+    if ($('#walk').hasClass('active')) {
+      var step1 = $('.strategy__section.--wrapper .strategy__section__steps ul li')[1];
+      $(step1).addClass('active')
+    } else {
 
-  //     var step1 = $('.strategy__section.--wrapper .strategy__section__steps ul li')[1]
-  //     $(step1).removeClass('active')
-  //   }
-  //   if ($('#run').hasClass('active')) {
-  //     var step1 = $('.strategy__section.--wrapper .strategy__section__steps ul li')[2];
-  //     $(step1).addClass('active')
-  //   } else {
+      var step1 = $('.strategy__section.--wrapper .strategy__section__steps ul li')[1]
+      $(step1).removeClass('active')
+    }
+    if ($('#run').hasClass('active')) {
+      var step1 = $('.strategy__section.--wrapper .strategy__section__steps ul li')[2];
+      $(step1).addClass('active')
+    } else {
 
-  //     var step1 = $('.strategy__section.--wrapper .strategy__section__steps ul li')[2]
-  //     $(step1).removeClass('active')
-  //   }
-  // })
+      var step1 = $('.strategy__section.--wrapper .strategy__section__steps ul li')[2]
+      $(step1).removeClass('active')
+    }
+  })
 
-  //   var controller = new ScrollMagic.Controller({globalSceneOptions:{duration:'200'}})
-  //    new ScrollMagic.Scene({
-  //     triggerElement: '#crawl',
-  //     triggerHook: 0.5,
-  //   })
-  //   .setClassToggle('#crawl', 'active')
-  //   .addIndicators()
-  //   .addTo(controller)
-  //   new ScrollMagic.Scene({triggerElement: "#walk"})
-  //   .setClassToggle("#walk", "active") // add class toggle
-  //   .addIndicators() // add indicators (requires plugin)
-  //   .addTo(controller);
-  //   new ScrollMagic.Scene({triggerElement: "#run"})
-  //   .setClassToggle("#run", "active") // add class toggle
-  //   .addIndicators() // add indicators (requires plugin)
-  //   .addTo(controller);
+    var controller = new ScrollMagic.Controller({globalSceneOptions:{duration:'200'}})
+     new ScrollMagic.Scene({
+      triggerElement: '#crawl',
+      triggerHook: 0.5,
+    })
+    .setClassToggle('#crawl', 'active')
+    .addTo(controller)
+    new ScrollMagic.Scene({triggerElement: "#walk"})
+    .setClassToggle("#walk", "active") // add class toggle
+    .addTo(controller);
+    new ScrollMagic.Scene({triggerElement: "#run"})
+    .setClassToggle("#run", "active") // add class toggle
+    .addTo(controller);
 
   //   //check Active 
   // setInterval(function(){
@@ -660,18 +655,18 @@ jQuery(function ($) {
     });
   }
   $(document).ready(function () {
-    $('.services').attachDragger();
+    $('.services_slider').attachDragger();
 
   });
   var slider = document.querySelectorAll('.services__slider__item');
   var trigger = $('.services__slider'),
-    maxDragX = $('.services__slider__item').length * (-130);
-
+    maxDragX = $('.services__slider__item').length * (-200);
   Draggable.create(slider, {
     type: "x",
     trigger: trigger,
     edgeResistance: .90,
     dragResistance: .50,
+    lockAxis:true,
     bounds: {
       minX: 0,
       maxX: maxDragX

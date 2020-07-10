@@ -7298,8 +7298,8 @@ p {
 }
 
 .marquee__section .marquee__section__track .img-wrapper {
-  width: 12vw;
-  height: auto;
+  width: 8vw;
+  height: 4vw;
 }
 
 .marquee__section .marquee__section__track .img-wrapper:not(:first-child) {

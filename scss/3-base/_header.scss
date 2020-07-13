@@ -4,7 +4,7 @@
     right: 5vw;
     z-index: 9999999999;
 
-    
+
     &.show {
         animation: menuShow 0.3s linear forwards;
     }
@@ -24,7 +24,7 @@
             color: getColor(White);
             font-size: 1.4vw;
             pointer-events: none;
-            font-family: TitlingLight; font-weight: 600;
+            font-family: TitlingRegular;
         }
 
         &.close {

@@ -19,7 +19,7 @@
             pointer-events: none;
 
             h1 {
-                font-size: 15.4vw !important;
+                font-size: 14vw !important;
 
             }
         }
@@ -83,7 +83,7 @@
 
                                 h3 {
                                     display: none;
-                                    font-family: TitlingLight; font-weight: 600;
+                                    font-family: TitlingRegular;
                                 }
                             }
                         }
@@ -129,7 +129,7 @@
                                 margin-left: -3vw;
                                 transition: all .5s;
                                 cursor: default;
-                                font-family: TitlingLight; font-weight: 600;
+                                font-family: TitlingRegular;
 
                                 &:hover {
                                     text-decoration: none;
@@ -165,7 +165,7 @@
                         li {
 
                             h3 {
-                                font-family: TitlingLight; font-weight: 600;
+                                font-family: TitlingRegular;
                             }
 
                             &:not(:first-child) {

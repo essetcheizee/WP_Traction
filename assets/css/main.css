@@ -1,11 +1,11 @@
 @font-face {
   font-family: TitlingLight;
-  src: url("./../../assets/fonts/Titling Gothic FB WideRegular.otf") format("opentype");
+  src: url("./../../assets/fonts/TitlingGothicFBNormal-Light.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: TitlingLight;
-  src: url("./../../assets/fonts/TitlingGothicFBNormal-Light.ttf") format("truetype");
+  font-family: TitlingRegular;
+  src: url("./../../assets/fonts/TitlingGothicFB.otf") format("opentype");
 }
 
 select,
@@ -45,7 +45,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: TitlingLight;
-  font-weight: 600;
   font-weight: 300;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
@@ -220,8 +219,7 @@ main {
   color: #FFFFFF;
   font-size: 1.4vw;
   pointer-events: none;
-  font-family: TitlingLight;
-  font-weight: 600;
+  font-family: TitlingRegular;
 }
 
 .menus-wrapper .toggle-menu.close {
@@ -831,8 +829,8 @@ h6 {
   margin: 0;
   padding: 0;
   line-height: 2.5vw;
-  font-weight: 600;
-  font-family: TitlingLight;
+  font-family: TitlingRegular;
+  letter-spacing: 1px;
 }
 
 .section-heading {
@@ -1111,8 +1109,7 @@ ul li {
 .navigation__wrapper .navigation__links ul li a {
   font-size: 4vw;
   color: #141C42;
-  font-family: TitlingLight;
-  font-weight: 600;
+  font-family: TitlingRegular;
   position: relative;
   overflow: hidden;
 }
@@ -7181,8 +7178,7 @@ p {
 }
 
 .featured .featured-box .box h2 {
-  font-family: TitlingLight;
-  font-weight: 600;
+  font-family: TitlingRegular;
   position: relative;
   overflow: hidden;
   color: #fff;
@@ -7600,7 +7596,7 @@ p {
 }
 
 .strategy .overlay__text h1 {
-  font-size: 15.4vw !important;
+  font-size: 14vw !important;
 }
 
 .strategy .overlay__image__top {
@@ -7654,8 +7650,7 @@ p {
 
 .strategy__section.--wrapper.--desktop .strategy__section__description ul li h3 {
   display: none;
-  font-family: TitlingLight;
-  font-weight: 600;
+  font-family: TitlingRegular;
 }
 
 .strategy__section.--wrapper .strategy__section__steps {
@@ -7690,8 +7685,7 @@ p {
   -webkit-transition: all .5s;
   transition: all .5s;
   cursor: default;
-  font-family: TitlingLight;
-  font-weight: 600;
+  font-family: TitlingRegular;
 }
 
 .strategy__section.--wrapper .strategy__section__steps ul li a:hover {
@@ -7720,8 +7714,7 @@ p {
 }
 
 .strategy__section.--wrapper .strategy__section__description ul li h3 {
-  font-family: TitlingLight;
-  font-weight: 600;
+  font-family: TitlingRegular;
 }
 
 .strategy__section.--wrapper .strategy__section__description ul li:not(:first-child) {

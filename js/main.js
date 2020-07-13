@@ -168,6 +168,12 @@ jQuery(function ($) {
 
   });
 
+  $('.page__content__title:after').on('click',function(){
+    $('html,body').animate({
+        scrollTop: $('.second').offset().top()
+    })
+})
+
   //Lets try Scroll Magic
 
   var controller = new ScrollMagic.Controller({

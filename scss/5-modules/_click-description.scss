@@ -24,7 +24,7 @@
                     p {
                         // display: none;
                         color: getColor(Primary);
-                        line-height: 2em;
+                        line-height: 1.4em;
                     }
 
                     &:first-child {
@@ -43,7 +43,7 @@
 
                 &:hover {
                     text-decoration:  none;
-                    
+
                     .svg-wrapper {
                         margin-left: 0;
                     }

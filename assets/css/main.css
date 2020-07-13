@@ -1201,7 +1201,7 @@ p {
 
 @media (max-width: 992px) {
   p {
-    font-size: 16px !important;
+    font-size: 20px !important;
     line-height: 1.6em !important;
   }
 }
@@ -7040,7 +7040,7 @@ p {
 
 @media (max-width: 992px) {
   .description .mdl__wrap .content-wrapper p {
-    font-size: 24px !important;
+    font-size: 28px !important;
   }
 }
 
@@ -7060,7 +7060,7 @@ p {
     max-width: 80%;
   }
   .description .mdl__wrap .content-wrapper p {
-    font-size: 20px !important;
+    font-size: 24px !important;
   }
 }
 
@@ -8062,7 +8062,7 @@ p {
 
 .click-description .mdl__wrap .description-list ul li p {
   color: #141C42;
-  line-height: 2em;
+  line-height: 1.4em;
 }
 
 .click-description .mdl__wrap .description-list ul li:first-child p {

@@ -27,6 +27,14 @@ class custom_header extends Widget_Base {
 			]
         );
         
+        $this->add_control(
+			'title',
+			[
+				'label' => __( 'Title', 'elementor' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'placeholder'   => __('Type your title here', 'elementor'),
+			]
+        );
         
         // $this->add_control(
 		// 	'contact',

@@ -222,22 +222,22 @@ min-height: 0 !important;
 }
 
 .traction__header{
+  
+  &.show {
+    animation: menuShow 0.3s linear forwards;
+    z-index: 9999999999;
+}
+
+&.hide {
+    animation: menuHide 0.3s linear forwards;
+}
+
   .branding{
     &.--header {
       position: fixed;
       top: 3vw;
       left: 5vw;
       z-index: 99999999999;
-
-      &.show {
-          animation: menuShow 0.3s linear forwards;
-          z-index: 9999999999;
-      }
-
-      &.hide {
-          animation: menuHide 0.3s linear forwards;
-      }
-
   }
   }
   .menus-wrapper{
@@ -245,14 +245,5 @@ min-height: 0 !important;
     top: 4vw;
     right: 5vw;
     z-index: 9999999999;
-
-
-    &.show {
-        animation: menuShow 0.3s linear forwards;
-    }
-
-    &.hide {
-        animation: menuHide 0.3s linear forwards;
-    }
   }
 }

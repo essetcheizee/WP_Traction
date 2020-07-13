@@ -54,11 +54,11 @@
 
             .arrow-link {
                 margin-left: -1.5vw;
-                transition: all 0.5s linear;
+                transition: all 0.2s linear;
 
                 &:hover {
                     margin-left: 0vw;
-
+                    text-decoration: none;
                 }
 
                 .svg-wrapper {

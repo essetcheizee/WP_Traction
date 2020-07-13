@@ -165,22 +165,22 @@ jQuery(function ($) {
 
   var controller = new ScrollMagic.Controller({
     globalSceneOptions: {
-      duration:'40%'
+      duration:'50%'
     }
   })
   new ScrollMagic.Scene({
       triggerElement: '#crawl',
-      triggerHook: 0.5,
+      triggerHook: 1,
     })
     .setClassToggle('#crawl', 'active')
     .addTo(controller)
   new ScrollMagic.Scene({
-      triggerElement: "#walk"
+      triggerElement: "#walk",
     })
     .setClassToggle("#walk", "active") // add class toggle
     .addTo(controller);
   new ScrollMagic.Scene({
-      triggerElement: "#run"
+      triggerElement: "#run",
     })
     .setClassToggle("#run", "active") // add class toggle
     .addTo(controller);

@@ -4,8 +4,8 @@
 }
 
 @font-face {
-  font-family: TitlingBold;
-  src: url("./../../assets/fonts/TitlingGothicFBWideBold.otf") format("opentype");
+  font-family: TitlingLight;
+  src: url("./../../assets/fonts/TitlingGothicFBNormal-Light.ttf") format("truetype");
 }
 
 select,
@@ -220,6 +220,7 @@ main {
   color: #FFFFFF;
   font-size: 1.4vw;
   pointer-events: none;
+  font-family: Titling;
 }
 
 .menus-wrapper .toggle-menu.close {
@@ -843,7 +844,7 @@ a {
   padding-bottom: 0.3vw;
   display: inline-block;
   font-size: 1vw;
-  font-weight: 400;
+  font-family: TitlingLight;
 }
 
 a.section-button {
@@ -1040,6 +1041,7 @@ ul li {
 .navigation__wrapper .navigation__links ul li a {
   font-size: 4vw;
   color: #141C42;
+  font-family: Titling;
 }
 
 .navigation__wrapper .navigation__links ul li a.active {
@@ -1166,10 +1168,11 @@ ul li {
 
 p {
   margin: 0;
-  font-size: 1.6vw;
+  font-size: 2.2vw;
   font-weight: 400;
-  line-height: 3.2vw;
+  line-height: 1.6em;
   color: #161616;
+  font-family: TitlingLight !important;
 }
 
 @media (max-width: 992px) {
@@ -6964,13 +6967,14 @@ p {
 
 .description .mdl__wrap .content-wrapper .arrow-link {
   margin-left: -1.5vw;
-  -webkit-transition: all 0.5s linear;
-  transition: all 0.5s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
   color: #F596BA;
 }
 
 .description .mdl__wrap .content-wrapper .arrow-link:hover {
   margin-left: 0vw;
+  text-decoration: none;
 }
 
 .description .mdl__wrap .content-wrapper .arrow-link .svg-wrapper g,
@@ -7035,6 +7039,10 @@ p {
   padding: 0;
 }
 
+.featured .featured-box .box h2 {
+  font-family: Titling;
+}
+
 .featured .featured-box .box:hover {
   text-decoration: none;
 }
@@ -7079,7 +7087,7 @@ p {
 .featured .featured-box .box .featured__content .paragraph p {
   color: #8A8A8A;
   line-height: 2vw;
-  font-size: 1.06vw;
+  font-size: 1.2vw;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -7485,6 +7493,7 @@ p {
 
 .strategy__section.--wrapper.--desktop .strategy__section__description ul li h3 {
   display: none;
+  font-family: Titling;
 }
 
 .strategy__section.--wrapper .strategy__section__steps {
@@ -7519,6 +7528,7 @@ p {
   -webkit-transition: all .5s;
   transition: all .5s;
   cursor: default;
+  font-family: Titling;
 }
 
 .strategy__section.--wrapper .strategy__section__steps ul li a:hover {
@@ -7544,6 +7554,10 @@ p {
 
 .strategy__section.--wrapper .strategy__section__description {
   width: 50%;
+}
+
+.strategy__section.--wrapper .strategy__section__description ul li h3 {
+  font-family: Titling;
 }
 
 .strategy__section.--wrapper .strategy__section__description ul li:not(:first-child) {
@@ -8006,11 +8020,23 @@ p {
 .click-description .mdl__wrap .description-list .arrow-link {
   color: #F596BA;
   z-index: 9;
+  overflow: hidden;
+}
+
+.click-description .mdl__wrap .description-list .arrow-link:hover {
+  text-decoration: none;
+}
+
+.click-description .mdl__wrap .description-list .arrow-link:hover .svg-wrapper {
+  margin-left: 0;
 }
 
 .click-description .mdl__wrap .description-list .arrow-link .svg-wrapper {
   margin: 0;
   margin-right: .5vw;
+  margin-left: -1.5vw;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .click-description .mdl__wrap .description-list .arrow-link .svg-wrapper svg path,

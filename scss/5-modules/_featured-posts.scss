@@ -12,6 +12,10 @@
             border-bottom: none;
             padding: 0;
 
+            h2 {
+                font-family: Titling;
+            }
+
             &:hover {
                 text-decoration: none;
 
@@ -58,7 +62,7 @@
                     p {
                         color: #8A8A8A;
                         line-height: 2vw;
-                        font-size: 1.06vw;
+                        font-size: 1.2vw;
                         @include text-clamp(3);
                     }
 

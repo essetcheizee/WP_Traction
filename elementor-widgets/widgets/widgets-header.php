@@ -368,4 +368,3 @@ class custom_header extends Widget_Base {
     <?php
     }
 }
-    </div>        

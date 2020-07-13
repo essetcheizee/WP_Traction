@@ -100,7 +100,7 @@ jQuery(function ($) {
 
     // });
 
-    var hero = $('.hero');
+    var hero = $('.hero').height();
     if(!hero){
       
       $('.traction__header').addClass('white__bg');

@@ -96,10 +96,32 @@
                         a {
                             font-size: 4vw;
                             color: getColor(Primary);
-                            font-family: TitlingLight; font-weight: 600;
+                            font-family: TitlingLight;
+                            font-weight: 600;
+                            position: relative;
+                            overflow: hidden;
 
                             &.active {
                                 color: getColor(Secondary);
+                            }
+
+                            &:hover {
+                                &::after {
+                                    -webkit-animation: footer-link-hover .8s cubic-bezier(.58, .3, .005, 1) 0s 1;
+                                    animation: footer-link-hover .8s cubic-bezier(.58, .3, .005, 1) 0s 1;
+                                }
+                            }
+
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 0;
+                                border-bottom: .1rem solid getColor(Primary);
+                                transition: all .8s cubic-bezier(.555, .205, .295, .975);
+                                box-sizing: border-box;
                             }
                         }
                     }
@@ -127,8 +149,30 @@
                         li {
 
                             a {
+
+                                &:hover {
+                                    &::after {
+                                        -webkit-animation: footer-link-hover .8s cubic-bezier(.58, .3, .005, 1) 0s 1;
+                                        animation: footer-link-hover .8s cubic-bezier(.58, .3, .005, 1) 0s 1;
+                                    }
+                                }
+
                                 font-size: 1.15vw;
                                 color: #8A8A8A;
+                                position: relative;
+                                overflow: hidden;
+
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 0;
+                                    border-bottom: .1rem solid getColor(Primary);
+                                    transition: all .8s cubic-bezier(.555, .205, .295, .975);
+                                    box-sizing: border-box;
+                                }
                             }
                         }
                     }
@@ -178,6 +222,7 @@
 
                     &__contact {
                         margin-bottom: 16px;
+
                         ul {
 
                             li {
@@ -241,6 +286,7 @@
             }
         }
     }
+
     @include md {
         &__wrapper {
 
@@ -248,7 +294,7 @@
                 ul {
                     li {
                         text-align: center;
-                        
+
                         a {
                             font-size: 40px;
                         }

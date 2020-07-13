@@ -107,17 +107,13 @@ jQuery(function ($) {
       if ($('.menus-wrapper').hasClass('mobile')) {
 
       } else {
-        $('.menus-wrapper').addClass('hide');
-        $('.menus-wrapper').removeClass('show');
-        $('.branding.--header').addClass('hide');
-        $('.branding.--header').removeClass('show');
+        $('.traction__header').addClass('hide');
+        $('.traction__header').removeClass('show');
       }
 
     } else {
-      $('.menus-wrapper').addClass('show');
-      $('.menus-wrapper').removeClass('hide');
-      $('.branding.--header').removeClass('hide');
-      $('.branding.--header').addClass('show');
+      $('.traction__header').addClass('show');
+      $('.traction__header').removeClass('hide');
     }
     position = scroll;
 

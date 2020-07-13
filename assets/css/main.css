@@ -184,6 +184,23 @@ main {
   clear: both;
 }
 
+.menus-wrapper {
+  position: fixed;
+  top: 4vw;
+  right: 5vw;
+  z-index: 9999999999;
+}
+
+.menus-wrapper.show {
+  -webkit-animation: menuShow 0.3s linear forwards;
+          animation: menuShow 0.3s linear forwards;
+}
+
+.menus-wrapper.hide {
+  -webkit-animation: menuHide 0.3s linear forwards;
+          animation: menuHide 0.3s linear forwards;
+}
+
 .menus-wrapper .toggle-menu {
   cursor: pointer;
   display: -webkit-box;
@@ -8799,6 +8816,13 @@ p {
   min-height: 0 !important;
 }
 
+.traction__header {
+  position: fixed;
+  top: 3vw;
+  left: 5vw;
+  z-index: 99999999999;
+}
+
 .traction__header.show {
   -webkit-animation: menuShow 0.3s linear forwards;
           animation: menuShow 0.3s linear forwards;
@@ -8808,20 +8832,6 @@ p {
 .traction__header.hide {
   -webkit-animation: menuHide 0.3s linear forwards;
           animation: menuHide 0.3s linear forwards;
-}
-
-.traction__header .branding.--header {
-  position: fixed;
-  top: 3vw;
-  left: 5vw;
-  z-index: 99999999999;
-}
-
-.traction__header .menus-wrapper {
-  position: fixed;
-  top: 4vw;
-  right: 5vw;
-  z-index: 9999999999;
 }
 
 /* hover animation */

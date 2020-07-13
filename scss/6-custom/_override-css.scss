@@ -222,7 +222,10 @@ min-height: 0 !important;
 }
 
 .traction__header{
-  
+  position: fixed;
+  top: 3vw;
+  left: 5vw;
+  z-index: 99999999999;
   &.show {
     animation: menuShow 0.3s linear forwards;
     z-index: 9999999999;
@@ -232,18 +235,5 @@ min-height: 0 !important;
     animation: menuHide 0.3s linear forwards;
 }
 
-  .branding{
-    &.--header {
-      position: fixed;
-      top: 3vw;
-      left: 5vw;
-      z-index: 99999999999;
-  }
-  }
-  .menus-wrapper{
-    position: fixed;
-    top: 4vw;
-    right: 5vw;
-    z-index: 9999999999;
-  }
+  
 }

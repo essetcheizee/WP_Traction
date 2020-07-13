@@ -27,14 +27,7 @@ class custom_header extends Widget_Base {
 			]
         );
         
-        $this->add_control(
-			'title',
-			[
-				'label' => __( 'Title', 'elementor' ),
-                'type' => \Elementor\Controls_Manager::TEXT,
-                'placeholder'   => __('Type your title here', 'elementor'),
-			]
-        );
+       
         
         // $this->add_control(
 		// 	'contact',
@@ -107,7 +100,7 @@ class custom_header extends Widget_Base {
     </g>
 </svg>
         </div>
-        <span class="brand-text"><?= $settings['title']?></span>
+        
     </a>
 
     <div class="menus-wrapper">
@@ -266,7 +259,7 @@ class custom_header extends Widget_Base {
                 </g>
             </svg>
         </div>
-        <span class="brand-text">{{settings.title}}</span>
+       
     </a>
 
     <div class="menus-wrapper">

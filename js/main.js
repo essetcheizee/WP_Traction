@@ -726,8 +726,8 @@ jQuery(function ($) {
   $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
   $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
   $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
-
-  $('a.branding.--header').wrap('div');
+  $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
+  $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
 
 
 

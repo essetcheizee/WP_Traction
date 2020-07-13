@@ -170,7 +170,7 @@ jQuery(function ($) {
 
   $('.page__content__title:after').on('click',function(){
     $('html,body').animate({
-        scrollTop: $('.second').offset().top()
+        scrollTop: $('.strategy').offset().top()
     })
 })
 

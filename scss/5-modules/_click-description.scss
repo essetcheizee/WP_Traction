@@ -42,7 +42,7 @@
                 overflow: hidden;
 
                 &:hover {
-                    text-decoration:  none;
+                    text-decoration: none;
 
                     .svg-wrapper {
                         margin-left: 0;
@@ -53,7 +53,7 @@
                     margin: 0;
                     margin-right: .5vw;
                     margin-left: -1.5vw;
-                    transition:  all 0.2s;
+                    transition: all 0.2s;
 
 
                     svg {
@@ -83,13 +83,70 @@
                     }
 
                     a {
+                        position: relative;
+                        overflow: hidden;
+                        color: #fff;
+                        display: inline-block;
+
+
+                        &::after {
+
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            height: 0;
+                            width: 0%;
+                            border-bottom: .2rem solid getColor(Primary);
+                            animation: footer-link-hover-return .8s cubic-bezier(.58, .3, .005, 1) forwards;
+                            box-sizing: border-box;
+                        }
+
+                        &:hover {
+                            text-decoration: none;
+
+
+                            &::after {
+                                border-bottom: .2rem solid getColor(Primary);
+                                -webkit-animation: footer-link-hover .8s cubic-bezier(.58, .3, .005, 1) forwards;
+                                animation: footer-link-hover .8s cubic-bezier(.58, .3, .005, 1) forwards;
+                            }
+                        }
+
+
                         &.active {
                             color: getColor(Primary);
                         }
 
                         color: colorOpacity(getColor(Black), 40);
                     }
+
+
                 }
+
+                &:hover {
+                    text-decoration: none;
+
+                    .featured__image {
+
+                        img {
+                            transform: scale(1.5);
+                            transition: all 10s linear;
+                        }
+                    }
+
+                    h2 {
+
+                        &::after {
+                            border-bottom: .2rem solid getColor(Primary);
+                            -webkit-animation: footer-link-hover .8s cubic-bezier(.58, .3, .005, 1) forwards;
+                            animation: footer-link-hover .8s cubic-bezier(.58, .3, .005, 1) forwards;
+                        }
+                    }
+                }
+
+
+
             }
         }
 
@@ -138,7 +195,7 @@
                     li {
 
                         p {
-                            font-size: 14   px!important;
+                            font-size: 14 px !important;
                             text-align: center;
                             margin-bottom: 16px;
                         }

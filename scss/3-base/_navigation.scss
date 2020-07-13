@@ -106,8 +106,8 @@
 
                             &:hover {
                                 &::after {
-                                    -webkit-animation: footer-link-hover .8s cubic-bezier(.58, .3, .005, 1) 0s 1;
-                                    animation: footer-link-hover .8s cubic-bezier(.58, .3, .005, 1) 0s 1;
+                                    -webkit-animation: footer-link-hover .8s cubic-bezier(.58, .3, .005, 1) forwards;
+                                    animation: footer-link-hover .8s cubic-bezier(.58, .3, .005, 1) forwards;
                                 }
                             }
 
@@ -116,9 +116,10 @@
                                 position: absolute;
                                 bottom: 0;
                                 left: 0;
-                                width: 100%;
+                                width: 0%;
                                 height: 0;
                                 border-bottom: .1rem solid getColor(Primary);
+                                animation: footer-link-hover-return .8s cubic-bezier(.58, .3, .005, 1) forwards;
                                 transition: all .8s cubic-bezier(.555, .205, .295, .975);
                                 box-sizing: border-box;
                             }
@@ -151,8 +152,8 @@
 
                                 &:hover {
                                     &::after {
-                                        -webkit-animation: footer-link-hover .8s cubic-bezier(.58, .3, .005, 1) 0s 1;
-                                        animation: footer-link-hover .8s cubic-bezier(.58, .3, .005, 1) 0s 1;
+                                        -webkit-animation: footer-link-hover .8s cubic-bezier(.58, .3, .005, 1) forwards;
+                                        animation: footer-link-hover .8s cubic-bezier(.58, .3, .005, 1) forwards;
                                     }
                                 }
 
@@ -166,9 +167,10 @@
                                     position: absolute;
                                     bottom: 0;
                                     left: 0;
-                                    width: 100%;
+                                    width: 0%;
                                     height: 0;
                                     border-bottom: .1rem solid getColor(Primary);
+                                    animation: footer-link-hover-return .8s cubic-bezier(.58, .3, .005, 1) forwards;
                                     transition: all .8s cubic-bezier(.555, .205, .295, .975);
                                     box-sizing: border-box;
                                 }

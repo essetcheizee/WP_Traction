@@ -727,6 +727,8 @@ jQuery(function ($) {
   $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
   $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
 
+  $('a.branding.--header').wrap('div');
+
 
 
   if ($('ul.menu li.menu-item').hasClass('current_page_item')) {

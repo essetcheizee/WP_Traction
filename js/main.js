@@ -100,6 +100,7 @@ jQuery(function ($) {
 
     // });
 
+    var scroll = $(window).scrollTop();
     var hero = $('.hero').height();
     if(!hero){
       
@@ -112,7 +113,6 @@ jQuery(function ($) {
       $('.traction__header').removeClass('white__bg');
     }
   }
-    var scroll = $(window).scrollTop();
     if (scroll > position) {
 
       if ($('.menus-wrapper').hasClass('mobile')) {

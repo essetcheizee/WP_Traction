@@ -222,6 +222,13 @@ min-height: 0 !important;
 }
 
 .traction__header{
+  width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vw 4vw;
+    top: 0;
+    left: 0;
   position: fixed;
   top: 3vw;
   top: 4vw;

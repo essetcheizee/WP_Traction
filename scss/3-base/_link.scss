@@ -1,11 +1,11 @@
 a {
 
     color: getColor(Primary);
-    text-decoration: none;
+    text-decoration: none!important;
     padding-bottom: 0.3vw;
     display: inline-block;
     font-size: 1vw;
-    font-weight: 400;
+    font-family: TitlingLight;
 
     &.section-button {
         margin-top: 3vw;

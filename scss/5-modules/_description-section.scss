@@ -54,11 +54,11 @@
 
             .arrow-link {
                 margin-left: -1.5vw;
-                transition: all 0.5s linear;
+                transition: all 0.2s linear;
 
                 &:hover {
                     margin-left: 0vw;
-
+                    text-decoration: none;
                 }
 
                 .svg-wrapper {
@@ -87,7 +87,7 @@
             .content-wrapper {
 
                 p {
-                    font-size: 24px !important;
+                    font-size: 28px !important;
                 }
             }
         }
@@ -115,7 +115,7 @@
                 max-width: 80%;
 
                 p {
-                    font-size: 20px !important;
+                    font-size: 24px !important;
                 }
             }
         }

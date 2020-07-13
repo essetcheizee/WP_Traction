@@ -2,10 +2,9 @@
     position: fixed;
     top: 4vw;
     right: 5vw;
-    mix-blend-mode: exclusion;
     z-index: 9999999999;
 
-    
+
     &.show {
         animation: menuShow 0.3s linear forwards;
     }
@@ -25,6 +24,7 @@
             color: getColor(White);
             font-size: 1.4vw;
             pointer-events: none;
+            font-family: TitlingRegular;
         }
 
         &.close {
@@ -86,6 +86,14 @@
 
         .close {
             display: flex;
+
+            span {
+                color: #000;
+            }
+
+            img {
+                filter: invert(0);
+            }
         }
     }
 

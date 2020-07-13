@@ -12,19 +12,44 @@
             border-bottom: none;
             padding: 0;
 
-            &:hover {
-                text-decoration: none;
+            h2 {
+                font-family: TitlingRegular;
+                position: relative;
+                overflow: hidden;
+                color: #fff;
+                display: inline-block;
 
-                h2 {
-                    text-decoration: underline;
+                &::after {
+
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 0;
+                    border-bottom: .2rem solid getColor(Primary);
+                    transition: all .8s cubic-bezier(.555, .205, .295, .975);
+                    box-sizing: border-box;
                 }
 
+            }
+
+            &:hover {
+                text-decoration: none;
 
                 .featured__image {
 
                     img {
                         transform: scale(1.5);
                         transition: all 10s linear;
+                    }
+                }
+
+                h2 {
+
+                    &::after {
+                        -webkit-animation: footer-link-hover .8s cubic-bezier(.58, .3, .005, 1) 0s 1;
+                        animation: footer-link-hover .8s cubic-bezier(.58, .3, .005, 1) 0s 1;
                     }
                 }
             }
@@ -58,7 +83,7 @@
                     p {
                         color: #8A8A8A;
                         line-height: 2vw;
-                        font-size: 1.06vw;
+                        font-size: 1.2vw;
                         @include text-clamp(3);
                     }
 

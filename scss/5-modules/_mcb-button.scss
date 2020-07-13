@@ -1,0 +1,56 @@
+.mcb-button {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+
+.mcb-buttonp {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+
+.mcb-button:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    border-bottom: .1rem solid #fff;
+    transition: all .8s cubic-bezier(.555, .205, .295, .975);
+    box-sizing: border-box;
+}
+
+.mcb-buttonp:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    border-bottom: .1rem solid getColor(Primary);
+    transition: all .8s cubic-bezier(.555, .205, .295, .975);
+    box-sizing: border-box;
+}
+
+/*BUTTON LIKE TRACTION*/
+
+.mcb-button:hover:after {
+    -webkit-animation: footer-link-hover .8s cubic-bezier(.58, .3, .005, 1) 0s 1;
+    animation: footer-link-hover .8s cubic-bezier(.58, .3, .005, 1) 0s 1;
+}
+
+
+.pagination:hover .mcb-button:after {
+    -webkit-animation: footer-link-hover .8s cubic-bezier(.58, .3, .005, 1) 0s 1;
+    animation: footer-link-hover .8s cubic-bezier(.58, .3, .005, 1) 0s 1;
+}
+
+
+.mcb-buttonp:hover:after {
+    -webkit-animation: footer-link-hover .8s cubic-bezier(.58, .3, .005, 1) 0s 1;
+    animation: footer-link-hover .8s cubic-bezier(.58, .3, .005, 1) 0s 1;
+}

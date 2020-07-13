@@ -24,7 +24,7 @@
                     p {
                         // display: none;
                         color: getColor(Primary);
-                        line-height: 2em;
+                        line-height: 1.4em;
                     }
 
                     &:first-child {
@@ -39,10 +39,22 @@
             .arrow-link {
                 color: getColor(Secondary);
                 z-index: 9;
+                overflow: hidden;
+
+                &:hover {
+                    text-decoration:  none;
+
+                    .svg-wrapper {
+                        margin-left: 0;
+                    }
+                }
 
                 .svg-wrapper {
                     margin: 0;
                     margin-right: .5vw;
+                    margin-left: -1.5vw;
+                    transition:  all 0.2s;
+
 
                     svg {
 

@@ -2,7 +2,6 @@
     @include flex-content(center, center);
     cursor: pointer;
     border: none;
-    mix-blend-mode: exclusion;
 
     &:hover {
         text-decoration: none;
@@ -17,6 +16,16 @@
         svg {
             height: 2vw;
             width: 2vw;
+        }
+
+        &.--header {
+            height: auto;
+            width: 10vw;
+
+            svg {
+                height: 100%;
+                width: 100%;
+            }
         }
     }
 
@@ -47,6 +56,13 @@
     }
 
     @include lg {
+
+        .svg-wrapper {
+            &.--header {
+                height: auto;
+                width: 200px;
+            }
+        }
 
         .svg-wrapper,
         .svg-wrapper svg {

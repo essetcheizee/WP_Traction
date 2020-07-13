@@ -53,12 +53,32 @@
             position: relative;
 
             h1 {
-                color: getColor(White);
+            color: getColor(White);
 
                 &:not(:last-child) {
                     margin-bottom: 2vw;
                 }
             }
+
+
+            .arrow-link {
+
+                .svg-wrapper {
+                    transition: all 0.2s linear;
+                    margin-left: -1.5vw;
+                }
+
+                &:hover {
+
+                    .svg-wrapper {
+                        margin-left: 0vw;
+                    }
+
+                    margin-left: 0vw;
+                    text-decoration: none;
+                }
+            }
+
 
         }
     }
@@ -131,7 +151,7 @@
 
             .hero-content {
                 margin-top: -50px;
-                
+
                 .hero-text {
 
                     .title {

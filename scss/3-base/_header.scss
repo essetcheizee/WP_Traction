@@ -2,7 +2,6 @@
     position: fixed;
     top: 4vw;
     right: 5vw;
-    mix-blend-mode: exclusion;
     z-index: 9999999999;
 
     
@@ -87,6 +86,14 @@
 
         .close {
             display: flex;
+
+            span {
+                color: #000;
+            }
+
+            img {
+                filter: invert(0);
+            }
         }
     }
 

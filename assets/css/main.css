@@ -188,7 +188,6 @@ main {
   position: fixed;
   top: 4vw;
   right: 5vw;
-  mix-blend-mode: exclusion;
   z-index: 9999999999;
 }
 
@@ -296,6 +295,15 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.menus-wrapper.mobile .close span {
+  color: #000;
+}
+
+.menus-wrapper.mobile .close img {
+  -webkit-filter: invert(0);
+          filter: invert(0);
 }
 
 @media (max-width: 576px) {
@@ -6762,7 +6770,6 @@ p {
           justify-content: center;
   cursor: pointer;
   border: none;
-  mix-blend-mode: exclusion;
 }
 
 .branding:hover {
@@ -6779,6 +6786,16 @@ p {
 .branding .svg-wrapper svg {
   height: 2vw;
   width: 2vw;
+}
+
+.branding .svg-wrapper.--header {
+  height: auto;
+  width: 10vw;
+}
+
+.branding .svg-wrapper.--header svg {
+  height: 100%;
+  width: 100%;
 }
 
 .branding .brand-text {
@@ -6807,6 +6824,10 @@ p {
 }
 
 @media (max-width: 992px) {
+  .branding .svg-wrapper.--header {
+    height: auto;
+    width: 200px;
+  }
   .branding .svg-wrapper,
   .branding .svg-wrapper svg {
     height: 50px;

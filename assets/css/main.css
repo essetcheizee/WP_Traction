@@ -6645,10 +6645,6 @@ p {
   margin-bottom: 2vw;
 }
 
-.hero .mdl__wrap .hero-text .arrow-link {
-  margin-left: -1.5vw;
-}
-
 .hero .mdl__wrap .hero-text .arrow-link .svg-wrapper {
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;

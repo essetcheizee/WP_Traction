@@ -76,33 +76,7 @@ class custom_header extends Widget_Base {
  
  <a class="branding --header" href="<?php echo home_url() ?>">
         <div class="svg-wrapper --header">
-            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34.971" viewBox="0 0 35 34.971">
-                <g id="Page-1" transform="translate(0 -0.029)">
-                    <g id="Homepage-V2" transform="translate(-77 -5000)">
-                        <g id="TractionGrey" transform="translate(77 5000)">
-                            <path id="Fill-1"
-                                d="M0,25.987,8.769,35,17.5,26.026v-.078l.038.039-.038.039L26.231,35,35,25.987,17.5,8Z"
-                                fill="#24d6df" fill-rule="evenodd" />
-                            <path id="Fill-2" d="M17,27.159l.08-.08L17,27Z" fill-rule="evenodd" />
-                            <g id="Group-22" transform="translate(17)">
-                                <path id="Fill-18" d="M.1,8.749l8.651,8.756,8.613-8.719L8.717.029.1,8.749V26.264h0Z"
-                                    fill="#f497b9" fill-rule="evenodd" />
-                                <path id="Fill-20" d="M8.755,17.506.1,26.264V8.749Z" fill="#2e3b95"
-                                    fill-rule="evenodd" />
-                            </g>
-                        </g>
-                    </g>
-                </g>
-            </svg>
-        </div>
-    </a>
-
-    <div class="menus-wrapper">
-        <a class="toggle-menu open">
-
-            <span>Menu</span>
-            <div class="svg-wrapper">
-            <svg width="175px" height="35px" viewBox="0 0 175 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <svg width="175px" height="35px" viewBox="0 0 175 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Homepage-V2" transform="translate(-45.000000, -49.000000)">
             <g id="TractionGrey" transform="translate(45.000000, 49.000000)">
@@ -124,6 +98,28 @@ class custom_header extends Widget_Base {
         </g>
     </g>
 </svg>
+        </div>
+    </a>
+
+    <div class="menus-wrapper">
+        <a class="toggle-menu open">
+
+            <span>Menu</span>
+            <div class="svg-wrapper">
+                <svg width="37px" height="17px" viewBox="0 0 37 17" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                        stroke-linecap="square">
+                        <g id="Homepage-V2" transform="translate(-1349.000000, -55.000000)" fill-rule="nonzero"
+                            stroke="#FFFFFF" stroke-width="2">
+                            <g id="Group" transform="translate(1350.000000, 55.000000)">
+                                <line x1="0.7" y1="1.8" x2="34.3" y2="1.8" id="Line"></line>
+                                <line x1="0.7" y1="8.7" x2="34.3" y2="8.7" id="Line-Copy"></line>
+                                <line x1="0.7" y1="15.9" x2="34.3" y2="15.9" id="Line-Copy-2"></line>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
 
             </div>
 
@@ -241,26 +237,7 @@ class custom_header extends Widget_Base {
     
     
     <a class="branding --header">
-        <div class="svg-wrapper --header"><svg width="37px" height="17px" viewBox="0 0 37 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
-        <g id="Homepage-V2" transform="translate(-1349.000000, -55.000000)" fill-rule="nonzero" stroke="#FFFFFF" stroke-width="2">
-            <g id="Group" transform="translate(1350.000000, 55.000000)">
-                <line x1="0.7" y1="1.8" x2="34.3" y2="1.8" id="Line"></line>
-                <line x1="0.7" y1="8.7" x2="34.3" y2="8.7" id="Line-Copy"></line>
-                <line x1="0.7" y1="15.9" x2="34.3" y2="15.9" id="Line-Copy-2"></line>
-            </g>
-        </g>
-    </g>
-</svg>
-        </div>
-    </a>
-
-    <div class="menus-wrapper">
-        <a class="toggle-menu open">
-
-            <span>Menu</span>
-            <div class="svg-wrapper">
-            <svg width="175px" height="35px" viewBox="0 0 175 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <div class="svg-wrapper --header"><svg width="175px" height="35px" viewBox="0 0 175 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Homepage-V2" transform="translate(-45.000000, -49.000000)">
             <g id="TractionGrey" transform="translate(45.000000, 49.000000)">
@@ -282,6 +259,28 @@ class custom_header extends Widget_Base {
         </g>
     </g>
 </svg>
+        </div>
+    </a>
+
+    <div class="menus-wrapper">
+        <a class="toggle-menu open">
+
+            <span>Menu</span>
+            <div class="svg-wrapper">
+                <svg width="37px" height="17px" viewBox="0 0 37 17" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                        stroke-linecap="square">
+                        <g id="Homepage-V2" transform="translate(-1349.000000, -55.000000)" fill-rule="nonzero"
+                            stroke="#FFFFFF" stroke-width="2">
+                            <g id="Group" transform="translate(1350.000000, 55.000000)">
+                                <line x1="0.7" y1="1.8" x2="34.3" y2="1.8" id="Line"></line>
+                                <line x1="0.7" y1="8.7" x2="34.3" y2="8.7" id="Line-Copy"></line>
+                                <line x1="0.7" y1="15.9" x2="34.3" y2="15.9" id="Line-Copy-2"></line>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
 
             </div>
 

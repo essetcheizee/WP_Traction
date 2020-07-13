@@ -13,22 +13,44 @@
             padding: 0;
 
             h2 {
-                font-family: TitlingLight; font-weight: 600;
+                font-family: TitlingLight;
+                font-weight: 600;
+                position: relative;
+                overflow: hidden;
+                color: #fff;
+                display: inline-block;
+
+                &::after {
+
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 0;
+                    border-bottom: .2rem solid getColor(Primary);
+                    transition: all .8s cubic-bezier(.555, .205, .295, .975);
+                    box-sizing: border-box;
+                }
+
             }
 
             &:hover {
                 text-decoration: none;
-
-                h2 {
-                    text-decoration: underline;
-                }
-
 
                 .featured__image {
 
                     img {
                         transform: scale(1.5);
                         transition: all 10s linear;
+                    }
+                }
+
+                h2 {
+
+                    &::after {
+                        -webkit-animation: footer-link-hover .8s cubic-bezier(.58, .3, .005, 1) 0s 1;
+                        animation: footer-link-hover .8s cubic-bezier(.58, .3, .005, 1) 0s 1;
                     }
                 }
             }

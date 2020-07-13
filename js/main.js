@@ -100,7 +100,18 @@ jQuery(function ($) {
 
     // });
 
-
+    var hero = $('.hero');
+    if(!hero){
+      
+      $('.traction__header').addClass('white__bg');
+   
+  }else{
+    if(scroll > hero){
+      $('.traction__header').addClass('white__bg');
+    }else{
+      $('.traction__header').removeClass('white__bg');
+    }
+  }
     var scroll = $(window).scrollTop();
     if (scroll > position) {
 

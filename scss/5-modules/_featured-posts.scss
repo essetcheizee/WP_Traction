@@ -25,10 +25,10 @@
                     position: absolute;
                     bottom: 0;
                     left: 0;
-                    width: 100%;
                     height: 0;
+                    width: 0%;
                     border-bottom: .2rem solid getColor(Primary);
-                    transition: all .8s cubic-bezier(.555, .205, .295, .975);
+                    animation: footer-link-hover-return .8s cubic-bezier(.58, .3, .005, 1) forwards;
                     box-sizing: border-box;
                 }
 
@@ -48,8 +48,9 @@
                 h2 {
 
                     &::after {
-                        -webkit-animation: footer-link-hover .8s cubic-bezier(.58, .3, .005, 1) 0s 1;
-                        animation: footer-link-hover .8s cubic-bezier(.58, .3, .005, 1) 0s 1;
+                        border-bottom: .2rem solid getColor(Primary);
+                        -webkit-animation: footer-link-hover .8s cubic-bezier(.58, .3, .005, 1) forwards;
+                        animation: footer-link-hover .8s cubic-bezier(.58, .3, .005, 1) forwards;
                     }
                 }
             }

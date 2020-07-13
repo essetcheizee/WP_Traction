@@ -8814,9 +8814,6 @@ p {
   top: 0;
   left: 0;
   position: fixed;
-  top: 3vw;
-  top: 4vw;
-  left: 5vw;
   z-index: 99999999999;
 }
 

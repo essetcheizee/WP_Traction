@@ -184,23 +184,6 @@ main {
   clear: both;
 }
 
-.menus-wrapper {
-  position: fixed;
-  top: 4vw;
-  right: 5vw;
-  z-index: 9999999999;
-}
-
-.menus-wrapper.show {
-  -webkit-animation: menuShow 0.3s linear forwards;
-          animation: menuShow 0.3s linear forwards;
-}
-
-.menus-wrapper.hide {
-  -webkit-animation: menuHide 0.3s linear forwards;
-          animation: menuHide 0.3s linear forwards;
-}
-
 .menus-wrapper .toggle-menu {
   cursor: pointer;
   display: -webkit-box;
@@ -6897,24 +6880,6 @@ p {
   font-size: 2vw;
   margin-top: 1vw;
   pointer-events: none;
-}
-
-.branding.--header {
-  position: fixed;
-  top: 3vw;
-  left: 5vw;
-  z-index: 99999999999;
-}
-
-.branding.--header.show {
-  -webkit-animation: menuShow 0.3s linear forwards;
-          animation: menuShow 0.3s linear forwards;
-  z-index: 9999999999;
-}
-
-.branding.--header.hide {
-  -webkit-animation: menuHide 0.3s linear forwards;
-          animation: menuHide 0.3s linear forwards;
 }
 
 @media (max-width: 992px) {

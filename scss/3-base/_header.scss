@@ -1,17 +1,17 @@
 .menus-wrapper {
-    position: fixed;
-    top: 4vw;
-    right: 5vw;
-    z-index: 9999999999;
+   // position: fixed;
+   // top: 4vw;
+   // right: 5vw;
+   // z-index: 9999999999;
 
 
-    &.show {
-        animation: menuShow 0.3s linear forwards;
-    }
+ //   &.show {
+ //       animation: menuShow 0.3s linear forwards;
+ //   }
 
-    &.hide {
-        animation: menuHide 0.3s linear forwards;
-    }
+//    &.hide {
+//        animation: menuHide 0.3s linear forwards;
+//    }
 
 
     .toggle-menu {

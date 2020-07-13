@@ -8800,6 +8800,19 @@ p {
 }
 
 .traction__header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3vw 4vw;
+  top: 0;
+  left: 0;
   position: fixed;
   top: 3vw;
   top: 4vw;

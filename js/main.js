@@ -715,19 +715,19 @@ jQuery(function ($) {
   $(slider).on('mousemove', cursorMovement)
   $(slider).on('mouseleave', cursorLeave)
 
-  $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
-  $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
-  $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
-  $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
-  $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
-  $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
-  $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
-  $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
-  $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
-  $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
-  $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
-  $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
-  $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
+  // $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
+  // $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
+  // $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
+  // $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
+  // $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
+  // $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
+  // $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
+  // $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
+  // $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
+  // $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
+  // $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
+  // $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
+  // $('a.branding.--header, div.menus-wrapper, div.navigation').unwrap();
 
 
 

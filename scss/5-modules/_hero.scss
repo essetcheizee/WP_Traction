@@ -60,12 +60,21 @@
                 }
             }
 
-            
+
             .arrow-link {
                 margin-left: -1.5vw;
-                transition: all 0.2s linear;
+
+                .svg-wrapper {
+                    transition: all 0.2s linear;
+                    margin-left: -1.5vw;
+                }
 
                 &:hover {
+
+                    .svg-wrapper {
+                        margin-left: 0vw;
+                    }
+
                     margin-left: 0vw;
                     text-decoration: none;
                 }
@@ -143,7 +152,7 @@
 
             .hero-content {
                 margin-top: -50px;
-                
+
                 .hero-text {
 
                     .title {

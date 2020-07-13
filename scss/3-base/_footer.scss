@@ -125,6 +125,25 @@
                                         a {
                                             margin: 0;
                                             font-size: 1vw;
+                                            overflow: hidden;
+
+
+                                            .svg-wrapper {
+                                                margin-left: -1vw;
+                                                transition: all 0.2s linear;
+                                            }
+
+
+
+                                            &:hover {
+
+                                                .svg-wrapper {
+                                                    margin-left: 0;
+                                                }
+
+                                                margin-left: 0vw;
+                                                text-decoration: none;
+                                            }
 
                                             .svg-wrapper {
                                                 width: 2vw;
@@ -556,6 +575,7 @@
                     }
                 }
             }
+
             &.lower {
                 .footer__wrapper {
                     @include flex-content(flex-start, flex-start);
@@ -567,13 +587,13 @@
                             margin-right: 0;
 
                             p {
-                                font-size: 12px!important;
+                                font-size: 12px !important;
                             }
                         }
-                        
+
                         &.brand {
                             margin-bottom: 24px;
-                            
+
                             a {
                                 .img-wrapper {
                                     height: auto;

@@ -169,6 +169,7 @@ jQuery(function ($) {
   });
 
   $('.page__content__title:after').on('click',function(){
+    console.log('scroll')
     $('html,body').animate({
         scrollTop: $('.strategy').offset().top()
     })

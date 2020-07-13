@@ -298,7 +298,7 @@ class custom_header extends Widget_Base {
         </g>
     </g>
 </svg>
-/div>
+    </div>
 
 
     <div class="navigation">

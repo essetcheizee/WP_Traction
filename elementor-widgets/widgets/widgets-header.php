@@ -74,7 +74,7 @@ class custom_header extends Widget_Base {
         global $post;
        
         ?>
- <div>
+ <div class="traction__header">
  <a class="branding --header" href="<?php echo home_url() ?>">
         <div class="svg-wrapper --header">
         <svg width="175px" height="35px" viewBox="0 0 175 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -237,7 +237,7 @@ class custom_header extends Widget_Base {
 
     ?>
     
- 
+ <div class="traction__header">
     <a class="branding --header">
         <div class="svg-wrapper --header">
             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34.971" viewBox="0 0 35 34.971">
@@ -261,7 +261,7 @@ class custom_header extends Widget_Base {
         </div>
        
     </a>
-
+</div>
     <div class="menus-wrapper">
         <a class="toggle-menu open">
 

@@ -1,5 +1,5 @@
 @font-face {
-  font-family: Titling;
+  font-family: TitlingLight;
   src: url("./../../assets/fonts/Titling Gothic FB WideRegular.otf") format("opentype");
 }
 
@@ -44,7 +44,8 @@ body {
   line-height: 1.2;
   margin: 0;
   padding: 0;
-  font-family: Titling;
+  font-family: TitlingLight;
+  font-weight: 600;
   font-weight: 300;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
@@ -219,7 +220,8 @@ main {
   color: #FFFFFF;
   font-size: 1.4vw;
   pointer-events: none;
-  font-family: Titling;
+  font-family: TitlingLight;
+  font-weight: 600;
 }
 
 .menus-wrapper .toggle-menu.close {
@@ -786,7 +788,8 @@ h6 {
   margin: 0;
   padding: 0;
   line-height: 2.5vw;
-  font-weight: 400;
+  font-weight: 600;
+  font-family: TitlingLight;
 }
 
 .section-heading {
@@ -795,7 +798,7 @@ h6 {
 }
 
 h1 {
-  font-size: 3.2vw;
+  font-size: 3.5vw;
 }
 
 h2 {
@@ -1065,7 +1068,8 @@ ul li {
 .navigation__wrapper .navigation__links ul li a {
   font-size: 4vw;
   color: #141C42;
-  font-family: Titling;
+  font-family: TitlingLight;
+  font-weight: 600;
 }
 
 .navigation__wrapper .navigation__links ul li a.active {
@@ -7092,7 +7096,8 @@ p {
 }
 
 .featured .featured-box .box h2 {
-  font-family: Titling;
+  font-family: TitlingLight;
+  font-weight: 600;
 }
 
 .featured .featured-box .box:hover {
@@ -7491,7 +7496,7 @@ p {
 }
 
 .strategy .overlay__text h1 {
-  font-size: 11.4vw !important;
+  font-size: 15.4vw !important;
 }
 
 .strategy .overlay__image__top {
@@ -7545,7 +7550,8 @@ p {
 
 .strategy__section.--wrapper.--desktop .strategy__section__description ul li h3 {
   display: none;
-  font-family: Titling;
+  font-family: TitlingLight;
+  font-weight: 600;
 }
 
 .strategy__section.--wrapper .strategy__section__steps {
@@ -7580,7 +7586,8 @@ p {
   -webkit-transition: all .5s;
   transition: all .5s;
   cursor: default;
-  font-family: Titling;
+  font-family: TitlingLight;
+  font-weight: 600;
 }
 
 .strategy__section.--wrapper .strategy__section__steps ul li a:hover {
@@ -7609,7 +7616,8 @@ p {
 }
 
 .strategy__section.--wrapper .strategy__section__description ul li h3 {
-  font-family: Titling;
+  font-family: TitlingLight;
+  font-weight: 600;
 }
 
 .strategy__section.--wrapper .strategy__section__description ul li:not(:first-child) {

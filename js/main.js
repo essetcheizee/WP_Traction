@@ -67,12 +67,23 @@ jQuery(function ($) {
   $('.toggle-menu.open').click(function () {
     $('.menus-wrapper').addClass('mobile');
     $('.navigation').addClass('mobile');
+	  
+	  setTimeout(()=> {
+		  
+    	$('.branding.--header').addClass('mobile');
+	  }, 430)
+	  
     $('.navigation').removeClass('closeNav');
     // console.log('hello!');
   });
   $('.toggle-menu.close').click(function () {
     $('.menus-wrapper').removeClass('mobile');
     $('.navigation').removeClass('mobile');
+	  
+	  setTimeout(()=> {
+		  
+    	$('.branding.--header').removeClass('mobile');
+	  }, 200);
 
     $('.navigation').addClass('closeNav');
 
@@ -167,13 +178,6 @@ jQuery(function ($) {
 
 
   });
-
-  $('.--arrow-down h1:after').on('click',function(){
-    console.log('scroll')
-    $('html,body').animate({
-        scrollTop: $('.strategy').offset().top()
-    })
-})
 
   //Lets try Scroll Magic
 
@@ -511,7 +515,7 @@ jQuery(function ($) {
 
   $('.item-pagination').on('click', function (e) {
     clearInterval(timer);
-    e.preventDefault();
+    e.preventDefault
     var $sliderIndex = $(this).index(),
       $slideIndex = $('.slick-active').data('slick-index');
 

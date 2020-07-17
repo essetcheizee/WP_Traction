@@ -444,7 +444,7 @@ wp_reset_postdata();
        
 ?>
 
-    <a href="#" class="item-pagination" data-bg='<?= get_the_post_thumbnail_url()?>'>
+    <a href="javascript:void(0)" class="item-pagination" data-bg='<?= get_the_post_thumbnail_url()?>'>
     1
         <div class="inner-circle">
             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
@@ -481,7 +481,7 @@ wp_reset_postdata();
        
 ?>
 
-    <a href="#" class="item-pagination" data-bg='<?= get_the_post_thumbnail_url()?>'>
+    <a href="javascript:void(0)" class="item-pagination" data-bg='<?= get_the_post_thumbnail_url()?>'>
     2
         <div class="inner-circle">
             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
@@ -518,7 +518,7 @@ wp_reset_postdata();
        
 ?>
 
-    <a href="#" class="item-pagination" data-bg='<?= get_the_post_thumbnail_url()?>'>
+    <a href="javascript:void(0)" class="item-pagination" data-bg='<?= get_the_post_thumbnail_url()?>'>
     3
         <div class="inner-circle">
             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
@@ -555,7 +555,7 @@ wp_reset_postdata();
        
 ?>
 
-    <a href="#" class="item-pagination" data-bg='<?= get_the_post_thumbnail_url()?>'>
+    <a href="javascript:void(0)" class="item-pagination" data-bg='<?= get_the_post_thumbnail_url()?>'>
     4
         <div class="inner-circle">
             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">

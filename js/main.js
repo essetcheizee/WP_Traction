@@ -168,7 +168,7 @@ jQuery(function ($) {
 
   });
 
-  $('.page__content__title:after').on('click',function(){
+  $('.--arrow-down h1:after').on('click',function(){
     console.log('scroll')
     $('html,body').animate({
         scrollTop: $('.strategy').offset().top()
@@ -511,7 +511,7 @@ jQuery(function ($) {
 
   $('.item-pagination').on('click', function (e) {
     clearInterval(timer);
-    e.preventDefault
+    e.preventDefault();
     var $sliderIndex = $(this).index(),
       $slideIndex = $('.slick-active').data('slick-index');
 

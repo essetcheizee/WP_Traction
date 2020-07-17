@@ -23,7 +23,7 @@ class custom_post_image extends Widget_Base {
 		$this->start_controls_section(
 			'section_content',
 			[
-				'label' => __( 'Traction - Page Description', 'elementor' ),
+				'label' => __( 'Traction - Page Image', 'elementor' ),
 			]
         );
         $this->add_control(

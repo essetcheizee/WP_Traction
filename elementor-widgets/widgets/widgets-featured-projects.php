@@ -63,7 +63,6 @@ class custom_featured_projects extends Widget_Base {
             <?php 
                 $args = array(
                     'order'             => 'ASC',
-                    'posts_per_page'    => 6,
                     'category_name'     => 'Featured'
                 );
                $slider     = new \WP_Query($args);
